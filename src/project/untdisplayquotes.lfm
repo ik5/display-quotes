@@ -1,0 +1,58 @@
+object frmDisplayQuotes: TfrmDisplayQuotes
+  Left = 591
+  Height = 300
+  Top = 126
+  Width = 712
+  BorderStyle = bsDialog
+  Caption = 'Display Quotes'
+  ClientHeight = 300
+  ClientWidth = 712
+  Constraints.MinHeight = 300
+  Constraints.MinWidth = 600
+  KeyPreview = True
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  LCLVersion = '0.9.31'
+  Visible = True
+  object mmoQuote: TMemo
+    Left = 9
+    Height = 219
+    Top = 37
+    Width = 688
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object cmbxQuotes: TComboBox
+    Left = 9
+    Height = 28
+    Top = 2
+    Width = 688
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Bottom = 8
+    ItemHeight = 0
+    OnChange = cmbxQuotesChange
+    TabOrder = 1
+  end
+  object btnLoadQuotes: TButton
+    Left = 9
+    Height = 25
+    Top = 267
+    Width = 141
+    Anchors = [akLeft, akBottom]
+    Caption = 'Reload Quotes'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object btnRandomQuote: TButton
+    Left = 553
+    Height = 25
+    Top = 267
+    Width = 144
+    Anchors = [akRight, akBottom]
+    Caption = 'Random Quote'
+    OnClick = btnRandomQuoteClick
+    TabOrder = 3
+  end
+end

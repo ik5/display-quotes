@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="quotes.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="quotes"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4"/>
+        <CursorPos X="29" Y="22"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="untdisplayquotes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmDisplayQuotes"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untDisplayQuotes"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="19" Y="74"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="26" Column="54" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="40" Column="23" TopLine="25"/>
+      </Position2>
+      <Position3>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="71" Column="11" TopLine="45"/>
+      </Position3>
+      <Position4>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="53" Column="15" TopLine="45"/>
+      </Position4>
+      <Position5>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="70" Column="28" TopLine="45"/>
+      </Position5>
+      <Position6>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="69" Column="17" TopLine="46"/>
+      </Position6>
+      <Position7>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="58" Column="9" TopLine="46"/>
+      </Position7>
+      <Position8>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="64" Column="45" TopLine="47"/>
+      </Position8>
+      <Position9>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="71" Column="45" TopLine="54"/>
+      </Position9>
+      <Position10>
+        <Filename Value="untdisplayquotes.pas"/>
+        <Caret Line="68" Column="44" TopLine="48"/>
+      </Position10>
+      <Position11>
+        <Filename Value="quotes.lpr"/>
+        <Caret Line="8" Column="5" TopLine="4"/>
+      </Position11>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
