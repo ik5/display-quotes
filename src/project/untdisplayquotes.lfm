@@ -26,10 +26,13 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   end
   object cmbxQuotes: TComboBox
     Left = 9
-    Height = 28
+    Height = 30
     Top = 2
     Width = 688
     Anchors = [akTop, akLeft, akRight]
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+    AutoDropDown = True
     BorderSpacing.Bottom = 8
     ItemHeight = 0
     OnChange = cmbxQuotesChange
@@ -54,5 +57,15 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Caption = 'Random Quote'
     OnClick = btnRandomQuoteClick
     TabOrder = 3
+  end
+  object btnCopyToClipboard: TButton
+    Left = 275
+    Height = 25
+    Top = 267
+    Width = 163
+    Anchors = [akLeft, akRight, akBottom]
+    Caption = 'Copy To Clipboard'
+    OnClick = btnCopyToClipboardClick
+    TabOrder = 4
   end
 end

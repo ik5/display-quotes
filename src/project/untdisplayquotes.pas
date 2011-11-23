@@ -15,8 +15,10 @@ type
   TfrmDisplayQuotes = class(TForm)
     btnLoadQuotes: TButton;
     btnRandomQuote: TButton;
+    btnCopyToClipboard: TButton;
     cmbxQuotes: TComboBox;
     mmoQuote: TMemo;
+    procedure btnCopyToClipboardClick(Sender: TObject);
     procedure btnRandomQuoteClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure cmbxQuotesChange(Sender: TObject);
@@ -33,6 +35,7 @@ var
   frmDisplayQuotes: TfrmDisplayQuotes;
 
 implementation
+Uses Clipbrd;
 
 {$R *.lfm}
 
@@ -61,6 +64,11 @@ begin
   Item := Random(QuoteCount);
   mmoQuote.Lines.Add(cmbxQuotes.Items.Strings[Item]);
   cmbxQuotes.ItemIndex := Item;
+end;
+
+procedure TfrmDisplayQuotes.btnCopyToClipboardClick(Sender: TObject);
+begin
+  Clipboard.AsText := mmoQuote.Lines.Text;
 end;
 
 procedure TfrmDisplayQuotes.cmbxQuotesChange(Sender: TObject);

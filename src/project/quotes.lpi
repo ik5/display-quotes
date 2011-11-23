@@ -45,7 +45,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmDisplayQuotes"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="untdisplayquotes"/>
+        <UnitName Value="untDisplayQuotes"/>
       </Unit1>
     </Units>
   </ProjectOptions>
