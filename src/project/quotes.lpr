@@ -12,6 +12,7 @@ uses
 
 {$R *.res}
 
+{$IFDEF UNIX}
 procedure set_random;
 var
   f    : file of cardinal;
@@ -22,11 +23,12 @@ begin
   if IOResult <> 0 then Exit;
   read (f,RandSeed);
   CloseFile (f);
-  Randomize;
 end;
+{$ENDIF}
 
 begin
-  set_random;
+  {$IFDEF UNIX}set_random;{$ENDIF}
+  Randomize;
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TfrmDisplayQuotes, frmDisplayQuotes);
