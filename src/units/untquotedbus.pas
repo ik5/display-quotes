@@ -94,9 +94,9 @@ begin
        [
          PChar('Display Quotes'),    // App name
          DBUS_TYPE_UINT32,
-         Length(AStr),               // Request ID
+         PInteger(100),              // Request ID
          DBUS_TYPE_STRING,
-         PChar(''),                  // App Icon Path
+         PChar('notify'),            // App Icon Path
          DBUS_TYPE_STRING,
          PChar('The current Quote'), // Summery
          DBUS_TYPE_STRING,
@@ -106,8 +106,8 @@ begin
          DBUS_TYPE_DICT_ENTRY,
          PChar('{}'),                // hints
          DBUS_TYPE_UINT32,
-         0,                          // TIMEOUT
-         DBUS_TYPE_INVALID
+         PLongInt(0)                 // TIMEOUT
+
        ]
   );
 
