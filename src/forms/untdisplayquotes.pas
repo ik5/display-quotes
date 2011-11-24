@@ -121,13 +121,19 @@ begin
 end;
 
 procedure TfrmDisplayQuotes.ChangeQuote(index: Integer);
+var
+  AQuote : String;
 begin
+  AQuote := Quotes.Strings[Index];
   mmoQuote.Lines.BeginUpdate;
   mmoQuote.Lines.Clear;
-  mmoQuote.Lines.Add(Quotes.Strings[Index]);
+  mmoQuote.Lines.Add(AQuote);
   mmoQuote.Lines.EndUpdate;
   cmbxQuotes.ItemIndex := Index;
   lblQuoteNumber.Caption := Format(txtQuoteNumber, [Index + 1]);
+  {$IFDEF UNIX}
+    NotifyQuote(AQuote);
+  {$ENDIF}
 end;
 
 procedure TfrmDisplayQuotes.IterateQuotes;

@@ -33,13 +33,14 @@ var
   DBusConn : TDBusConnection;
 
 begin
+  DBusConn   := nil;
   try
     DBusConn := TDBusConnection.Create;
     try
       Result := DBusConn.SendNotification(AQuote);
     finally
       if Assigned(DBusConn) then
-        DBusConn.Free;
+        FreeAndNil(DBusConn);
     end;
   Except
     Result := False;
@@ -69,48 +70,63 @@ end;
 
 destructor TDBusConnection.Destroy;
 begin
-  dbus_connection_close(FConn);
   inherited Destroy;
 end;
 
 function TDBusConnection.SendNotification(const AStr: AnsiString): Boolean;
 var
-  msg     : PDBusMessage;
-  args    : DBusMessageIter;
-  pending : PDBusPendingCall;
-  Answer  : dbus_bool_t;
+  msg      : PDBusMessage;
+  args     : DBusMessageIter;
+  pending  : PDBusPendingCall;
+  Answer   : dbus_bool_t;
+  id       : Integer;
+  Timeout  : LongInt;
+  AppName,
+  AppIcon,
+  Summery,
+  Body,
+  Hash     : PChar;
+  Arr      : PLongint;
 begin
   msg := dbus_message_new_method_call('org.freedesktop.Notifications',  // target for the method call
                                       '/org/freedesktop/Notifications', // object to call on
                                       'org.freedesktop.Notifications',  // interface to call on
                                       'Notify');                        // method name
-  if msg = nil then
-    Exit(False);
+  if msg = nil then Exit(False);
 
   dbus_message_iter_init_append(msg, @args);
-  dbus_message_set_no_reply(msg, 1); // don't really wait for answer ...
+  dbus_message_set_no_reply(msg, 1); // don't really wait for an answer ...
+  id      := 0;
+  Timeout := -1;
+  Arr := Getmem(0);
+  AppName := 'Display Quote';
+  AppIcon := '';
+  Summery := 'Testing';
+  Body    := 'Hello World';
+  Hash    := '{}';
   Answer := dbus_message_append_args(msg,
          DBUS_TYPE_STRING,
        [
-         PChar('Display Quotes'),    // App name
+         @AppName,                    // App name
          DBUS_TYPE_UINT32,
-         PInteger(100),              // Request ID
+         @id,                        // Request ID
          DBUS_TYPE_STRING,
-         PChar('notify'),            // App Icon Path
+         @AppIcon,                   // App Icon Path
          DBUS_TYPE_STRING,
-         PChar('The current Quote'), // Summery
+         @Summery,                    // Summery
          DBUS_TYPE_STRING,
-         PChar('Hello'),             // Body
+         @Body,                       // Body
          DBUS_TYPE_ARRAY,
-         PChar(''),                  // actions
-         DBUS_TYPE_DICT_ENTRY,
-         PChar('{}'),                // hints
+         // actions
+         DBUS_TYPE_UINT32, Arr, 0,
+         DBUS_TYPE_STRING,
+         @Hash,                       // hints
          DBUS_TYPE_UINT32,
-         PLongInt(0)                 // TIMEOUT
-
+         @Timeout,                   // TIMEOUT
+         DBUS_TYPE_INVALID
        ]
   );
-
+  Freemem(Arr);
   if (Answer = 0) then Exit(False);
 
   Answer := dbus_connection_send_with_reply(FConn, msg, @pending, -1);

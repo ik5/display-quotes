@@ -28,12 +28,12 @@ end;
 {$ENDIF}
 
 begin
+  Application.Title:='Display Quotes';
   {$IFDEF UNIX}set_random;{$ENDIF}
   Randomize;
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TfrmDisplayQuotes, frmDisplayQuotes);
-  Application.CreateForm(TfrmQuoteSearch, frmQuoteSearch);
   Application.Run;
 end.
 
