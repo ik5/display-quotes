@@ -23,7 +23,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Anchors = [akTop, akLeft, akRight, akBottom]
     ReadOnly = True
     ScrollBars = ssAutoBoth
-    TabOrder = 0
+    TabOrder = 1
   end
   object cmbxQuotes: TComboBox
     Left = 9
@@ -38,7 +38,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ItemHeight = 0
     OnChange = cmbxQuotesChange
     Style = csDropDownList
-    TabOrder = 1
+    TabOrder = 0
   end
   object btnReloadQuotes: TBitBtn
     Left = 9
@@ -85,7 +85,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     }
     GlyphShowMode = gsmSystem
     OnClick = btnReloadQuotesClick
-    TabOrder = 2
+    TabOrder = 4
   end
   object btnCopyToClipBoard: TBitBtn
     Left = 250
@@ -179,7 +179,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     }
     GlyphShowMode = gsmSystem
     OnClick = btnRandomQuoteClick
-    TabOrder = 4
+    TabOrder = 2
   end
   object lblQuotesCount: TLabel
     Left = 9
