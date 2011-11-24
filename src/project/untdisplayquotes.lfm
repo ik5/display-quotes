@@ -11,6 +11,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   Constraints.MinHeight = 300
   Constraints.MinWidth = 600
   KeyPreview = True
+  OnClose = FormClose
   OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '0.9.31'
@@ -83,7 +84,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       16C900500085004D0024FFFFFF00FFFFFF00004D001C004D0020
     }
     GlyphShowMode = gsmSystem
-    OnClick = Button1Click
+    OnClick = btnReloadQuotesClick
     TabOrder = 2
   end
   object btnCopyToClipBoard: TBitBtn
