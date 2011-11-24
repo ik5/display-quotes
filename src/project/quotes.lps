@@ -12,7 +12,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="39" Y="11"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -21,12 +21,13 @@
         <ComponentName Value="frmDisplayQuotes"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="untDisplayQuotes"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="51"/>
-        <CursorPos X="27" Y="53"/>
+        <TopLine Value="71"/>
+        <CursorPos X="19" Y="80"/>
         <ComponentState Value="1"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -41,7 +42,7 @@
         <TopLine Value="1"/>
         <CursorPos X="21" Y="1"/>
         <ComponentState Value="1"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -53,19 +54,18 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="18" Y="1"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="../units/untquotedbus.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="untQuoteDBUS"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="49" Y="13"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="95"/>
+        <CursorPos X="31" Y="103"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -244,7 +244,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="24" HistoryIndex="23">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus.pas"/>
         <Caret Line="60" Column="19" TopLine="50"/>
@@ -341,6 +341,22 @@
         <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-types.inc"/>
         <Caret Line="31" Column="25" TopLine="15"/>
       </Position24>
+      <Position25>
+        <Filename Value="../units/untquotedbus.pas"/>
+        <Caret Line="13" Column="49" TopLine="1"/>
+      </Position25>
+      <Position26>
+        <Filename Value="../units/untquotedbus.pas"/>
+        <Caret Line="56" Column="21" TopLine="44"/>
+      </Position26>
+      <Position27>
+        <Filename Value="../units/untquotedbus.pas"/>
+        <Caret Line="63" Column="22" TopLine="47"/>
+      </Position27>
+      <Position28>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="42" Column="44" TopLine="31"/>
+      </Position28>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

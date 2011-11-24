@@ -39,6 +39,7 @@ type
     Quotes: TStringList;
     procedure IterateQuotes;
     procedure LoadQuotes;
+    procedure ChangeQuote(index : Integer);
   end;
 
 var
@@ -50,7 +51,7 @@ resourcestring
 
 implementation
 
-uses Clipbrd, untFindQuote;
+uses Clipbrd, untFindQuote {$IFDEF UNIX},untQuoteDBUS{$ENDIF};
 
 {$R *.lfm}
 
@@ -75,12 +76,7 @@ begin
   Application.ProcessMessages;
 
   Item := Random(QuoteCount);
-  mmoQuote.Lines.BeginUpdate;
-  mmoQuote.Lines.Clear;
-  mmoQuote.Lines.Add(Quotes.Strings[Item]);
-  mmoQuote.Lines.EndUpdate;
-  cmbxQuotes.ItemIndex := Item;
-  lblQuoteNumber.Caption := Format(txtQuoteNumber, [Item + 1]);
+  ChangeQuote(Item);
 
   Screen.Cursor := crDefault;
   Application.ProcessMessages;
@@ -98,9 +94,7 @@ end;
 
 procedure TfrmDisplayQuotes.cmbxQuotesChange(Sender: TObject);
 begin
-  mmoQuote.Lines.Clear;
-  mmoQuote.Lines.Text := cmbxQuotes.Text;
-  lblQuoteNumber.Caption := Format(txtQuoteNumber, [cmbxQuotes.ItemIndex + 1]);
+  ChangeQuote(cmbxQuotes.ItemIndex);
 end;
 
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -121,11 +115,19 @@ begin
   cmbxQuotes.Items.Clear;
   IterateQuotes;
   cmbxQuotes.Items.Assign(Quotes);
-  cmbxQuotes.ItemIndex := 0;
   cmbxQuotes.Items.EndUpdate;
-  mmoQuote.Lines.Text    := cmbxQuotes.Text;
+  ChangeQuote(0);
   lblQuotesCount.Caption := Format(txtQuoteCount, [Quotes.Count]);
-  lblQuoteNumber.Caption := Format(txtQuoteNumber, [1]);
+end;
+
+procedure TfrmDisplayQuotes.ChangeQuote(index: Integer);
+begin
+  mmoQuote.Lines.BeginUpdate;
+  mmoQuote.Lines.Clear;
+  mmoQuote.Lines.Add(Quotes.Strings[Index]);
+  mmoQuote.Lines.EndUpdate;
+  cmbxQuotes.ItemIndex := Index;
+  lblQuoteNumber.Caption := Format(txtQuoteNumber, [Index + 1]);
 end;
 
 procedure TfrmDisplayQuotes.IterateQuotes;
