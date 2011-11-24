@@ -6,17 +6,19 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls;
+  StdCtrls, Buttons;
 
 type
 
   { TfrmDisplayQuotes }
 
   TfrmDisplayQuotes = class(TForm)
-    btnLoadQuotes: TButton;
-    btnRandomQuote: TButton;
-    btnCopyToClipboard: TButton;
+    btnCopyToClipBoard: TBitBtn;
+    btnRandomQuote: TBitBtn;
+    btnReloadQuotes: TBitBtn;
     cmbxQuotes: TComboBox;
+    lblQuoteNumber: TLabel;
+    lblQuotesCount: TLabel;
     mmoQuote: TMemo;
     procedure btnCopyToClipboardClick(Sender: TObject);
     procedure btnRandomQuoteClick(Sender: TObject);
@@ -34,6 +36,10 @@ type
 var
   frmDisplayQuotes: TfrmDisplayQuotes;
 
+ResourceString
+  txtQuoteCount  = '#%d quotes loaded';
+  txtQuoteNumber = 'Quote #%d';
+
 implementation
 Uses Clipbrd;
 
@@ -43,7 +49,7 @@ Uses Clipbrd;
 
 procedure TfrmDisplayQuotes.Button1Click(Sender: TObject);
 begin
-  Screen.Cursor := crHandPoint;
+  Screen.Cursor := crHourGlass;
   Application.ProcessMessages;
 
   mmoQuote.Lines.Clear;
@@ -64,6 +70,7 @@ begin
   Item := Random(QuoteCount);
   mmoQuote.Lines.Add(cmbxQuotes.Items.Strings[Item]);
   cmbxQuotes.ItemIndex := Item;
+  lblQuoteNumber.Caption := Format(txtQuoteNumber, [Item+1]);
 end;
 
 procedure TfrmDisplayQuotes.btnCopyToClipboardClick(Sender: TObject);
@@ -113,6 +120,8 @@ begin
 
   cmbxQuotes.ItemIndex := 0;
   mmoQuote.Lines.Add(cmbxQuotes.Text);
+  lblQuotesCount.Caption := Format(txtQuoteCount, [QuoteCount]);
+  lblQuoteNumber.Caption := Format(txtQuoteNumber, [1]);
 end;
 
 end.

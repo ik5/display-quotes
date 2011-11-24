@@ -25,7 +25,7 @@
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="59"/>
-        <CursorPos X="1" Y="71"/>
+        <CursorPos X="24" Y="71"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -41,12 +41,10 @@
       <Unit3>
         <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
         <UnitName Value="Clipbrd"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="185"/>
         <CursorPos X="3" Y="203"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/lcltype.pp"/>
@@ -58,18 +56,16 @@
       </Unit4>
       <Unit5>
         <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/include/clipbrd.inc"/>
-        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit5>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="untdisplayquotes.pas"/>
         <Caret Line="53" Column="15" TopLine="45"/>
@@ -166,26 +162,6 @@
         <Filename Value="untdisplayquotes.pas"/>
         <Caret Line="72" Column="16" TopLine="59"/>
       </Position24>
-      <Position25>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
-        <Caret Line="263" Column="15" TopLine="244"/>
-      </Position25>
-      <Position26>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
-        <Caret Line="254" Column="8" TopLine="234"/>
-      </Position26>
-      <Position27>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/include/clipbrd.inc"/>
-        <Caret Line="758" Column="44" TopLine="747"/>
-      </Position27>
-      <Position28>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
-        <Caret Line="254" Column="8" TopLine="234"/>
-      </Position28>
-      <Position29>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
-        <Caret Line="261" Column="19" TopLine="235"/>
-      </Position29>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
