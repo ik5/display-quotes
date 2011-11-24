@@ -10,7 +10,7 @@ uses
 function NotifyQuote(const AQuote : AnsiString) : Boolean;
 
 implementation
-uses dbus, ctypes;
+uses dbus;
 
 type
   EDbusEception = class(Exception);
@@ -102,9 +102,9 @@ begin
          DBUS_TYPE_STRING,
          PChar('Hello'),             // Body
          DBUS_TYPE_ARRAY,
-         nil,                        // actions
+         PChar(''),                  // actions
          DBUS_TYPE_DICT_ENTRY,
-         nil,                        // hints
+         PChar('{}'),                // hints
          DBUS_TYPE_UINT32,
          0,                          // TIMEOUT
          DBUS_TYPE_INVALID
