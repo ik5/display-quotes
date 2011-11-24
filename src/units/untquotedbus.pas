@@ -10,7 +10,7 @@ uses
 function NotifyQuote(const AQuote : AnsiString) : Boolean;
 
 implementation
-uses dbus, ctypes, forms;
+uses dbus, ctypes;
 
 type
   EDbusEception = class(Exception);
@@ -20,8 +20,7 @@ type
   TDBusConnection = class
   private
     FConn : PDBusConnection;
-    FErr  : PDBusError;
-    FRet  : cint;
+    FErr  : DBusError;
   public
     constructor Create; virtual;
     destructor Destroy; override;
@@ -53,14 +52,14 @@ constructor TDBusConnection.Create;
 var msg : String;
 begin
   // init errors
-  dbus_error_init(FErr);
+  dbus_error_init(@FErr);
 
   { Connection }
-  FConn := dbus_bus_get(DBUS_BUS_SESSION, FErr);
-  if dbus_error_is_set(FErr) <> 0 then
+  FConn := dbus_bus_get(DBUS_BUS_SESSION, @FErr);
+  if dbus_error_is_set(@FErr) <> 0 then
     begin
-     msg := StrPas(FErr^.message);
-     dbus_error_free(FErr);
+     msg := StrPas(FErr.message);
+     dbus_error_free(@FErr);
      raise EDbusEception.CreateFmt('DBUS Error: %s', [msg]);
     end;
 
@@ -77,37 +76,38 @@ end;
 function TDBusConnection.SendNotification(const AStr: AnsiString): Boolean;
 var
   msg     : PDBusMessage;
-  args    : PDBusMessageIter;
+  args    : DBusMessageIter;
   pending : PDBusPendingCall;
   Answer  : dbus_bool_t;
 begin
-  msg := dbus_message_new_method_call('org.freedesktop.Notifications', // target for the method call
-                                      'org/freedesktop/Notifications', // object to call on
-                                      'org.freedesktop.Notifications', // interface to call on
-                                      'Notify');                       // method name
+  msg := dbus_message_new_method_call('org.freedesktop.Notifications',  // target for the method call
+                                      '/org/freedesktop/Notifications', // object to call on
+                                      'org.freedesktop.Notifications',  // interface to call on
+                                      'Notify');                        // method name
   if msg = nil then
     Exit(False);
 
-  dbus_message_iter_init_append(msg, args);
+  dbus_message_iter_init_append(msg, @args);
   dbus_message_set_no_reply(msg, 1); // don't really wait for answer ...
   Answer := dbus_message_append_args(msg,
          DBUS_TYPE_STRING,
        [
-         PChar(Application.Title),  // App name
+         PChar('Display Quotes'),    // App name
          DBUS_TYPE_UINT32,
-         Length(AStr),              // Request ID
+         Length(AStr),               // Request ID
          DBUS_TYPE_STRING,
-         '',                        // App Icon Path
+         PChar(''),                  // App Icon Path
          DBUS_TYPE_STRING,
-         'The current Quote',       // Summery
+         PChar('The current Quote'), // Summery
          DBUS_TYPE_STRING,
-         PChar(AStr),               // Body
+         PChar('Hello'),             // Body
          DBUS_TYPE_ARRAY,
-         nil,                       // actions
+         nil,                        // actions
          DBUS_TYPE_DICT_ENTRY,
-         nil,                       // hints
+         nil,                        // hints
          DBUS_TYPE_UINT32,
-         0                          // TIMEOUT
+         0,                          // TIMEOUT
+         DBUS_TYPE_INVALID
        ]
   );
 
