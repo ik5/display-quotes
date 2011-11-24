@@ -30,8 +30,8 @@ type
     { private declarations }
   public
     { public declarations }
-    QuoteCount : cardinal;
-    Quotes     : TStringList;
+    QuoteCount: cardinal;
+    Quotes: TStringList;
     procedure IterateQuotes;
     procedure LoadQuotes;
   end;
@@ -39,12 +39,13 @@ type
 var
   frmDisplayQuotes: TfrmDisplayQuotes;
 
-ResourceString
-  txtQuoteCount  = '#%d quotes loaded';
+resourcestring
+  txtQuoteCount = '#%d quotes loaded';
   txtQuoteNumber = 'Quote #%d';
 
 implementation
-Uses Clipbrd;
+
+uses Clipbrd;
 
 {$R *.lfm}
 
@@ -63,13 +64,21 @@ end;
 
 procedure TfrmDisplayQuotes.btnRandomQuoteClick(Sender: TObject);
 var
-  Item : Integer;
+  Item: integer;
 begin
-  mmoQuote.Lines.Clear;
+  Screen.Cursor := crHourGlass;
+  Application.ProcessMessages;
+
   Item := Random(QuoteCount);
+  mmoQuote.Lines.BeginUpdate;
+  mmoQuote.Lines.Clear;
   mmoQuote.Lines.Add(Quotes.Strings[Item]);
+  mmoQuote.Lines.EndUpdate;
   cmbxQuotes.ItemIndex := Item;
-  lblQuoteNumber.Caption := Format(txtQuoteNumber, [Item+1]);
+  lblQuoteNumber.Caption := Format(txtQuoteNumber, [Item + 1]);
+
+  Screen.Cursor := crDefault;
+  Application.ProcessMessages;
 end;
 
 procedure TfrmDisplayQuotes.btnCopyToClipboardClick(Sender: TObject);
@@ -84,8 +93,7 @@ begin
   lblQuoteNumber.Caption := Format(txtQuoteNumber, [cmbxQuotes.ItemIndex + 1]);
 end;
 
-procedure TfrmDisplayQuotes.FormClose(Sender: TObject;
-  var CloseAction: TCloseAction);
+procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   FreeAndNil(Quotes);
 end;
@@ -105,8 +113,9 @@ begin
   cmbxQuotes.Items.Assign(Quotes);
   cmbxQuotes.ItemIndex := 0;
   cmbxQuotes.Items.EndUpdate;
-  mmoQuote.Lines.Text := cmbxQuotes.Text;
+  mmoQuote.Lines.Text    := cmbxQuotes.Text;
   lblQuotesCount.Caption := Format(txtQuoteCount, [Quotes.Count]);
+  lblQuoteNumber.Caption := Format(txtQuoteNumber, [1]);
 end;
 
 procedure TfrmDisplayQuotes.IterateQuotes;
