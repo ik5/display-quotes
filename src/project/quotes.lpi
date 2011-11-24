@@ -34,14 +34,14 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="quotes.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="quotes"/>
       </Unit0>
       <Unit1>
-        <Filename Value="untdisplayquotes.pas"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmDisplayQuotes"/>
         <ResourceBaseClass Value="Form"/>
@@ -54,6 +54,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="untSearchDialog"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="../units/untfindquote.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="untFindQuote"/>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -63,7 +68,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../forms"/>
+      <OtherUnitFiles Value="../forms;../units"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
