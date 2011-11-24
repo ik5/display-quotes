@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="8">
+    <Units Count="9">
       <Unit0>
         <Filename Value="quotes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -11,7 +11,7 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="57" Y="10"/>
+        <CursorPos X="71" Y="10"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -21,47 +21,16 @@
         <ComponentName Value="frmDisplayQuotes"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="untDisplayQuotes"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="51"/>
         <CursorPos X="27" Y="53"/>
+        <ComponentState Value="1"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/stdctrls.pp"/>
-        <UnitName Value="StdCtrls"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="377"/>
-        <CursorPos X="14" Y="393"/>
-        <UsageCount Value="10"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
-        <UnitName Value="Clipbrd"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="185"/>
-        <CursorPos X="3" Y="203"/>
-        <UsageCount Value="10"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/lcltype.pp"/>
-        <UnitName Value="LCLType"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2641"/>
-        <CursorPos X="3" Y="2627"/>
-        <UsageCount Value="10"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/include/clipbrd.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit5>
-      <Unit6>
         <Filename Value="../forms/untsearchdialog.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmQuoteSearch"/>
@@ -74,8 +43,8 @@
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-      </Unit6>
-      <Unit7>
+      </Unit2>
+      <Unit3>
         <Filename Value="../units/untfindquote.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="untFindQuote"/>
@@ -83,9 +52,52 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="18" Y="1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../units/untquotedbus.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="untQuoteDBUS"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="26" Y="8"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="377"/>
+        <CursorPos X="14" Y="393"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
+        <UnitName Value="Clipbrd"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="185"/>
+        <CursorPos X="3" Y="203"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/lcltype.pp"/>
+        <UnitName Value="LCLType"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2641"/>
+        <CursorPos X="3" Y="2627"/>
+        <UsageCount Value="10"/>
       </Unit7>
+      <Unit8>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/include/clipbrd.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit8>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
