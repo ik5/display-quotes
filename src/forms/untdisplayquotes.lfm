@@ -202,7 +202,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   end
   object mnuMainMenu: TMainMenu
     left = 264
-    top = 32
+    top = 26
     object mnuFind: TMenuItem
       Action = acFindQuote
       GlyphShowMode = gsmSystem
@@ -210,7 +210,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   end
   object ActionList: TActionList
     left = 448
-    top = 32
+    top = 26
     object acFindQuote: TAction
       Caption = '&Find Quote ...'
       OnExecute = acFindQuoteExecute
