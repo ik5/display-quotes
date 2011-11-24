@@ -30,7 +30,6 @@ type
     { private declarations }
   public
     { public declarations }
-    function Execute : Boolean;
   published
     property CaseSensitive : Boolean read FCase write FCase;
     property Quote : Boolean read FQuote write FQuote;
