@@ -8,7 +8,8 @@ uses
   {.$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, untDisplayQuotes, untSearchDialog, untFindQuote
-  {$IFDEF UNIX}, untQuoteDBUS {$ENDIF}
+  {$IFDEF UNIX}//, untQuoteDBUS
+  {$ENDIF}
   { you can add units after this };
 
 {$R *.res}

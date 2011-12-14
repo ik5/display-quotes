@@ -51,7 +51,7 @@ resourcestring
 
 implementation
 
-uses Clipbrd, untFindQuote {$IFDEF UNIX},untQuoteDBUS{$ENDIF};
+uses Clipbrd, untFindQuote;
 
 {$R *.lfm}
 
