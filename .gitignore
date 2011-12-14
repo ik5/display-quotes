@@ -1,4 +1,7 @@
 src/*/backup/*
 src/*/lib/*
 src/project/quotes
+src/project/gmon.out
+src/project/core
 src/*/*bak
+*~
