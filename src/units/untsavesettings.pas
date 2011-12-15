@@ -7,6 +7,9 @@ interface
 uses
   Classes, SysUtils, jsonConf;
 
+const
+  SettingsFileName = 'settings.json';
+
 type
 
   { TSettings }
@@ -16,7 +19,6 @@ type
     FLastQuote   : Integer;
     FNotifyEvent : Boolean;
     FWindow      : TRect;
-    FFile        : String;
     FConfig      : TJSONConfig;
   public
     constructor Create; virtual;
@@ -33,6 +35,10 @@ var
   ProgramSettings : TSettings;
 
 implementation
+uses FileUtil;
+
+resourcestring
+  errCreateConfigDirectory = 'Unable to create config directory "%s".';
 
 { TSettings }
 
@@ -41,12 +47,19 @@ var
   UserDir : String;
 begin
    UserDir := GetAppConfigDir(False);
+   if not
    if not DirectoryExists(UserDir) then
-     ForceDirectories(UserDir);
+     if not ForceDirectories(UserDir) then
+       raise Exception.CreateFmt(errCreateConfigDirectory, [UserDir]);
+
+  FConfig          := TJSONConfig.Create(nil);
+  FConfig.Filename := UserDir + SettingsFileName;;
 end;
 
 destructor TSettings.Destroy;
 begin
+  FConfig.Flush;
+  FreeAndNil(FConfig);
   inherited Destroy;
 end;
 
