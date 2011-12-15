@@ -30,6 +30,7 @@ type
     { private declarations }
   public
     { public declarations }
+    function Execute : Boolean;
   published
     property CaseSensitive : Boolean read FCase write FCase;
     property Quote : Boolean read FQuote write FQuote;
@@ -58,6 +59,11 @@ end;
 procedure TfrmQuoteSearch.rdQuoteChange(Sender: TObject);
 begin
   FQuote := TRadioButton(Sender).Tag = 2;
+end;
+
+function TfrmQuoteSearch.Execute: Boolean;
+begin
+  Result := not self.ShowModal in [mrAbort, mrCancel, mrNo, mrNoToAll];
 end;
 
 end.
