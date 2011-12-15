@@ -36,7 +36,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object lblQuoteNumber: TLabel
     Left = 6
     Height = 21
-    Top = 26
+    Top = 33
     Width = 130
     Caption = 'lblQuoteNumber'
     ParentColor = False
@@ -244,11 +244,12 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object btnReloadQuotes: TSpeedButton
     Left = 601
     Height = 25
-    Top = 26
+    Top = 29
     Width = 23
     Action = acReloadQuotes
     Anchors = [akTop, akRight]
     AutoSize = True
+    Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
@@ -293,11 +294,12 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object btnCopy: TSpeedButton
     Left = 628
     Height = 25
-    Top = 26
+    Top = 29
     Width = 23
     Action = acCopyToClipboard
     Anchors = [akTop, akRight]
     AutoSize = True
+    Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000000000000000
@@ -342,11 +344,12 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object btnFindQuote: TSpeedButton
     Left = 655
     Height = 25
-    Top = 26
+    Top = 29
     Width = 23
     Action = acFindQuote
     Anchors = [akTop, akRight]
     AutoSize = True
+    Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
@@ -391,11 +394,12 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object btnRandom: TSpeedButton
     Left = 682
     Height = 25
-    Top = 26
+    Top = 29
     Width = 23
     Action = acRandomQuote
     Anchors = [akTop, akRight]
     AutoSize = True
+    Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
@@ -539,6 +543,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       Checked = True
       DisableIfNoHandler = False
       Hint = 'Display Notification for the new quote'
+      ShortCut = 16462
     end
     object acQuite: TAction
       Caption = '&Quite'
