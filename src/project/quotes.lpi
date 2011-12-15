@@ -72,7 +72,7 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="quote"/>
+      <Filename Value="quotes"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>

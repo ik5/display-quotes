@@ -16,17 +16,17 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   Position = poDesktopCenter
   LCLVersion = '0.9.31'
   object mmoQuote: TMemo
-    Left = 9
+    Left = 6
     Height = 205
     Top = 57
-    Width = 696
+    Width = 699
     Anchors = [akTop, akLeft, akRight, akBottom]
     ReadOnly = True
     ScrollBars = ssAutoBoth
     TabOrder = 0
   end
   object lblQuotesCount: TLabel
-    Left = 9
+    Left = 6
     Height = 21
     Top = 0
     Width = 121
@@ -34,7 +34,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentColor = False
   end
   object lblQuoteNumber: TLabel
-    Left = 9
+    Left = 6
     Height = 21
     Top = 26
     Width = 130
@@ -47,6 +47,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Top = 0
     Width = 23
     Action = acFirstQuote
+    Anchors = [akTop, akRight]
     AutoSize = True
     Flat = True
     Glyph.Data = {
@@ -96,6 +97,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Top = 0
     Width = 23
     Action = acPrevQuote
+    Anchors = [akTop, akRight]
     AutoSize = True
     Flat = True
     Glyph.Data = {
@@ -245,6 +247,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Top = 26
     Width = 23
     Action = acReloadQuotes
+    Anchors = [akTop, akRight]
     AutoSize = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
@@ -293,6 +296,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Top = 26
     Width = 23
     Action = acCopyToClipboard
+    Anchors = [akTop, akRight]
     AutoSize = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
@@ -434,7 +438,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object chkNotify: TCheckBox
-    Left = 9
+    Left = 6
     Height = 24
     Top = 268
     Width = 119
@@ -460,7 +464,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     TabOrder = 2
   end
   object ActionList: TActionList
-    Images = ImageList1
+    Images = ImageList
     left = 152
     object acFindQuote: TAction
       Caption = '&Find Quote ...'
@@ -544,7 +548,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ShortCut = 32883
     end
   end
-  object ImageList1: TImageList
+  object ImageList: TImageList
     left = 216
     Bitmap = {
       4C69090000001000000010000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF

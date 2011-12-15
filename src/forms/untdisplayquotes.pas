@@ -27,7 +27,7 @@ type
     ActionList: TActionList;
     btnQuite: TBitBtn;
     chkNotify: TCheckBox;
-    ImageList1: TImageList;
+    ImageList: TImageList;
     lblQuoteNumber: TLabel;
     lblQuotesCount: TLabel;
     mmoQuote: TMemo;
@@ -63,7 +63,7 @@ var
 
 resourcestring
   txtQuoteCount = '#%d quotes loaded';
-  txtQuoteNumber = 'Quote #%d';
+  txtQuoteNumber = '#%d quote';
 
 implementation
 
