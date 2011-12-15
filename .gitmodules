@@ -1,0 +1,3 @@
+[submodule "src/libnotify"]
+	path = src/libnotify
+	url = git@github.com:ik5/libnotify-fpc.git
