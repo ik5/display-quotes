@@ -538,20 +538,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       Hint = 'Display Notification for the new quote'
       ShortCut = 32846
     end
-    object acQuite: TAction
-      Caption = '&Quite'
-      Hint = 'Quite Program'
-      ImageIndex = 8
-      OnExecute = acQuiteExecute
-      ShortCut = 32883
-    end
-    object acSaveSettings: TAction
-      Caption = 'Sa&ve Settings'
-      Hint = 'Save Settings'
-      ImageIndex = 9
-      OnExecute = acSaveSettingsExecute
-      ShortCut = 16467
-    end
   end
   object ImageList: TImageList
     left = 536
