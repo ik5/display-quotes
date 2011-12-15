@@ -23,7 +23,6 @@ type
   public
     constructor Create;     virtual;
     destructor Destroy;     override;
-    procedure LoadFile;     virtual;
     procedure WriteFile;    virtual;
   published
     property LastQuote   : Integer read FLastQuote   write FLastQuote;
@@ -61,11 +60,6 @@ begin
   FConfig.Flush;
   FreeAndNil(FConfig);
   inherited Destroy;
-end;
-
-procedure TSettings.LoadFile;
-begin
-
 end;
 
 procedure TSettings.WriteFile;
