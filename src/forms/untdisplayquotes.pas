@@ -24,7 +24,9 @@ type
     acRandomQuote: TAction;
     acNotifyQuote: TAction;
     acQuite: TAction;
+    acSaveSettings: TAction;
     ActionList: TActionList;
+    btnSaveSettings: TBitBtn;
     btnQuite: TBitBtn;
     chkNotify: TCheckBox;
     ImageList: TImageList;
@@ -43,6 +45,7 @@ type
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
     procedure acQuiteExecute(Sender: TObject);
+    procedure acSaveSettingsExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
@@ -122,6 +125,11 @@ end;
 procedure TfrmDisplayQuotes.acQuiteExecute(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TfrmDisplayQuotes.acSaveSettingsExecute(Sender: TObject);
+begin
+
 end;
 
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
