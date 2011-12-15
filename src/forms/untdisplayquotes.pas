@@ -146,9 +146,10 @@ end;
 procedure TfrmDisplayQuotes.LoadQuotes;
 begin
   mmoQuote.Lines.Clear;
+  Quotes.Clear;
   IterateQuotes;
   ChangeQuote(0);
-  lblQuotesCount.Caption := Format(txtQuoteCount, [Quotes.Count]);
+  lblQuotesCount.Caption := Format(txtQuoteCount, [QuoteCount]);
 end;
 
 procedure TfrmDisplayQuotes.ChangeQuote(index: Integer);
