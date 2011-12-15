@@ -21,10 +21,10 @@ type
     FWindow      : TRect;
     FConfig      : TJSONConfig;
   public
-    constructor Create; virtual;
-    destructor Destroy; override;
-    procedure Save;     virtual;
-    procedure Write;    virtual;
+    constructor Create;     virtual;
+    destructor Destroy;     override;
+    procedure LoadFile;     virtual;
+    procedure WriteFile;    virtual;
   published
     property LastQuote   : Integer read FLastQuote   write FLastQuote;
     property NotifyEvent : Boolean read FNotifyEvent write FNotifyEvent;
@@ -63,12 +63,12 @@ begin
   inherited Destroy;
 end;
 
-procedure TSettings.Save;
+procedure TSettings.LoadFile;
 begin
 
 end;
 
-procedure TSettings.Write;
+procedure TSettings.WriteFile;
 begin
 
 end;
