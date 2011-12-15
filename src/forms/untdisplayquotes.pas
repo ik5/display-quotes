@@ -41,7 +41,6 @@ type
     procedure acNextQuoteExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    procedure mnuFindQuoteClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -119,11 +118,6 @@ procedure TfrmDisplayQuotes.FormCreate(Sender: TObject);
 begin
   Quotes := TStringList.Create;
   LoadQuotes;
-end;
-
-procedure TfrmDisplayQuotes.mnuFindQuoteClick(Sender: TObject);
-begin
-
 end;
 
 procedure TfrmDisplayQuotes.LoadQuotes;

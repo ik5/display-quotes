@@ -432,7 +432,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     top = 26
     object mnuFindQuote: TMenuItem
       Action = acFindQuote
-      OnClick = mnuFindQuoteClick
+      OnClick = acFindQuoteExecute
     end
   end
   object ImageList1: TImageList
