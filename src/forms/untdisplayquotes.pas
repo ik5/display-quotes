@@ -26,13 +26,10 @@ type
     acQuite: TAction;
     acSaveSettings: TAction;
     ActionList: TActionList;
-    btnSaveSettings: TBitBtn;
-    btnQuite: TBitBtn;
     chkNotify: TCheckBox;
     ImageList: TImageList;
     lblQuoteNumber: TLabel;
     lblQuotesCount: TLabel;
-    mmoQuote: TMemo;
     btnFirst: TSpeedButton;
     btnPrev: TSpeedButton;
     btnNext: TSpeedButton;
@@ -41,6 +38,7 @@ type
     btnCopy: TSpeedButton;
     btnFindQuote: TSpeedButton;
     btnRandom: TSpeedButton;
+    mmoQuote: TMemo;
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
