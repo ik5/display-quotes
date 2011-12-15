@@ -38,7 +38,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="6">
       <Unit0>
         <Filename Value="quotes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -59,14 +59,21 @@
       <Unit3>
         <Filename Value="../forms/untsearchdialog.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmQuoteSearch"/>
         <HasResources Value="True"/>
-        <UnitName Value="untsearchdialog"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untSearchDialog"/>
       </Unit3>
       <Unit4>
         <Filename Value="../units/untgtknotify.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="untgtknotify"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="../units/untsavesettings.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="untSaveSettings"/>
+      </Unit5>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
