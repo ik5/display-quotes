@@ -378,32 +378,37 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ShortCut = 16454
     end
     object acNextQuote: TAction
+      Tag = 1
       Caption = '&Next Quote'
       ImageIndex = 1
       OnExecute = acNextQuoteExecute
       ShortCut = 16423
     end
     object acPrevQuote: TAction
+      Tag = 2
       Caption = '&Prev Quote'
       ImageIndex = 0
-      OnExecute = acPrevQuoteExecute
+      OnExecute = acNextQuoteExecute
       ShortCut = 16421
     end
     object acFirstQuote: TAction
+      Tag = 3
       Caption = 'First Quote'
       ImageIndex = 3
-      OnExecute = acFirstQuoteExecute
+      OnExecute = acNextQuoteExecute
       ShortCut = 16420
     end
     object acLastQuote: TAction
+      Tag = 4
       Caption = 'Last Quote'
       ImageIndex = 4
-      OnExecute = acLastQuoteExecute
+      OnExecute = acNextQuoteExecute
       ShortCut = 16419
     end
     object acChangeQuote: TAction
+      Tag = 5
       Caption = 'Change Quote'
-      OnExecute = acChangeQuoteExecute
+      OnExecute = acNextQuoteExecute
     end
   end
   object MainMenu: TMainMenu

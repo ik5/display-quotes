@@ -35,10 +35,7 @@ type
     mmoQuote: TMemo;
     procedure acChangeQuoteExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
-    procedure acFirstQuoteExecute(Sender: TObject);
-    procedure acLastQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
-    procedure acPrevQuoteExecute(Sender: TObject);
     procedure btnCopyToClipboardClick(Sender: TObject);
     procedure btnRandomQuoteClick(Sender: TObject);
     procedure btnReloadQuotesClick(Sender: TObject);
@@ -55,6 +52,7 @@ type
     procedure IterateQuotes;
     procedure LoadQuotes;
     procedure ChangeQuote(index : Integer);
+    procedure ChangeCursor(Busy : Boolean = true); inline;
   end;
 
 var
@@ -92,14 +90,12 @@ procedure TfrmDisplayQuotes.btnRandomQuoteClick(Sender: TObject);
 var
   Item: integer;
 begin
-  Screen.Cursor := crHourGlass;
-  Application.ProcessMessages;
+  ChangeCursor;
 
   Item := Random(QuoteCount);
   ChangeQuote(Item);
 
-  Screen.Cursor := crDefault;
-  Application.ProcessMessages;
+  ChangeCursor(false);
 end;
 
 procedure TfrmDisplayQuotes.btnCopyToClipboardClick(Sender: TObject);
@@ -107,34 +103,28 @@ begin
   Clipboard.AsText := mmoQuote.Lines.Text;
 end;
 
-procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
-begin
-  //
-end;
-
 procedure TfrmDisplayQuotes.acChangeQuoteExecute(Sender: TObject);
 begin
 
 end;
 
-procedure TfrmDisplayQuotes.acFirstQuoteExecute(Sender: TObject);
+procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
 begin
-  ChangeQuote(0);
-end;
-
-procedure TfrmDisplayQuotes.acLastQuoteExecute(Sender: TObject);
-begin
-  ChangeQuote(QuoteCount -1);
+  //
 end;
 
 procedure TfrmDisplayQuotes.acNextQuoteExecute(Sender: TObject);
 begin
-  ChangeQuote(QuoteNum +1);
-end;
+  ChangeCursor;
+  case TAction(Sender).Tag of
+    1 : ChangeQuote(QuoteNum +1);
+    2 : ChangeQuote(QuoteNum -1);
+    3 : ChangeQuote(0);
+    4 : ChangeQuote(QuoteCount -1);
+    5 : ;
+  end;
 
-procedure TfrmDisplayQuotes.acPrevQuoteExecute(Sender: TObject);
-begin
-  ChangeQuote(QuoteNum -1);
+  ChangeCursor(false);
 end;
 
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -177,9 +167,17 @@ begin
   acNextQuote.Enabled    := index < (QuoteCount -1);
   acLastQuote.Enabled    := index < (QuoteCount -1);
   Application.ProcessMessages;
+
   {$IFDEF UNIX}
   NotifyQuote(AQuote);
   {$ENDIF}
+end;
+
+procedure TfrmDisplayQuotes.ChangeCursor(Busy : Boolean = true);
+const CursorImage : array[Boolean] of TCursor = (crDefault, crHourGlass);
+begin
+   Screen.Cursor := CursorImage[Busy];
+  Application.ProcessMessages;
 end;
 
 procedure TfrmDisplayQuotes.IterateQuotes;
