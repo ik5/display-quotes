@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, Buttons, Menus, ActnList, Spin;
+  StdCtrls, Buttons, Menus, ActnList;
 
 type
 
@@ -22,28 +22,29 @@ type
     acReloadQuotes: TAction;
     acCopyToClipboard: TAction;
     acRandomQuote: TAction;
+    acNotifyQuote: TAction;
+    acQuite: TAction;
     ActionList: TActionList;
-    btnNextQuote: TBitBtn;
-    btnLastQuote: TBitBtn;
-    btnPrevQuote: TBitBtn;
-    btnFirstQuote: TBitBtn;
-    btnCopyToClipBoard: TBitBtn;
-    btnRandomQuote: TBitBtn;
-    btnReloadQuotes: TBitBtn;
+    btnQuite: TBitBtn;
+    chkNotify: TCheckBox;
     ImageList1: TImageList;
-    lblGotoQuote: TLabel;
     lblQuoteNumber: TLabel;
     lblQuotesCount: TLabel;
-    MainMenu: TMainMenu;
-    mnuFindQuote: TMenuItem;
     mmoQuote: TMemo;
-    spnedtGoto: TSpinEdit;
+    btnFirst: TSpeedButton;
+    btnPrev: TSpeedButton;
+    btnNext: TSpeedButton;
+    btnLast: TSpeedButton;
+    btnReloadQuotes: TSpeedButton;
+    btnCopy: TSpeedButton;
+    btnFindQuote: TSpeedButton;
+    btnRandom: TSpeedButton;
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
+    procedure acQuiteExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    procedure spnedtGotoChange(Sender: TObject);
   private
     { private declarations }
   public
@@ -103,7 +104,7 @@ begin
     2 : Item := QuoteNum -1;
     3 : Item := 0;
     4 : Item := QuoteCount -1;
-    5 : Item := spnedtGoto.Value -1;
+    5 : ;
     6 : begin
           Item := -1;
           LoadQuotes;
@@ -118,6 +119,11 @@ begin
   ChangeCursor(false);
 end;
 
+procedure TfrmDisplayQuotes.acQuiteExecute(Sender: TObject);
+begin
+  Close;
+end;
+
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   FreeAndNil(Quotes);
@@ -129,19 +135,12 @@ begin
   LoadQuotes;
 end;
 
-procedure TfrmDisplayQuotes.spnedtGotoChange(Sender: TObject);
-begin
-  acNextQuoteExecute(acChangeQuote);
-end;
-
-
 procedure TfrmDisplayQuotes.LoadQuotes;
 begin
   mmoQuote.Lines.Clear;
   IterateQuotes;
   ChangeQuote(0);
   lblQuotesCount.Caption := Format(txtQuoteCount, [Quotes.Count]);
-  spnedtGoto.MaxValue := QuoteCount;
 end;
 
 procedure TfrmDisplayQuotes.ChangeQuote(index: Integer);
@@ -162,7 +161,8 @@ begin
   Application.ProcessMessages;
 
   {$IFDEF UNIX}
-  NotifyQuote(AQuote);
+  if chkNotify.Checked then
+    NotifyQuote(AQuote);
   {$ENDIF}
 end;
 
