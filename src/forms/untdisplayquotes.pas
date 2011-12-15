@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, Buttons, Menus, ActnList;
+  StdCtrls, Buttons, Menus, ActnList, Spin;
 
 type
 
@@ -31,16 +31,19 @@ type
     btnRandomQuote: TBitBtn;
     btnReloadQuotes: TBitBtn;
     ImageList1: TImageList;
+    lblGotoQuote: TLabel;
     lblQuoteNumber: TLabel;
     lblQuotesCount: TLabel;
     MainMenu: TMainMenu;
     mnuFindQuote: TMenuItem;
     mmoQuote: TMemo;
+    spnedtGoto: TSpinEdit;
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure spnedtGotoChange(Sender: TObject);
   private
     { private declarations }
   public
@@ -63,7 +66,7 @@ resourcestring
 
 implementation
 
-uses Clipbrd, untFindQuote
+uses Clipbrd, untFindQuote, untSearchDialog
 {$IFDEF UNIX}
   {$IFDEF LCLGTK2}
     , untGTKNotify
@@ -81,7 +84,13 @@ end;
 
 procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
 begin
-  //
+  frmQuoteSearch := TfrmQuoteSearch.Create(self);
+  if frmQuoteSearch.Execute then
+   begin
+
+   end;
+
+  FreeAndNil(frmQuoteSearch);
 end;
 
 procedure TfrmDisplayQuotes.acNextQuoteExecute(Sender: TObject);
@@ -94,7 +103,7 @@ begin
     2 : Item := QuoteNum -1;
     3 : Item := 0;
     4 : Item := QuoteCount -1;
-    5 : ;
+    5 : Item := spnedtGoto.Value -1;
     6 : begin
           Item := -1;
           LoadQuotes;
@@ -120,12 +129,19 @@ begin
   LoadQuotes;
 end;
 
+procedure TfrmDisplayQuotes.spnedtGotoChange(Sender: TObject);
+begin
+  acNextQuoteExecute(acChangeQuote);
+end;
+
+
 procedure TfrmDisplayQuotes.LoadQuotes;
 begin
   mmoQuote.Lines.Clear;
   IterateQuotes;
   ChangeQuote(0);
   lblQuotesCount.Caption := Format(txtQuoteCount, [Quotes.Count]);
+  spnedtGoto.MaxValue := QuoteCount;
 end;
 
 procedure TfrmDisplayQuotes.ChangeQuote(index: Integer);

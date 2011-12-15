@@ -364,9 +364,32 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     GlyphShowMode = gsmSystem
     TabOrder = 7
   end
+  object spnedtGoto: TSpinEdit
+    Tag = 5
+    Left = 303
+    Height = 28
+    Top = 3
+    Width = 102
+    Anchors = [akTop, akLeft, akRight]
+    MinValue = 1
+    OnChange = spnedtGotoChange
+    TabOrder = 8
+    Value = 1
+  end
+  object lblGotoQuote: TLabel
+    Left = 303
+    Height = 21
+    Top = 37
+    Width = 102
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    Caption = '&GoTo Quote'
+    FocusControl = spnedtGoto
+    ParentColor = False
+  end
   object ActionList: TActionList
     Images = ImageList1
-    left = 448
+    left = 112
     top = 26
     object acFindQuote: TAction
       Caption = '&Find Quote ...'
@@ -428,15 +451,15 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     end
   end
   object MainMenu: TMainMenu
-    left = 306
+    left = 224
     top = 26
     object mnuFindQuote: TMenuItem
       Action = acFindQuote
-      OnClick = acFindQuoteExecute
+      GlyphShowMode = gsmSystem
     end
   end
   object ImageList1: TImageList
-    left = 200
+    left = 152
     top = 26
     Bitmap = {
       4C69080000001000000010000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
