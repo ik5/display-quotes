@@ -8,6 +8,9 @@
       <Title Value="Display Quotes"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
       <Icon Value="0"/>
     </General>
     <i18n>
@@ -30,10 +33,13 @@
         <LaunchingApplication PathPlusParams="/usr/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="1">
+    <RequiredPackages Count="2">
       <Item1>
-        <PackageName Value="LCL"/>
+        <PackageName Value="jujiboutils"/>
       </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
     </RequiredPackages>
     <Units Count="6">
       <Unit0>
@@ -95,6 +101,7 @@
         <UseHeaptrc Value="True"/>
         <UseValgrind Value="True"/>
         <GenGProfCode Value="True"/>
+        <UseExternalDbgSyms Value="True"/>
       </Debugging>
     </Linking>
     <Other>

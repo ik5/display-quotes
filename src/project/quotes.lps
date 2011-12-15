@@ -11,8 +11,8 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="16" Y="12"/>
-        <UsageCount Value="38"/>
+        <CursorPos X="57" Y="10"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -24,9 +24,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="127"/>
-        <CursorPos X="16" Y="127"/>
-        <UsageCount Value="38"/>
+        <TopLine Value="118"/>
+        <CursorPos X="87" Y="135"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -40,8 +40,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="21" Y="1"/>
-        <ComponentState Value="1"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -53,207 +52,10 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
-        <Filename Value="../units/untquotedbus.pas"/>
-        <UnitName Value="untQuoteDBUS"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="90"/>
-        <CursorPos X="25" Y="92"/>
-        <UsageCount Value="32"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/stdctrls.pp"/>
-        <UnitName Value="StdCtrls"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="377"/>
-        <CursorPos X="14" Y="393"/>
-        <UsageCount Value="10"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
-        <UnitName Value="Clipbrd"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="185"/>
-        <CursorPos X="3" Y="203"/>
-        <UsageCount Value="10"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/lcltype.pp"/>
-        <UnitName Value="LCLType"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2641"/>
-        <CursorPos X="3" Y="2627"/>
-        <UsageCount Value="10"/>
-      </Unit7>
-      <Unit8>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/include/clipbrd.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit8>
-      <Unit9>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus.pas"/>
-        <UnitName Value="dbus"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="45"/>
-        <CursorPos X="18" Y="76"/>
-        <UsageCount Value="12"/>
-      </Unit9>
-      <Unit10>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-macros.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="32"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit10>
-      <Unit11>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-arch-deps.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="14"/>
-        <CursorPos X="3" Y="39"/>
-        <UsageCount Value="10"/>
-      </Unit11>
-      <Unit12>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-types.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="15"/>
-        <CursorPos X="25" Y="31"/>
-        <UsageCount Value="12"/>
-      </Unit12>
-      <Unit13>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-errors.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="23"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit13>
-      <Unit14>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-address.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit14>
-      <Unit15>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-message.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="42"/>
-        <CursorPos X="40" Y="60"/>
-        <UsageCount Value="12"/>
-      </Unit15>
-      <Unit16>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-connection.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="161"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit16>
-      <Unit17>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-bus.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit17>
-      <Unit18>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-pending-call.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit18>
-      <Unit19>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-protocol.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="232"/>
-        <CursorPos X="3" Y="263"/>
-        <UsageCount Value="10"/>
-      </Unit19>
-      <Unit20>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-server.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit20>
-      <Unit21>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-signature.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit21>
-      <Unit22>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-threads.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit22>
-      <Unit23>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-misc.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit23>
-      <Unit24>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/examples/busexample.pp"/>
-        <UnitName Value="busexample"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="30"/>
-        <CursorPos X="31" Y="35"/>
-        <UsageCount Value="10"/>
-      </Unit24>
-      <Unit25>
-        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-shared.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="60"/>
-        <CursorPos X="70" Y="67"/>
-        <UsageCount Value="10"/>
-      </Unit25>
-      <Unit26>
-        <Filename Value="../../../../foss/fpc/fpc26/rtl/unix/aliasctp.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="17"/>
-        <CursorPos X="38" Y="33"/>
-        <UsageCount Value="10"/>
-      </Unit26>
-      <Unit27>
-        <Filename Value="../../../../foss/fpc/fpc26/rtl/unix/ctypes.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="20"/>
-        <CursorPos X="3" Y="36"/>
-        <UsageCount Value="10"/>
-      </Unit27>
-      <Unit28>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/forms.pp"/>
-        <UnitName Value="Forms"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1483"/>
-        <CursorPos X="14" Y="1499"/>
-        <UsageCount Value="10"/>
-      </Unit28>
-      <Unit29>
-        <Filename Value="../../../../foss/fpc/fpc26/rtl/inc/heaph.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="68"/>
-        <CursorPos X="10" Y="89"/>
-        <UsageCount Value="10"/>
-      </Unit29>
-      <Unit30>
-        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/customdrawn/customdrawnextras.pas"/>
-        <UnitName Value="customdrawnextras"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="171"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit30>
-      <Unit31>
         <Filename Value="../units/untgtknotify.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="untGTKNotify"/>
@@ -261,104 +63,337 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="54" Y="7"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
-      </Unit31>
-      <Unit32>
+      </Unit4>
+      <Unit5>
         <Filename Value="../libnotify/src/libnotify.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="libnotify"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../units/untquotedbus.pas"/>
+        <UnitName Value="untQuoteDBUS"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="90"/>
+        <CursorPos X="25" Y="92"/>
+        <UsageCount Value="32"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="377"/>
+        <CursorPos X="14" Y="393"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/clipbrd.pp"/>
+        <UnitName Value="Clipbrd"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="185"/>
+        <CursorPos X="3" Y="203"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/lcltype.pp"/>
+        <UnitName Value="LCLType"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2641"/>
+        <CursorPos X="3" Y="2627"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/include/clipbrd.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus.pas"/>
+        <UnitName Value="dbus"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="45"/>
+        <CursorPos X="18" Y="76"/>
+        <UsageCount Value="12"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-macros.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="32"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-arch-deps.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="14"/>
+        <CursorPos X="3" Y="39"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-types.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="15"/>
+        <CursorPos X="25" Y="31"/>
+        <UsageCount Value="12"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-errors.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="23"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-address.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-message.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="40" Y="60"/>
+        <UsageCount Value="12"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-connection.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="161"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-bus.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-pending-call.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-protocol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="232"/>
+        <CursorPos X="3" Y="263"/>
+        <UsageCount Value="10"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-server.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-signature.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-threads.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-misc.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/examples/busexample.pp"/>
+        <UnitName Value="busexample"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="30"/>
+        <CursorPos X="31" Y="35"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="../../../../foss/fpc/fpc26/packages/dbus/src/dbus-shared.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="60"/>
+        <CursorPos X="70" Y="67"/>
+        <UsageCount Value="10"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="../../../../foss/fpc/fpc26/rtl/unix/aliasctp.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="17"/>
+        <CursorPos X="38" Y="33"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="../../../../foss/fpc/fpc26/rtl/unix/ctypes.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="20"/>
+        <CursorPos X="3" Y="36"/>
+        <UsageCount Value="10"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1483"/>
+        <CursorPos X="14" Y="1499"/>
+        <UsageCount Value="10"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="../../../../foss/fpc/fpc26/rtl/inc/heaph.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="68"/>
+        <CursorPos X="10" Y="89"/>
+        <UsageCount Value="10"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/customdrawn/customdrawnextras.pas"/>
+        <UnitName Value="customdrawnextras"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="171"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
       </Unit32>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="21" HistoryIndex="20">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="135" Column="1" TopLine="117"/>
+        <Caret Line="144" Column="31" TopLine="137"/>
       </Position1>
       <Position2>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="136" Column="1" TopLine="118"/>
+        <Caret Line="145" Column="31" TopLine="138"/>
       </Position2>
       <Position3>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="135" Column="1" TopLine="117"/>
+        <Caret Line="146" Column="31" TopLine="139"/>
       </Position3>
       <Position4>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="132" Column="43" TopLine="117"/>
+        <Caret Line="147" Column="31" TopLine="140"/>
       </Position4>
       <Position5>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="54" Column="27" TopLine="52"/>
+        <Caret Line="148" Column="31" TopLine="141"/>
       </Position5>
       <Position6>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="41" Column="25" TopLine="25"/>
+        <Caret Line="149" Column="31" TopLine="142"/>
       </Position6>
       <Position7>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="60" Column="44" TopLine="34"/>
+        <Caret Line="156" Column="31" TopLine="149"/>
       </Position7>
       <Position8>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="65" Column="13" TopLine="39"/>
+        <Caret Line="109" Column="18" TopLine="95"/>
       </Position8>
       <Position9>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="108" Column="13" TopLine="82"/>
+        <Caret Line="111" Column="1" TopLine="98"/>
       </Position9>
       <Position10>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="92" Column="1" TopLine="61"/>
+        <Caret Line="132" Column="1" TopLine="115"/>
       </Position10>
       <Position11>
-        <Filename Value="../units/untgtknotify.pas"/>
-        <Caret Line="10" Column="40" TopLine="1"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="145" Column="1" TopLine="129"/>
       </Position11>
       <Position12>
         <Filename Value="quotes.lpr"/>
-        <Caret Line="15" Column="13" TopLine="9"/>
+        <Caret Line="12" Column="16" TopLine="1"/>
       </Position12>
       <Position13>
-        <Filename Value="quotes.lpr"/>
-        <Caret Line="10" Column="57" TopLine="1"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="37" Column="1" TopLine="21"/>
       </Position13>
       <Position14>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="140" Column="16" TopLine="124"/>
+        <Caret Line="36" Column="1" TopLine="21"/>
       </Position14>
       <Position15>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="57" Column="7" TopLine="49"/>
+        <Caret Line="9" Column="47" TopLine="1"/>
       </Position15>
       <Position16>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="140" Column="16" TopLine="52"/>
+        <Caret Line="148" Column="48" TopLine="136"/>
       </Position16>
       <Position17>
-        <Filename Value="../units/untgtknotify.pas"/>
-        <Caret Line="7" Column="22" TopLine="1"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="155" Column="48" TopLine="143"/>
       </Position17>
       <Position18>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="56" Column="14" TopLine="52"/>
+        <Caret Line="48" Column="17" TopLine="42"/>
       </Position18>
       <Position19>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="55" Column="14" TopLine="51"/>
+        <Caret Line="55" Column="35" TopLine="77"/>
       </Position19>
       <Position20>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="54" Column="14" TopLine="50"/>
+        <Caret Line="57" Column="35" TopLine="57"/>
       </Position20>
       <Position21>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="55" Column="14" TopLine="51"/>
+        <Caret Line="118" Column="26" TopLine="116"/>
       </Position21>
+      <Position22>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="119" Column="26" TopLine="117"/>
+      </Position22>
+      <Position23>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="120" Column="26" TopLine="118"/>
+      </Position23>
+      <Position24>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="119" Column="26" TopLine="117"/>
+      </Position24>
+      <Position25>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="120" Column="26" TopLine="118"/>
+      </Position25>
+      <Position26>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="127" Column="26" TopLine="125"/>
+      </Position26>
+      <Position27>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="174" Column="34" TopLine="148"/>
+      </Position27>
+      <Position28>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="9" Column="37" TopLine="1"/>
+      </Position28>
+      <Position29>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="117" Column="1" TopLine="100"/>
+      </Position29>
+      <Position30>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="178" Column="52" TopLine="170"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
