@@ -9,6 +9,7 @@ uses
 
 const
   SettingsFileName = 'settings.json';
+  DefaultDirName   = 'display_quotes';
 
 type
 
@@ -24,6 +25,8 @@ type
     FConfig      : TJSONConfig;
     FTop         : Integer;
     FWidth       : Integer;
+
+    function GetAppConfigDir : String;
   public
     constructor Create;     virtual;
     destructor Destroy;     override;
@@ -56,11 +59,19 @@ const
 
 { TSettings }
 
+// Small hack for having the proper directory name
+function TSettings.GetAppConfigDir : String;
+begin
+  Result := StringReplace(SysUtils.GetAppConfigDir(False),
+              Application.Title, DefaultDirName,
+              [rfReplaceAll, rfIgnoreCase]);
+end;
+
 constructor TSettings.Create;
 var
   UserDir : String;
 begin
-   UserDir := GetAppConfigDir(False);
+   UserDir := self.GetAppConfigDir;
    if not DirectoryExists(UserDir) then
      if not ForceDirectories(UserDir) then
        raise Exception.CreateFmt(errCreateConfigDirectory, [UserDir]);
