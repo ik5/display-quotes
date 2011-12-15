@@ -31,8 +31,8 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Height = 30
     Top = 275
     Width = 175
+    Action = acReloadQuotes
     Anchors = [akLeft, akBottom]
-    Caption = 'Reload Quotes'
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
@@ -70,7 +70,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       16C900500085004D0024FFFFFF00FFFFFF00004D001C004D0020
     }
     GlyphShowMode = gsmSystem
-    OnClick = btnReloadQuotesClick
     TabOrder = 3
   end
   object btnCopyToClipBoard: TBitBtn
@@ -78,8 +77,8 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Height = 30
     Top = 275
     Width = 203
+    Action = acCopyToClipboard
     Anchors = [akLeft, akRight, akBottom]
-    Caption = 'Copy To Clipboard'
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000000000000000
@@ -117,7 +116,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       004C0000004B0000001200000000000000000000000000000000
     }
     GlyphShowMode = gsmSystem
-    OnClick = btnCopyToClipboardClick
     TabOrder = 2
   end
   object btnRandomQuote: TBitBtn
@@ -125,8 +123,8 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Height = 30
     Top = 275
     Width = 177
+    Action = acRandomQuote
     Anchors = [akRight, akBottom]
-    Caption = 'Random Quote'
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
@@ -164,7 +162,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       FF00FFFFFF00FFFFFF00FFFFFF00006D8F1B14323C98FFFFFF00
     }
     GlyphShowMode = gsmSystem
-    OnClick = btnRandomQuoteClick
     TabOrder = 1
   end
   object lblQuotesCount: TLabel
@@ -409,6 +406,25 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       Tag = 5
       Caption = 'Change Quote'
       OnExecute = acNextQuoteExecute
+    end
+    object acReloadQuotes: TAction
+      Tag = 6
+      Caption = 'Reload Quotes'
+      ImageIndex = 2
+      OnExecute = acNextQuoteExecute
+      ShortCut = 116
+    end
+    object acCopyToClipboard: TAction
+      Caption = 'Copy To Clipboard'
+      ImageIndex = 6
+      OnExecute = acCopyToClipboardExecute
+      ShortCut = 16451
+    end
+    object acRandomQuote: TAction
+      Tag = 7
+      Caption = 'Random Quote'
+      OnExecute = acNextQuoteExecute
+      ShortCut = 16466
     end
   end
   object MainMenu: TMainMenu

@@ -19,6 +19,9 @@ type
     acFirstQuote: TAction;
     acLastQuote: TAction;
     acChangeQuote: TAction;
+    acReloadQuotes: TAction;
+    acCopyToClipboard: TAction;
+    acRandomQuote: TAction;
     ActionList: TActionList;
     btnNextQuote: TBitBtn;
     btnLastQuote: TBitBtn;
@@ -34,11 +37,9 @@ type
     mnuFindQuote: TMenuItem;
     mmoQuote: TMemo;
     procedure acChangeQuoteExecute(Sender: TObject);
+    procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
-    procedure btnCopyToClipboardClick(Sender: TObject);
-    procedure btnRandomQuoteClick(Sender: TObject);
-    procedure btnReloadQuotesClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure mnuFindQuoteClick(Sender: TObject);
@@ -75,37 +76,14 @@ uses Clipbrd, untFindQuote
 
 { TfrmDisplayQuotes }
 
-procedure TfrmDisplayQuotes.btnReloadQuotesClick(Sender: TObject);
-begin
-  Screen.Cursor := crHourGlass;
-  Application.ProcessMessages;
-
-  LoadQuotes;
-
-  Screen.Cursor := crDefault;
-  Application.ProcessMessages;
-end;
-
-procedure TfrmDisplayQuotes.btnRandomQuoteClick(Sender: TObject);
-var
-  Item: integer;
-begin
-  ChangeCursor;
-
-  Item := Random(QuoteCount);
-  ChangeQuote(Item);
-
-  ChangeCursor(false);
-end;
-
-procedure TfrmDisplayQuotes.btnCopyToClipboardClick(Sender: TObject);
-begin
-  Clipboard.AsText := mmoQuote.Lines.Text;
-end;
-
 procedure TfrmDisplayQuotes.acChangeQuoteExecute(Sender: TObject);
 begin
 
+end;
+
+procedure TfrmDisplayQuotes.acCopyToClipboardExecute(Sender: TObject);
+begin
+  Clipboard.AsText := mmoQuote.Lines.Text;
 end;
 
 procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
@@ -114,15 +92,26 @@ begin
 end;
 
 procedure TfrmDisplayQuotes.acNextQuoteExecute(Sender: TObject);
+var
+  Item : Integer;
 begin
   ChangeCursor;
   case TAction(Sender).Tag of
-    1 : ChangeQuote(QuoteNum +1);
-    2 : ChangeQuote(QuoteNum -1);
-    3 : ChangeQuote(0);
-    4 : ChangeQuote(QuoteCount -1);
+    1 : Item := QuoteNum +1;
+    2 : Item := QuoteNum -1;
+    3 : Item := 0;
+    4 : Item := QuoteCount -1;
     5 : ;
+    6 : begin
+          Item := -1;
+          LoadQuotes;
+        end;
+
+    7 : Item := Random(QuoteCount);
   end;
+
+  if Item > -1 then
+    ChangeQuote(Item);
 
   ChangeCursor(false);
 end;
