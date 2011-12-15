@@ -36,7 +36,6 @@ type
     MainMenu: TMainMenu;
     mnuFindQuote: TMenuItem;
     mmoQuote: TMemo;
-    procedure acChangeQuoteExecute(Sender: TObject);
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
@@ -75,11 +74,6 @@ uses Clipbrd, untFindQuote
 {$R *.lfm}
 
 { TfrmDisplayQuotes }
-
-procedure TfrmDisplayQuotes.acChangeQuoteExecute(Sender: TObject);
-begin
-
-end;
 
 procedure TfrmDisplayQuotes.acCopyToClipboardExecute(Sender: TObject);
 begin
