@@ -11,7 +11,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   Constraints.MinHeight = 300
   Constraints.MinWidth = 600
   KeyPreview = True
-  Menu = mnuMainMenu
+  Menu = MainMenu
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poDesktopCenter
@@ -200,14 +200,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Caption = 'lblQuoteNumber'
     ParentColor = False
   end
-  object mnuMainMenu: TMainMenu
-    left = 264
-    top = 26
-    object mnuFind: TMenuItem
-      Action = acFindQuote
-      GlyphShowMode = gsmSystem
-    end
-  end
   object ActionList: TActionList
     left = 448
     top = 26
@@ -215,6 +207,14 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       Caption = '&Find Quote ...'
       OnExecute = acFindQuoteExecute
       ShortCut = 16454
+    end
+  end
+  object MainMenu: TMainMenu
+    left = 306
+    top = 26
+    object mnuFindQuote: TMenuItem
+      Action = acFindQuote
+      OnClick = mnuFindQuoteClick
     end
   end
 end

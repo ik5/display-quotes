@@ -35,7 +35,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="6">
       <Unit0>
         <Filename Value="quotes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -61,10 +61,15 @@
         <UnitName Value="untFindQuote"/>
       </Unit3>
       <Unit4>
-        <Filename Value="../units/untquotedbus.pas"/>
+        <Filename Value="../units/untgtknotify.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="untQuoteDBUS"/>
+        <UnitName Value="untGTKNotify"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="../libnotify/src/libnotify.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="libnotify"/>
+      </Unit5>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -74,7 +79,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../forms;../units"/>
+      <OtherUnitFiles Value="../forms;../units;../libnotify/src"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <CodeGeneration>

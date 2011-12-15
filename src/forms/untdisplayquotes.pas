@@ -21,8 +21,8 @@ type
     cmbxQuotes: TComboBox;
     lblQuoteNumber: TLabel;
     lblQuotesCount: TLabel;
-    mnuFind: TMenuItem;
-    mnuMainMenu: TMainMenu;
+    MainMenu: TMainMenu;
+    mnuFindQuote: TMenuItem;
     mmoQuote: TMemo;
     procedure acFindQuoteExecute(Sender: TObject);
     procedure btnCopyToClipboardClick(Sender: TObject);
@@ -31,6 +31,7 @@ type
     procedure cmbxQuotesChange(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure mnuFindQuoteClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -51,7 +52,12 @@ resourcestring
 
 implementation
 
-uses Clipbrd, untFindQuote;
+uses Clipbrd, untFindQuote
+{$IFDEF UNIX}
+  {$IFDEF LCLGTK2}
+    , untGTKNotify
+  {$ENDIF}
+{$ENDIF};
 
 {$R *.lfm}
 
@@ -106,6 +112,11 @@ procedure TfrmDisplayQuotes.FormCreate(Sender: TObject);
 begin
   Quotes := TStringList.Create;
   LoadQuotes;
+end;
+
+procedure TfrmDisplayQuotes.mnuFindQuoteClick(Sender: TObject);
+begin
+
 end;
 
 procedure TfrmDisplayQuotes.LoadQuotes;

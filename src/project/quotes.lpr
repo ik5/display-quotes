@@ -9,6 +9,9 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, untDisplayQuotes, untSearchDialog, untFindQuote
   {$IFDEF UNIX}//, untQuoteDBUS
+    {$IFDEF LCLGTK2}
+    , untGTKNotify
+    {$ENDIF}
   {$ENDIF}
   { you can add units after this };
 
