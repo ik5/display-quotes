@@ -1,12 +1,12 @@
 object frmDisplayQuotes: TfrmDisplayQuotes
   Left = 476
-  Height = 340
+  Height = 335
   Top = 201
   Width = 712
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'Display Quotes'
-  ClientHeight = 312
+  ClientHeight = 307
   ClientWidth = 712
   Constraints.MinHeight = 300
   Constraints.MinWidth = 712
@@ -18,7 +18,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   LCLVersion = '0.9.31'
   object mmoQuote: TMemo
     Left = 9
-    Height = 208
+    Height = 203
     Top = 59
     Width = 688
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -29,7 +29,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object btnReloadQuotes: TBitBtn
     Left = 9
     Height = 30
-    Top = 275
+    Top = 270
     Width = 175
     Action = acReloadQuotes
     Anchors = [akLeft, akBottom]
@@ -75,7 +75,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object btnCopyToClipBoard: TBitBtn
     Left = 250
     Height = 30
-    Top = 275
+    Top = 270
     Width = 203
     Action = acCopyToClipboard
     Anchors = [akLeft, akRight, akBottom]
@@ -121,7 +121,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object btnRandomQuote: TBitBtn
     Left = 520
     Height = 30
-    Top = 275
+    Top = 270
     Width = 177
     Action = acRandomQuote
     Anchors = [akRight, akBottom]
@@ -228,7 +228,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     TabOrder = 4
   end
   object btnPrevQuote: TBitBtn
-    Left = 148
+    Left = 145
     Height = 30
     Top = 3
     Width = 121
@@ -319,7 +319,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     TabOrder = 6
   end
   object btnNextQuote: TBitBtn
-    Left = 428
+    Left = 431
     Height = 30
     Top = 3
     Width = 130
@@ -366,7 +366,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   end
   object spnedtGoto: TSpinEdit
     Tag = 5
-    Left = 303
+    Left = 302
     Height = 28
     Top = 3
     Width = 102
@@ -377,7 +377,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Value = 1
   end
   object lblGotoQuote: TLabel
-    Left = 303
+    Left = 302
     Height = 21
     Top = 37
     Width = 102
