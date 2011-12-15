@@ -53,6 +53,7 @@ type
     QuoteCount,
     QuoteNum    : cardinal;
     Quotes      : TStringList;
+    Started     : Boolean;
     procedure IterateQuotes;
     procedure LoadQuotes;
     procedure ChangeQuote(index : Integer);
@@ -68,7 +69,7 @@ resourcestring
 
 implementation
 
-uses Clipbrd, untFindQuote, untSearchDialog
+uses Math, Clipbrd, untFindQuote, untSearchDialog, untSaveSettings
 {$IFDEF UNIX}
   {$IFDEF LCLGTK2}
     , untGTKNotify
@@ -122,13 +123,28 @@ end;
 
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
+  ProgramSettings.LastQuote   := QuoteNum;
+  ProgramSettings.NotifyEvent := chkNotify.Checked;
+  ProgramSettings.Left        := Left;
+  ProgramSettings.Top         := Top;
+  ProgramSettings.Width       := Width;
+  ProgramSettings.Height      := Height;
+  ProgramSettings.WriteFile;
   FreeAndNil(Quotes);
 end;
 
 procedure TfrmDisplayQuotes.FormCreate(Sender: TObject);
 begin
-  Quotes := TStringList.Create;
+  Quotes            := TStringList.Create;
+  Started           := True;
+  chkNotify.Checked := ProgramSettings.NotifyEvent;
+  Left              := ProgramSettings.Left;
+  Top               := ProgramSettings.Top;
+  Width             := ProgramSettings.Width;
+  Height            := ProgramSettings.Height;
+
   LoadQuotes;
+  Started := False;
 end;
 
 procedure TfrmDisplayQuotes.LoadQuotes;
@@ -136,7 +152,10 @@ begin
   mmoQuote.Lines.Clear;
   Quotes.Clear;
   IterateQuotes;
-  ChangeQuote(0);
+  if Started then
+    ChangeQuote(Min(ProgramSettings.LastQuote, QuoteCount))
+  else
+    ChangeQuote(0);
   lblQuotesCount.Caption := Format(txtQuoteCount, [QuoteCount]);
 end;
 

@@ -16,18 +16,25 @@ type
 
   TSettings = class
   private
+    FHeight      : Integer;
+    FHight       : Integer;
     FLastQuote   : Integer;
+    FLeft        : Integer;
     FNotifyEvent : Boolean;
-    FWindow      : TRect;
     FConfig      : TJSONConfig;
+    FTop         : Integer;
+    FWidth       : Integer;
   public
     constructor Create;     virtual;
     destructor Destroy;     override;
     procedure WriteFile;    virtual;
   published
+    property Height      : Integer read FHeight      write FHight;
     property LastQuote   : Integer read FLastQuote   write FLastQuote;
+    property Left        : Integer read FLeft        write FLeft;
     property NotifyEvent : Boolean read FNotifyEvent write FNotifyEvent;
-    property Window      : TRect   read FWindow      write FWindow;
+    property Top         : Integer read FTop         write FTop;
+    property Width       : Integer read FWidth       write FWidth;
   end;
 
 var
@@ -44,8 +51,8 @@ const
   NotifyEventPath  = '/window/NotifyEvent';
   WindowLeftPath   = '/window/demensions/left';
   WindowTopPath    = '/window/demensions/top';
-  WindowRightPath  = '/window/demensions/right';
-  WindowBottomPath = '/window/demensions/bottom';
+  WindowWidthPath  = '/window/demensions/width';
+  WindowHeightPath = '/window/demensions/height';
 
 { TSettings }
 
@@ -54,7 +61,6 @@ var
   UserDir : String;
 begin
    UserDir := GetAppConfigDir(False);
-   if not
    if not DirectoryExists(UserDir) then
      if not ForceDirectories(UserDir) then
        raise Exception.CreateFmt(errCreateConfigDirectory, [UserDir]);
@@ -62,14 +68,14 @@ begin
   FConfig          := TJSONConfig.Create(nil);
   FConfig.Filename := UserDir + SettingsFileName;;
 
-  FLastQuote     := FConfig.GetValue(LastQuotePath, 0);
-  FNotiftEvent   := FConfig.GetValue(NotifyEventPath, true);
-  FWindow.Left   := FConfig.GetValue(WindowLeftPath,
+  FLastQuote   := FConfig.GetValue(LastQuotePath, 0);
+  FNotifyEvent := FConfig.GetValue(NotifyEventPath, true);
+  FLeft        := FConfig.GetValue(WindowLeftPath,
                               (Screen.Width div 2) - DefaultWidth);
-  FWindow.Top    := FConfig.GetValue(WindowTopPath,
+  FTop         := FConfig.GetValue(WindowTopPath,
                               (Screen.Height div 2) - DefaultHeight);
-  FWindow.Right  := FConfig.GetValue(WindowRightPath, DefaultWidth);
-  FWindow.Bottom := FConfig.GetValue(WindowBottomPath, DefaultHeight);
+  FWidth       := FConfig.GetValue(WindowWidthPath, DefaultWidth);
+  FHeight      := FConfig.GetValue(WindowHeightPath, DefaultHeight);
 end;
 
 destructor TSettings.Destroy;
@@ -83,10 +89,10 @@ procedure TSettings.WriteFile;
 begin
   FConfig.SetValue(LastQuotePath, FLastQuote);
   FConfig.SetValue(NotifyEventPath, FNotifyEvent);
-  FConfig.SetValue(WindowLeftPath, FWindow.Left);
-  FConfig.SetValue(WindowTopPath, FWindow.Top);
-  FConfig.SetValue(WindowRightPath, FWindow.Right);
-  FConfig.SetValue(WindowBottomPath, FWindow.Bottom);
+  FConfig.SetValue(WindowLeftPath, FLeft);
+  FConfig.SetValue(WindowTopPath, FTop);
+  FConfig.SetValue(WindowWidthPath, FWidth);
+  FConfig.SetValue(WindowHeightPath, FHeight);
   FConfig.Flush;
 end;
 
