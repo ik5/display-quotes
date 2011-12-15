@@ -8,6 +8,10 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   StdCtrls, Buttons, Menus, ActnList;
 
+const
+  DefaultWidth  = 712;
+  DefaultHeight = 237;
+
 type
 
   { TfrmDisplayQuotes }
@@ -40,7 +44,6 @@ type
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
-    procedure acQuiteExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
@@ -115,11 +118,6 @@ begin
     ChangeQuote(Item);
 
   ChangeCursor(false);
-end;
-
-procedure TfrmDisplayQuotes.acQuiteExecute(Sender: TObject);
-begin
-  Close;
 end;
 
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);

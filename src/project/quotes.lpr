@@ -38,7 +38,12 @@ begin
   Randomize;
   RequireDerivedFormResource := True;
   Application.Initialize;
+
+  ProgramSettings := TSettings.Create;
+
   Application.CreateForm(TfrmDisplayQuotes, frmDisplayQuotes);
   Application.Run;
+
+  ProgramSettings.Free;
 end.
 

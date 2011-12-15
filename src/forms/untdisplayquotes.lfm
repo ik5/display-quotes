@@ -8,6 +8,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   Caption = 'Display Quotes'
   ClientHeight = 237
   ClientWidth = 712
+  Constraints.MinHeight = 237
   Constraints.MinWidth = 712
   KeyPreview = True
   OnClose = FormClose
