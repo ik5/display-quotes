@@ -148,10 +148,12 @@ var
 begin
   QuoteNum := Index;
   AQuote   := Quotes.Strings[Index];
+
   mmoQuote.Lines.BeginUpdate;
   mmoQuote.Lines.Clear;
   mmoQuote.Lines.Add(AQuote);
   mmoQuote.Lines.EndUpdate;
+
   lblQuoteNumber.Caption := Format(txtQuoteNumber, [Index + 1]);
   acFirstQuote.Enabled   := index > 0;
   acPrevQuote.Enabled    := index > 0;
