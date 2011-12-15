@@ -34,10 +34,12 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentColor = False
   end
   object lblQuoteNumber: TLabel
-    Left = 6
+    Left = 291
     Height = 21
-    Top = 33
+    Top = 268
     Width = 130
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
     Caption = 'lblQuoteNumber'
     ParentColor = False
   end
@@ -479,7 +481,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     end
     object acNextQuote: TAction
       Tag = 1
-      Caption = '&Next Quote'
+      Caption = 'N&ext Quote'
       Hint = 'Go to next quote'
       ImageIndex = 1
       OnExecute = acNextQuoteExecute
@@ -539,11 +541,11 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     end
     object acNotifyQuote: TAction
       AutoCheck = True
-      Caption = 'Notify Quote'
+      Caption = '&Notify Quote'
       Checked = True
       DisableIfNoHandler = False
       Hint = 'Display Notification for the new quote'
-      ShortCut = 16462
+      ShortCut = 32846
     end
     object acQuite: TAction
       Caption = '&Quite'
