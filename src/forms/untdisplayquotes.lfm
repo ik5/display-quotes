@@ -1,7 +1,7 @@
 object frmDisplayQuotes: TfrmDisplayQuotes
-  Left = 476
+  Left = 444
   Height = 335
-  Top = 201
+  Top = 222
   Width = 712
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
