@@ -153,7 +153,7 @@ begin
   Quotes.Clear;
   IterateQuotes;
   if Started then
-    ChangeQuote(Min(ProgramSettings.LastQuote, QuoteCount))
+    ChangeQuote(Min(Max(ProgramSettings.LastQuote, 0), QuoteCount))
   else
     ChangeQuote(0);
   lblQuotesCount.Caption := Format(txtQuoteCount, [QuoteCount]);

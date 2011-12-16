@@ -82,9 +82,9 @@ begin
   FLastQuote   := FConfig.GetValue(LastQuotePath, 0);
   FNotifyEvent := FConfig.GetValue(NotifyEventPath, true);
   FLeft        := FConfig.GetValue(WindowLeftPath,
-                              (Screen.Width div 2) - DefaultWidth);
+                              (Screen.Width - DefaultWidth) div 2);
   FTop         := FConfig.GetValue(WindowTopPath,
-                              (Screen.Height div 2) - DefaultHeight);
+                              (Screen.Height - DefaultHeight) div 2);
   FWidth       := FConfig.GetValue(WindowWidthPath, DefaultWidth);
   FHeight      := FConfig.GetValue(WindowHeightPath, DefaultHeight);
 end;
