@@ -4013,7 +4013,7 @@ They're trained to believe, not to know. Belief can be manipulated. Only knowled
 ----
 Thus spoke St. Alia-of-the-Knife: "The Reverend Mother must combine the seductive wiles of a courtesan with the untouchable majesty of a virgin goddess, holding these attributes in tension so long as the powers of her youth endure. For when youth and beauty have gone, she will find that the place-between, once occupied by tension, has become a wellspring of cunning and resourcefulness."
     from "Muad'Dib, Family Commentaries" by the Princess Irulan
----
+----
 You have read that Muad'Dib had no playmates his own age on Caladan. The dangers were too great. But Muad'Dib did have wonderful companion-teachers. There was Gurney Halleck, the troubadour-warrior. You will sing some of Gurney's songs as you read along in this book. There was Thufir Hawat, the old Mentat Master of Assassins, who struck fear even into the heart of the Padishah Emperor. There were Duncan Idaho, the Swordmaster of the Ginaz; Dr. Wellington Yueh, a name black in treachery but bright in knowledge; the Lady Jessica, who guided her son in the Bene Gesserit Way, and--of course--the Duke Leto, whose qualities as a father have long been overlooked.
     from "A Child's History of Muad'Dib" by the Princess Irulan
 ----
@@ -4064,7 +4064,7 @@ O Seas of Caladan, O people of Duke Leto-- Citadel of Leto fallen, Fallen foreve
 ----
 When my father, the Padishah Emperor, heard of Duke Leto's death and the manner of it, he went into such a rage as we had never before seen. He blamed my mother and the compact forced on him to place a Bene Gesserit on the throne. He blamed the Guild and the evil old Baron. He blamed everyone in sight, not excepting even me, for he said I was a witch like all the others. And when I sought to comfort him, saying it was done according to an older law of self-preservation to which even the most ancient rulers gave allegiance, he sneered at me and asked if I thought him a weakling. I saw then that he had been aroused to this passion not by concern over the dead Duke but by what that death implied for all royalty. As I look back on it, I think there may have been some prescience in my father, too, for it is certain that his line and Muad'Dib's shared common ancestry.
     from "In My Father's House," by the Princess Irulan
----
+----
 Muad'Dib could indeed, see the Future, but you must understand the limits of this power. Think of sight. You have eyes, yet cannot see without light. If you are on the floor of a valley, you cannot see beyond your valley. Just so, Muad'Dib could not always choose to look across the mysterious terrain. He tells us that a single obscure decision of prophecy, perhaps the choice of one word over another, could change the entire aspect of the future. He tells us "The vision of time is broad, but when you pass through it, time becomes a narrow door." And always, he fought the temptation to choose a clear, safe course, warning "That path leads ever down into stagnation."
     from "Arrakis Awakening" by the Princess Irulan
 ----
@@ -5015,7 +5015,7 @@ One person with passion is better than forty people merely interested.
 ----
 ... Thous who are capable (and some that don't) use Pascal, the others, just say dou' (Homer Simpson like) every other line of code.
    Ido Kanner, Explainin someone why he uses Pascal
----
+----
 It was true that I didn't have much ambition, but there ought to be a place for people without ambition, I mean a better place than the one usually reserved. How in the hell could a man enjoy being awakened at 6:30 a.m. by an alarm clock, leap out of bed, dress, force-feed, shit, piss, brush teeth and hair, and fight traffic to get to a place where essentially you made lots of money for somebody else and were asked to be grateful for the opportunity to do so?
    Charles Bukowski, Factotum, Black Sparrow Press, 1975
 ----
