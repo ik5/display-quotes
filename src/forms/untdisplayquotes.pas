@@ -30,7 +30,6 @@ type
     ActionList: TActionList;
     chkNotify: TCheckBox;
     ImageList: TImageList;
-    lblQuoteNumber: TLabel;
     lblQuotesCount: TLabel;
     btnFirst: TSpeedButton;
     btnPrev: TSpeedButton;
@@ -64,8 +63,8 @@ var
   frmDisplayQuotes: TfrmDisplayQuotes;
 
 resourcestring
-  txtQuoteCount = '#%d quotes loaded';
-  txtQuoteNumber = '#%d quote';
+  txtQuoteCount = '#%d/%d quotes';
+  txtNotFound   = 'Could not find "%s"';
 
 implementation
 
@@ -86,14 +85,31 @@ begin
 end;
 
 procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
+var
+  index : integer;
+  s     : string;
 begin
   frmQuoteSearch := TfrmQuoteSearch.Create(self);
-  if frmQuoteSearch.Execute then
-   begin
+  try
+    if frmQuoteSearch.ShowModal in [mrAbort, mrCancel, mrNo, mrNoToAll] then
+      exit;
 
-   end;
+    s := frmQuoteSearch.edtSearch.Text;
+    if Trim(s) =  '' then
+      exit;
 
-  FreeAndNil(frmQuoteSearch);
+    index := FindQuoteByPart(s, Quotes);
+    if index = -1 then
+      begin
+        ShowMessage(Format(txtNotFound, [s]));
+        exit;
+      end;
+
+    ChangeQuote(index);
+    Beep;
+  finally
+    FreeAndNil(frmQuoteSearch);
+  end;
 end;
 
 procedure TfrmDisplayQuotes.acNextQuoteExecute(Sender: TObject);
@@ -156,7 +172,7 @@ begin
     ChangeQuote(Min(Max(ProgramSettings.LastQuote, 0), QuoteCount))
   else
     ChangeQuote(0);
-  lblQuotesCount.Caption := Format(txtQuoteCount, [QuoteCount]);
+  lblQuotesCount.Caption := Format(txtQuoteCount, [QuoteNum +1, QuoteCount]);
 end;
 
 procedure TfrmDisplayQuotes.ChangeQuote(index: Integer);
@@ -171,7 +187,7 @@ begin
   mmoQuote.Lines.Add(AQuote);
   mmoQuote.Lines.EndUpdate;
 
-  lblQuoteNumber.Caption := Format(txtQuoteNumber, [Index + 1]);
+  lblQuotesCount.Caption := Format(txtQuoteCount, [Index + 1, QuoteCount]);
   acFirstQuote.Enabled   := index > 0;
   acPrevQuote.Enabled    := index > 0;
   acNextQuote.Enabled    := index < (QuoteCount -1);

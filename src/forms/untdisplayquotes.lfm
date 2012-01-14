@@ -23,21 +23,11 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Caption = 'lblQuotesCount'
     ParentColor = False
   end
-  object lblQuoteNumber: TLabel
-    Left = 291
-    Height = 21
-    Top = 0
-    Width = 130
-    Alignment = taCenter
-    Anchors = [akTop, akLeft, akRight]
-    Caption = 'lblQuoteNumber'
-    ParentColor = False
-  end
   object btnFirst: TSpeedButton
-    Left = 601
-    Height = 25
+    Left = 597
+    Height = 20
     Top = 0
-    Width = 23
+    Width = 20
     Action = acFirstQuote
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -84,10 +74,10 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnPrev: TSpeedButton
-    Left = 628
-    Height = 25
+    Left = 619
+    Height = 20
     Top = 0
-    Width = 23
+    Width = 20
     Action = acPrevQuote
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -134,10 +124,10 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnNext: TSpeedButton
-    Left = 655
-    Height = 25
+    Left = 663
+    Height = 20
     Top = 0
-    Width = 23
+    Width = 20
     Action = acNextQuote
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -184,10 +174,10 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnLast: TSpeedButton
-    Left = 682
-    Height = 25
+    Left = 685
+    Height = 20
     Top = 0
-    Width = 23
+    Width = 20
     Action = acLastQuote
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -234,10 +224,10 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnReloadQuotes: TSpeedButton
-    Left = 601
-    Height = 25
+    Left = 604
+    Height = 20
     Top = 29
-    Width = 23
+    Width = 20
     Action = acReloadQuotes
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -284,10 +274,10 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnCopy: TSpeedButton
-    Left = 628
-    Height = 25
+    Left = 663
+    Height = 20
     Top = 29
-    Width = 23
+    Width = 20
     Action = acCopyToClipboard
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -334,10 +324,10 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnFindQuote: TSpeedButton
-    Left = 655
-    Height = 25
+    Left = 685
+    Height = 20
     Top = 29
-    Width = 23
+    Width = 20
     Action = acFindQuote
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -384,10 +374,10 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnRandom: TSpeedButton
-    Left = 682
-    Height = 25
-    Top = 29
-    Width = 23
+    Left = 641
+    Height = 20
+    Top = 0
+    Width = 20
     Action = acRandomQuote
     Anchors = [akTop, akRight]
     AutoSize = True

@@ -25,12 +25,12 @@ type
     procedure FormCreate(Sender: TObject);
     procedure rdQuoteChange(Sender: TObject);
   private
-    FCase: Boolean;
-    FQuote: Boolean;
+    FCase    : Boolean;
+    FQuote   : Boolean;
+    FClicked : Boolean;
     { private declarations }
   public
     { public declarations }
-    function Execute : Boolean;
   published
     property CaseSensitive : Boolean read FCase write FCase;
     property Quote : Boolean read FQuote write FQuote;
@@ -52,18 +52,14 @@ end;
 
 procedure TfrmQuoteSearch.FormCreate(Sender: TObject);
 begin
-  FQuote := True;
-  FCase  := False;
+  FQuote   := True;
+  FCase    := False;
+  FClicked := False;
 end;
 
 procedure TfrmQuoteSearch.rdQuoteChange(Sender: TObject);
 begin
   FQuote := TRadioButton(Sender).Tag = 2;
-end;
-
-function TfrmQuoteSearch.Execute: Boolean;
-begin
-  Result := not self.ShowModal in [mrAbort, mrCancel, mrNo, mrNoToAll];
 end;
 
 end.
