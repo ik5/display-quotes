@@ -28,18 +28,19 @@ type
     acRandomQuote: TAction;
     acNotifyQuote: TAction;
     ActionList: TActionList;
+    btnCopy: TSpeedButton;
+    btnFirst: TSpeedButton;
+    btnLast: TSpeedButton;
+    btnNext: TSpeedButton;
+    btnPrev: TSpeedButton;
+    btnRandom: TSpeedButton;
+    btnReloadQuotes: TSpeedButton;
     chkNotify: TCheckBox;
     frmQuoteSearch1: TfrmQuoteSearch;
     ImageList: TImageList;
     lblQuotesCount: TLabel;
-    btnFirst: TSpeedButton;
-    btnPrev: TSpeedButton;
-    btnNext: TSpeedButton;
-    btnLast: TSpeedButton;
-    btnReloadQuotes: TSpeedButton;
-    btnCopy: TSpeedButton;
-    btnRandom: TSpeedButton;
     mmoQuote: TMemo;
+    Panel1: TPanel;
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
@@ -85,10 +86,12 @@ begin
 end;
 
 procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
-var
+{var
   index : integer;
-  s     : string;
+  s     : string;}
 begin
+  frmQuoteSearch1.edtSearch.SetFocus;
+(*
   frmQuoteSearch := TfrmQuoteSearch.Create(self);
   try
     if frmQuoteSearch.ShowModal in [mrAbort, mrCancel, mrNo, mrNoToAll] then
@@ -110,6 +113,7 @@ begin
   finally
     FreeAndNil(frmQuoteSearch);
   end;
+*)
 end;
 
 procedure TfrmDisplayQuotes.acNextQuoteExecute(Sender: TObject);

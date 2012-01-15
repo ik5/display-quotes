@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, untDisplayQuotes;
+  ExtCtrls, Buttons;
 
 type
 
@@ -30,6 +30,7 @@ var
   frmQuoteSearch: TfrmQuoteSearch;
 
 implementation
+uses untDisplayQuotes;
 
 {$R *.lfm}
 

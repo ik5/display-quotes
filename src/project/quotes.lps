@@ -24,8 +24,8 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="89"/>
-        <CursorPos X="84" Y="100"/>
+        <TopLine Value="88"/>
+        <CursorPos X="3" Y="114"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -45,8 +45,8 @@
         <UnitName Value="untSearchDialog"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="4"/>
-        <CursorPos X="38" Y="9"/>
+        <TopLine Value="7"/>
+        <CursorPos X="23" Y="33"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -114,7 +114,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="221"/>
         <CursorPos X="36" Y="233"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="12"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>
@@ -160,7 +160,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="13" Y="35"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit17>
       <Unit18>
@@ -170,7 +170,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="111"/>
         <CursorPos X="15" Y="111"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit18>
       <Unit19>
@@ -195,124 +195,124 @@
     </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="50" Column="21" TopLine="34"/>
       </Position1>
       <Position2>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="23" Column="36" TopLine="4"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="103" Column="17" TopLine="89"/>
       </Position2>
       <Position3>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="102" Column="22" TopLine="75"/>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="40" Column="3" TopLine="30"/>
       </Position3>
       <Position4>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="101" Column="1" TopLine="75"/>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="39" Column="3" TopLine="29"/>
       </Position4>
       <Position5>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="102" Column="1" TopLine="76"/>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="40" Column="3" TopLine="30"/>
       </Position5>
       <Position6>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="108" Column="24" TopLine="92"/>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="39" Column="3" TopLine="29"/>
       </Position6>
       <Position7>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="107" Column="23" TopLine="92"/>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="40" Column="3" TopLine="30"/>
       </Position7>
       <Position8>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="51" Column="21" TopLine="35"/>
+        <Caret Line="41" Column="3" TopLine="31"/>
       </Position8>
       <Position9>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="50" Column="21" TopLine="34"/>
+        <Caret Line="40" Column="3" TopLine="30"/>
       </Position9>
       <Position10>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="103" Column="17" TopLine="89"/>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="39" Column="3" TopLine="29"/>
       </Position10>
       <Position11>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="40" Column="3" TopLine="30"/>
+        <Caret Line="15" Column="33" TopLine="7"/>
       </Position11>
       <Position12>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="39" Column="3" TopLine="29"/>
+        <Caret Line="16" Column="1" TopLine="7"/>
       </Position12>
       <Position13>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="40" Column="3" TopLine="30"/>
+        <Caret Line="25" Column="1" TopLine="1"/>
       </Position13>
       <Position14>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="39" Column="3" TopLine="29"/>
+        <Caret Line="24" Column="1" TopLine="1"/>
       </Position14>
       <Position15>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="40" Column="3" TopLine="30"/>
+        <Caret Line="23" Column="1" TopLine="1"/>
       </Position15>
       <Position16>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="41" Column="3" TopLine="31"/>
+        <Caret Line="24" Column="1" TopLine="1"/>
       </Position16>
       <Position17>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="40" Column="3" TopLine="30"/>
+        <Caret Line="23" Column="1" TopLine="1"/>
       </Position17>
       <Position18>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="39" Column="3" TopLine="29"/>
+        <Caret Line="22" Column="1" TopLine="14"/>
       </Position18>
       <Position19>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="15" Column="33" TopLine="7"/>
+        <Caret Line="21" Column="1" TopLine="14"/>
       </Position19>
       <Position20>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="16" Column="1" TopLine="7"/>
+        <Caret Line="9" Column="38" TopLine="4"/>
       </Position20>
       <Position21>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="25" Column="1" TopLine="1"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="103" Column="17" TopLine="89"/>
       </Position21>
       <Position22>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="24" Column="1" TopLine="1"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="102" Column="17" TopLine="88"/>
       </Position22>
       <Position23>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="23" Column="1" TopLine="1"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="100" Column="84" TopLine="89"/>
       </Position23>
       <Position24>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="24" Column="1" TopLine="1"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="101" Column="84" TopLine="90"/>
       </Position24>
       <Position25>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="23" Column="1" TopLine="1"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="100" Column="84" TopLine="89"/>
       </Position25>
       <Position26>
         <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="22" Column="1" TopLine="14"/>
+        <Caret Line="9" Column="38" TopLine="4"/>
       </Position26>
       <Position27>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="21" Column="1" TopLine="14"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="100" Column="84" TopLine="22"/>
       </Position27>
       <Position28>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="9" Column="38" TopLine="4"/>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="99" Column="84" TopLine="68"/>
       </Position28>
       <Position29>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="103" Column="17" TopLine="89"/>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="9" Column="38" TopLine="4"/>
       </Position29>
       <Position30>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="102" Column="17" TopLine="88"/>
+        <Caret Line="77" Column="68" TopLine="87"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
