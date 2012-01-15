@@ -23,6 +23,7 @@ type
     FLeft        : Integer;
     FNotifyEvent : Boolean;
     FConfig      : TJSONConfig;
+    FQuoteFile: String;
     FTop         : Integer;
     FWidth       : Integer;
 
@@ -37,6 +38,7 @@ type
     property Left        : Integer read FLeft        write FLeft;
     property NotifyEvent : Boolean read FNotifyEvent write FNotifyEvent;
     property Top         : Integer read FTop         write FTop;
+    property QuoteFile   : String  read FQuoteFile   write FQuoteFile;
     property Width       : Integer read FWidth       write FWidth;
   end;
 
@@ -56,6 +58,7 @@ const
   WindowTopPath    = '/window/demensions/top';
   WindowWidthPath  = '/window/demensions/width';
   WindowHeightPath = '/window/demensions/height';
+  QuoteFilePath    = '/quotes/file';
 
 { TSettings }
 
@@ -87,6 +90,7 @@ begin
                               (Screen.Height - DefaultHeight) div 2);
   FWidth       := FConfig.GetValue(WindowWidthPath, DefaultWidth);
   FHeight      := FConfig.GetValue(WindowHeightPath, DefaultHeight);
+  FQuoteFile   := FConfig.GetValue(QuoteFilePath, DefaultQuoteFile);
 end;
 
 destructor TSettings.Destroy;
@@ -104,6 +108,7 @@ begin
   FConfig.SetValue(WindowTopPath, FTop);
   FConfig.SetValue(WindowWidthPath, FWidth);
   FConfig.SetValue(WindowHeightPath, FHeight);
+  FConfig.SetValue(QuoteFilePath, FQuoteFile);
   FConfig.Flush;
 end;
 

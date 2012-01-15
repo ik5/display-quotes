@@ -9,8 +9,9 @@ uses
   StdCtrls, Buttons, Menus, ActnList, untSearchDialog;
 
 const
-  DefaultWidth  = 712;
-  DefaultHeight = 237;
+  DefaultWidth     = 712;
+  DefaultHeight    = 237;
+  DefaultQuoteFile = '~/quotes.txt';
 
 type
 
@@ -54,6 +55,7 @@ type
     QuoteNum    : cardinal;
     Quotes      : TStringList;
     Started     : Boolean;
+    QuoteFile   : String;
     procedure IterateQuotes;
     procedure LoadQuotes;
     procedure ChangeQuote(index : Integer);
@@ -66,6 +68,12 @@ var
 resourcestring
   txtQuoteCount = '#%d/%d quotes';
   txtNotFound   = 'Could not find "%s"';
+
+
+  txtQuoteOpenDialogTitle   = 'Please select the quote file:';
+  txtQuoteFileNotFoundTitle = 'The quote file was not found';
+  txtQuoteFileNotFoundBody  = 'The file "%s" was not found.' +
+                              'Would you like to look for it ?';
 
 implementation
 
@@ -124,6 +132,7 @@ begin
   ProgramSettings.Top         := Top;
   ProgramSettings.Width       := Width;
   ProgramSettings.Height      := Height;
+  ProgramSettings.QuoteFile   := QuoteFile;
   ProgramSettings.WriteFile;
   FreeAndNil(Quotes);
 end;
@@ -137,6 +146,7 @@ begin
   Top               := ProgramSettings.Top;
   Width             := ProgramSettings.Width;
   Height            := ProgramSettings.Height;
+  QuoteFile         := ProgramSettings.QuoteFile;
 
   LoadQuotes;
   Started := False;
@@ -188,10 +198,54 @@ end;
 
 procedure TfrmDisplayQuotes.IterateQuotes;
 var
-  qtfl: TextFile;
-  line, quote: ansistring;
+  qtfl        : TextFile;
+  line, quote : ansistring;
+  FileName    : String;
+
+procedure show_dialog; inline;
+var
+  opendialog : TOpenDialog;
 begin
-  AssignFile(qtfl, ExpandFileNameUTF8('~/quotes.txt'));
+ opendialog          := TOpenDialog.Create(self);
+ opendialog.Filter   := 'Text Files|*.txt|All Files|*'
+                        {$IFDEF WINDOWS} + '.*' {$ENDIF};
+ opendialog.Title    := txtQuoteOpenDialogTitle;
+ opendialog.FileName := FileName;
+ opendialog.Options  := [ofReadOnly, ofPathMustExist, ofFileMustExist,
+                         ofAutoPreview] + DefaultOpenDialogOptions;
+ try
+   if not opendialog.Execute then
+     Application.Terminate;
+
+   FileName := opendialog.FileName;
+ finally
+   opendialog.Free;
+ end;
+end;
+
+procedure Prompt_File; inline;
+var
+  Button : Integer;
+begin
+ Button := MessageDlg(txtQuoteFileNotFoundTitle,
+                      Format(txtQuoteFileNotFoundBody, [FileName]),
+                      mtError, mbYesNo, 0);
+ if Button = mrNo then
+   Application.Terminate; // No need to continue ...
+
+ show_dialog;
+end;
+
+begin
+  FileName := ExpandFileNameUTF8(QuoteFile);
+  if not FileExists(FileName) then
+    begin
+      Prompt_File
+    end;
+
+  QuoteFile := FileName;
+
+  AssignFile(qtfl, FileName);
   reset(qtfl);
   quote := '';
   QuoteCount := 0;
