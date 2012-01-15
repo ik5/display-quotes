@@ -74,6 +74,10 @@ resourcestring
   txtQuoteFileNotFoundTitle = 'The quote file was not found';
   txtQuoteFileNotFoundBody  = 'The file "%s" was not found.' +
                               'Would you like to look for it ?';
+  txtNoQuotesInTheListTitle = 'No Quotes';
+  txtNoQuotesInTheListBody  = 'There are no quotes in the list.'
+                              + LineEnding +
+                              'The application will exit now';
 
 implementation
 
@@ -157,6 +161,16 @@ begin
   mmoQuote.Lines.Clear;
   Quotes.Clear;
   IterateQuotes;
+
+  if Quotes.Count = 0 then // Avoid reading empty content ...
+    begin
+      MessageDlg(txtNoQuotesInTheListTitle, txtNoQuotesInTheListBody,
+                 mtError, [mbOK], 0);
+      Application.Terminate;
+      Application.ProcessMessages;
+      exit;
+    end;
+
   if Started then
     ChangeQuote(Min(Max(ProgramSettings.LastQuote, 0), QuoteCount))
   else
@@ -215,7 +229,10 @@ begin
                          ofAutoPreview] + DefaultOpenDialogOptions;
  try
    if not opendialog.Execute then
-     Application.Terminate;
+     begin
+       FileName := '';
+       Exit;
+     end;
 
    FileName := opendialog.FileName;
  finally
@@ -231,7 +248,10 @@ begin
                       Format(txtQuoteFileNotFoundBody, [FileName]),
                       mtError, mbYesNo, 0);
  if Button = mrNo then
-   Application.Terminate; // No need to continue ...
+   begin
+    FileName := '';
+    Exit;
+   end;
 
  show_dialog;
 end;
@@ -242,6 +262,8 @@ begin
     begin
       Prompt_File
     end;
+
+  if FileName = '' then Exit;
 
   QuoteFile := FileName;
 
