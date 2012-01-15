@@ -1,12 +1,12 @@
 object frmDisplayQuotes: TfrmDisplayQuotes
   Left = 544
-  Height = 237
-  Top = 356
+  Height = 277
+  Top = 377
   Width = 712
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'Display Quotes'
-  ClientHeight = 237
+  ClientHeight = 277
   ClientWidth = 712
   Constraints.MinHeight = 237
   Constraints.MinWidth = 712
@@ -24,7 +24,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentColor = False
   end
   object btnFirst: TSpeedButton
-    Left = 597
+    Left = 565
     Height = 20
     Top = 0
     Width = 20
@@ -74,7 +74,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnPrev: TSpeedButton
-    Left = 619
+    Left = 589
     Height = 20
     Top = 0
     Width = 20
@@ -124,7 +124,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnNext: TSpeedButton
-    Left = 663
+    Left = 661
     Height = 20
     Top = 0
     Width = 20
@@ -224,9 +224,9 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnReloadQuotes: TSpeedButton
-    Left = 604
+    Left = 503
     Height = 20
-    Top = 29
+    Top = 0
     Width = 20
     Action = acReloadQuotes
     Anchors = [akTop, akRight]
@@ -274,9 +274,9 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnCopy: TSpeedButton
-    Left = 663
+    Left = 637
     Height = 20
-    Top = 29
+    Top = 0
     Width = 20
     Action = acCopyToClipboard
     Anchors = [akTop, akRight]
@@ -323,58 +323,8 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ShowHint = True
     ParentShowHint = False
   end
-  object btnFindQuote: TSpeedButton
-    Left = 685
-    Height = 20
-    Top = 29
-    Width = 20
-    Action = acFindQuote
-    Anchors = [akTop, akRight]
-    AutoSize = True
-    Flat = True
-    Glyph.Data = {
-      36040000424D3604000000000000360000002800000010000000100000000100
-      2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00000000010000001400000001FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00000000010000001400000001FFFFFF00FFFFFF00000000080000
-      0098111111F3313234FF0B0B0BF40000009D0000000AFFFFFF00FFFFFF000000
-      000A0000009D0B0B0BF4313234FF101010F300000098000000080000008E2325
-      26FF465769FF547295FF7A91ABFF404245FF00000093FFFFFF00FFFFFF000000
-      0093404245FF7A91ABFF547295FF465769FF232526FF0000008E000000ED1F28
-      36FF002148FF0B4386FF0B4990FF526276FF0E0E0EF600000013000000130E0E
-      0EF6526276FF0B4990FF074084FF09294EFF1E2836FF000000ED0A0A0AEC2830
-      3CFF1C3353FF3D6190FF3B5B87FF4D5868FF171717FF010101CF010101CF1717
-      17FF4D5868FF345784FF3F6291FF1C3353FF252C39FF040404EB000000BE5253
-      55FF242A36FF1F2838FF3D4859FF6F7072FF1C1C1CFF282828FF282828FF1B1B
-      1BFF6F7072FF3D4859FF1F2838FF242A36FF525355FF000000BE000000471515
-      15FF686868FF7D7E81FF787878FF232323FF272727FF181818FF181818FF2727
-      27FF232323FF787878FF7D7E81FF686868FF151515FF00000047FFFFFF000000
-      00A5363636FF4D4D4DFF696969FF323232FF4E4E4EFF131313FF010101FF4D4D
-      4DFF323232FF696969FF4D4D4DFF363636FF000000A5FFFFFF00FFFFFF000000
-      00241B1B1BFB737373FF2B2B2BFF4A4A4AFF171717FF696969FF565656FF1717
-      17FF4A4A4AFF2B2B2BFF737373FF1B1B1BFB00000024FFFFFF00FFFFFF00FFFF
-      FF0000000047000000D12C2C2CFF2D2D2DFF161616FF121212F6121212F61616
-      16FF2B2B2BFF2C2C2CFF000000D100000047FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00000000191F1F1FFC6A6A6AFF242424FF00000029000000262424
-      24FF6A6A6AFF1F1F1FFC00000019FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF0000000062000000CC00000081FFFFFF00FFFFFF000000
-      0081000000CC00000062FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
-    }
-    NumGlyphs = 0
-    ShowCaption = False
-    ShowHint = True
-    ParentShowHint = False
-  end
   object btnRandom: TSpeedButton
-    Left = 641
+    Left = 613
     Height = 20
     Top = 0
     Width = 20
@@ -438,7 +388,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   object mmoQuote: TMemo
     Left = 7
     Height = 176
-    Top = 54
+    Top = 57
     Width = 698
     Align = alBottom
     BorderSpacing.Left = 7
@@ -451,9 +401,34 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ScrollBars = ssAutoBoth
     TabOrder = 1
   end
+  inline frmQuoteSearch1: TfrmQuoteSearch
+    Top = 240
+    Width = 712
+    Align = alBottom
+    ClientWidth = 712
+    TabOrder = 2
+    inherited edtSearch: TEdit
+      Left = 8
+    end
+    inherited cbxCaseSensitive: TCheckBox
+      Left = 327
+    end
+    inherited cbxRegex: TCheckBox
+      Left = 470
+    end
+    inherited btnPrev: TBitBtn
+      Left = 254
+    end
+    inherited btnNext: TBitBtn
+      Left = 291
+    end
+    inherited lblNotFound: TLabel
+      Left = 629
+    end
+  end
   object ActionList: TActionList
     Images = ImageList
-    left = 456
+    left = 192
     object acFindQuote: TAction
       Caption = '&Find Quote ...'
       Hint = 'Find Quote'
@@ -531,7 +506,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     end
   end
   object ImageList: TImageList
-    left = 536
+    left = 288
     Bitmap = {
       4C690A0000001000000010000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF

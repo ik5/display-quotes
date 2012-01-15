@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, Buttons, Menus, ActnList;
+  StdCtrls, Buttons, Menus, ActnList, untSearchDialog;
 
 const
   DefaultWidth  = 712;
@@ -29,6 +29,7 @@ type
     acNotifyQuote: TAction;
     ActionList: TActionList;
     chkNotify: TCheckBox;
+    frmQuoteSearch1: TfrmQuoteSearch;
     ImageList: TImageList;
     lblQuotesCount: TLabel;
     btnFirst: TSpeedButton;
@@ -37,7 +38,6 @@ type
     btnLast: TSpeedButton;
     btnReloadQuotes: TSpeedButton;
     btnCopy: TSpeedButton;
-    btnFindQuote: TSpeedButton;
     btnRandom: TSpeedButton;
     mmoQuote: TMemo;
     procedure acCopyToClipboardExecute(Sender: TObject);
@@ -68,7 +68,7 @@ resourcestring
 
 implementation
 
-uses Math, Clipbrd, untFindQuote, untSearchDialog, untSaveSettings
+uses Math, Clipbrd, untFindQuote, untSaveSettings
 {$IFDEF UNIX}
   {$IFDEF LCLGTK2}
     , untGTKNotify

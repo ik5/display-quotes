@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="20">
+    <Units Count="21">
       <Unit0>
         <Filename Value="quotes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -11,7 +11,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="17"/>
         <CursorPos X="1" Y="45"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -24,9 +24,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="92"/>
-        <CursorPos X="17" Y="103"/>
-        <UsageCount Value="24"/>
+        <TopLine Value="89"/>
+        <CursorPos X="84" Y="100"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -34,20 +34,20 @@
         <Filename Value="../libnotify/src/libnotify.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="libnotify"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="25"/>
       </Unit2>
       <Unit3>
         <Filename Value="../forms/untsearchdialog.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmQuoteSearch"/>
         <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
+        <ResourceBaseClass Value="Frame"/>
         <UnitName Value="untSearchDialog"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="35"/>
-        <CursorPos X="1" Y="64"/>
-        <UsageCount Value="24"/>
+        <TopLine Value="4"/>
+        <CursorPos X="38" Y="9"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -55,7 +55,7 @@
         <Filename Value="../units/untgtknotify.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="untgtknotify"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="25"/>
       </Unit4>
       <Unit5>
         <Filename Value="../units/untsavesettings.pas"/>
@@ -65,7 +65,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="68" Y="87"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -156,7 +156,7 @@
       <Unit17>
         <Filename Value="../units/untfindquote.pas"/>
         <UnitName Value="untFindQuote"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="13" Y="35"/>
@@ -166,7 +166,7 @@
       <Unit18>
         <Filename Value="../../../../foss/fpc/fpc26/packages/regexpr/src/regex.pp"/>
         <UnitName Value="Regex"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
         <TopLine Value="111"/>
         <CursorPos X="15" Y="111"/>
@@ -181,6 +181,14 @@
         <CursorPos X="14" Y="616"/>
         <UsageCount Value="10"/>
       </Unit19>
+      <Unit20>
+        <Filename Value="../forms/untsearchdialog.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="41" Y="8"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit20>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
@@ -188,135 +196,124 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
+        <Caret Line="27" Column="1" TopLine="4"/>
       </Position1>
       <Position2>
         <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
+        <Caret Line="23" Column="36" TopLine="4"/>
       </Position2>
       <Position3>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position3>
-      <Position4>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position4>
-      <Position5>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position5>
-      <Position6>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position6>
-      <Position7>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position7>
-      <Position8>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position8>
-      <Position9>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position9>
-      <Position10>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position10>
-      <Position11>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position11>
-      <Position12>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position12>
-      <Position13>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position13>
-      <Position14>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position14>
-      <Position15>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position15>
-      <Position16>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position16>
-      <Position17>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position17>
-      <Position18>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position18>
-      <Position19>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position19>
-      <Position20>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position20>
-      <Position21>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position21>
-      <Position22>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position22>
-      <Position23>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="29" Column="1" TopLine="4"/>
-      </Position23>
-      <Position24>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="27" Column="1" TopLine="4"/>
-      </Position24>
-      <Position25>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="23" Column="36" TopLine="4"/>
-      </Position25>
-      <Position26>
         <Filename Value="../forms/untdisplayquotes.pas"/>
         <Caret Line="102" Column="22" TopLine="75"/>
-      </Position26>
-      <Position27>
+      </Position3>
+      <Position4>
         <Filename Value="../forms/untdisplayquotes.pas"/>
         <Caret Line="101" Column="1" TopLine="75"/>
-      </Position27>
-      <Position28>
+      </Position4>
+      <Position5>
         <Filename Value="../forms/untdisplayquotes.pas"/>
         <Caret Line="102" Column="1" TopLine="76"/>
+      </Position5>
+      <Position6>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="108" Column="24" TopLine="92"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="107" Column="23" TopLine="92"/>
+      </Position7>
+      <Position8>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="51" Column="21" TopLine="35"/>
+      </Position8>
+      <Position9>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="50" Column="21" TopLine="34"/>
+      </Position9>
+      <Position10>
+        <Filename Value="../forms/untdisplayquotes.pas"/>
+        <Caret Line="103" Column="17" TopLine="89"/>
+      </Position10>
+      <Position11>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="40" Column="3" TopLine="30"/>
+      </Position11>
+      <Position12>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="39" Column="3" TopLine="29"/>
+      </Position12>
+      <Position13>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="40" Column="3" TopLine="30"/>
+      </Position13>
+      <Position14>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="39" Column="3" TopLine="29"/>
+      </Position14>
+      <Position15>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="40" Column="3" TopLine="30"/>
+      </Position15>
+      <Position16>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="41" Column="3" TopLine="31"/>
+      </Position16>
+      <Position17>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="40" Column="3" TopLine="30"/>
+      </Position17>
+      <Position18>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="39" Column="3" TopLine="29"/>
+      </Position18>
+      <Position19>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="15" Column="33" TopLine="7"/>
+      </Position19>
+      <Position20>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="16" Column="1" TopLine="7"/>
+      </Position20>
+      <Position21>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="25" Column="1" TopLine="1"/>
+      </Position21>
+      <Position22>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="24" Column="1" TopLine="1"/>
+      </Position22>
+      <Position23>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="23" Column="1" TopLine="1"/>
+      </Position23>
+      <Position24>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="24" Column="1" TopLine="1"/>
+      </Position24>
+      <Position25>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="23" Column="1" TopLine="1"/>
+      </Position25>
+      <Position26>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="22" Column="1" TopLine="14"/>
+      </Position26>
+      <Position27>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="21" Column="1" TopLine="14"/>
+      </Position27>
+      <Position28>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <Caret Line="9" Column="38" TopLine="4"/>
       </Position28>
       <Position29>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="108" Column="24" TopLine="92"/>
+        <Caret Line="103" Column="17" TopLine="89"/>
       </Position29>
       <Position30>
         <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="107" Column="23" TopLine="92"/>
+        <Caret Line="102" Column="17" TopLine="88"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
-  <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="../forms/untdisplayquotes.pas"/>
-        <Line Value="102"/>
-      </Item1>
-    </BreakPoints>
-  </Debugging>
 </CONFIG>

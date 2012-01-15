@@ -6,34 +6,23 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons;
+  ExtCtrls, Buttons, untDisplayQuotes;
 
 type
 
   { TfrmQuoteSearch }
 
-  TfrmQuoteSearch = class(TForm)
-    btnCancel: TBitBtn;
-    btnFind: TBitBtn;
-    cbCaseSensetive: TCheckBox;
+  TfrmQuoteSearch = class(TFrame)
+    btnNext: TBitBtn;
+    btnPrev: TBitBtn;
+    cbxCaseSensitive: TCheckBox;
+    cbxRegex: TCheckBox;
     edtSearch: TEdit;
-    grpbxSearchOptoins: TGroupBox;
-    lblQuotePart: TLabel;
-    rdQuote: TRadioButton;
-    rdAuthor: TRadioButton;
-    procedure cbCaseSensetiveChange(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure rdQuoteChange(Sender: TObject);
+    lblNotFound: TLabel;
   private
-    FCase    : Boolean;
-    FQuote   : Boolean;
-    FClicked : Boolean;
     { private declarations }
   public
     { public declarations }
-  published
-    property CaseSensitive : Boolean read FCase write FCase;
-    property Quote : Boolean read FQuote write FQuote;
   end; 
 
 var
@@ -45,22 +34,7 @@ implementation
 
 { TfrmQuoteSearch }
 
-procedure TfrmQuoteSearch.cbCaseSensetiveChange(Sender: TObject);
-begin
-  FCase := cbCaseSensetive.Checked;
-end;
 
-procedure TfrmQuoteSearch.FormCreate(Sender: TObject);
-begin
-  FQuote   := True;
-  FCase    := False;
-  FClicked := False;
-end;
-
-procedure TfrmQuoteSearch.rdQuoteChange(Sender: TObject);
-begin
-  FQuote := TRadioButton(Sender).Tag = 2;
-end;
 
 end.
 

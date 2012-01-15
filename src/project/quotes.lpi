@@ -58,7 +58,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmQuoteSearch"/>
         <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
+        <ResourceBaseClass Value="Frame"/>
         <UnitName Value="untSearchDialog"/>
       </Unit3>
       <Unit4>
