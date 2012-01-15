@@ -1,12 +1,14 @@
 object frmDisplayQuotes: TfrmDisplayQuotes
   Left = 544
-  Height = 326
-  Top = 377
-  Width = 728
+  Height = 300
+  Top = 403
+  Width = 720
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Display Quotes'
-  ClientHeight = 326
-  ClientWidth = 728
+  ClientHeight = 300
+  ClientWidth = 720
+  Constraints.MinHeight = 300
+  Constraints.MinWidth = 720
   KeyPreview = True
   OnClose = FormClose
   OnCreate = FormCreate
@@ -14,9 +16,9 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   LCLVersion = '0.9.31'
   object mmoQuote: TMemo
     Left = 7
-    Height = 229
+    Height = 203
     Top = 57
-    Width = 714
+    Width = 706
     Align = alClient
     BorderSpacing.Left = 7
     BorderSpacing.Top = 3
@@ -30,28 +32,34 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     TabOrder = 0
   end
   inline frmQuoteSearch1: TfrmQuoteSearch
-    Top = 289
-    Width = 726
+    Top = 263
+    Width = 718
     Align = alBottom
     BorderSpacing.Right = 2
-    ClientWidth = 726
+    ClientWidth = 718
     TabOrder = 1
+    inherited btnPrev: TBitBtn
+      OnClick = nil
+    end
+    inherited btnNext: TBitBtn
+      OnClick = nil
+    end
     inherited lblNotFound: TLabel
-      Left = 643
+      Left = 635
     end
   end
   object Panel1: TPanel
     Left = 0
     Height = 54
     Top = 0
-    Width = 728
+    Width = 720
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 54
-    ClientWidth = 728
+    ClientWidth = 720
     TabOrder = 2
     object btnLast: TSpeedButton
-      Left = 701
+      Left = 693
       Height = 20
       Top = 2
       Width = 20
@@ -101,7 +109,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ParentShowHint = False
     end
     object btnNext: TSpeedButton
-      Left = 677
+      Left = 669
       Height = 20
       Top = 2
       Width = 20
@@ -151,7 +159,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ParentShowHint = False
     end
     object btnCopy: TSpeedButton
-      Left = 653
+      Left = 645
       Height = 20
       Top = 2
       Width = 20
@@ -201,7 +209,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ParentShowHint = False
     end
     object btnRandom: TSpeedButton
-      Left = 629
+      Left = 621
       Height = 20
       Top = 2
       Width = 20
@@ -251,7 +259,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ParentShowHint = False
     end
     object btnPrev: TSpeedButton
-      Left = 605
+      Left = 597
       Height = 20
       Top = 2
       Width = 20
@@ -301,7 +309,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ParentShowHint = False
     end
     object btnFirst: TSpeedButton
-      Left = 581
+      Left = 573
       Height = 20
       Top = 2
       Width = 20
@@ -351,7 +359,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ParentShowHint = False
     end
     object btnReloadQuotes: TSpeedButton
-      Left = 519
+      Left = 511
       Height = 20
       Top = 2
       Width = 20

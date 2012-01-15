@@ -102,6 +102,7 @@ object frmQuoteSearch: TfrmQuoteSearch
       FF00FFFFFF00FFFFFF00
     }
     GlyphShowMode = gsmSystem
+    OnClick = btnPrevClick
     TabOrder = 1
   end
   object btnNext: TBitBtn
@@ -177,6 +178,7 @@ object frmQuoteSearch: TfrmQuoteSearch
     }
     GlyphShowMode = gsmSystem
     Layout = blGlyphRight
+    OnClick = btnNextClick
     TabOrder = 2
   end
   object lblNotFound: TLabel

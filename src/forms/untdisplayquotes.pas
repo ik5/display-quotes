@@ -69,7 +69,7 @@ resourcestring
 
 implementation
 
-uses Math, Clipbrd, untFindQuote, untSaveSettings
+uses Math, Clipbrd, untSaveSettings
 {$IFDEF UNIX}
   {$IFDEF LCLGTK2}
     , untGTKNotify
@@ -86,34 +86,9 @@ begin
 end;
 
 procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
-{var
-  index : integer;
-  s     : string;}
+
 begin
   frmQuoteSearch1.edtSearch.SetFocus;
-(*
-  frmQuoteSearch := TfrmQuoteSearch.Create(self);
-  try
-    if frmQuoteSearch.ShowModal in [mrAbort, mrCancel, mrNo, mrNoToAll] then
-      exit;
-
-    s := frmQuoteSearch.edtSearch.Text;
-    if Trim(s) =  '' then
-      exit;
-
-    index := FindQuoteByPart(s, Quotes);
-    if index = -1 then
-      begin
-        ShowMessage(Format(txtNotFound, [s]));
-        exit;
-      end;
-
-    ChangeQuote(index);
-    Beep;
-  finally
-    FreeAndNil(frmQuoteSearch);
-  end;
-*)
 end;
 
 procedure TfrmDisplayQuotes.acNextQuoteExecute(Sender: TObject);
