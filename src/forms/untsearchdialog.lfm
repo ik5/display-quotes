@@ -2,21 +2,21 @@ object frmQuoteSearch: TfrmQuoteSearch
   Left = 0
   Height = 37
   Top = 0
-  Width = 627
+  Width = 739
   ClientHeight = 37
-  ClientWidth = 627
+  ClientWidth = 739
   TabOrder = 0
   DesignLeft = 577
   DesignTop = 319
   object edtSearch: TEdit
-    Left = 2
+    Left = 56
     Height = 28
     Top = 3
-    Width = 197
+    Width = 248
     TabOrder = 0
   end
   object cbxCaseSensitive: TCheckBox
-    Left = 283
+    Left = 388
     Height = 24
     Top = 5
     Width = 131
@@ -24,7 +24,7 @@ object frmQuoteSearch: TfrmQuoteSearch
     TabOrder = 3
   end
   object cbxRegex: TCheckBox
-    Left = 424
+    Left = 529
     Height = 24
     Top = 5
     Width = 72
@@ -32,7 +32,7 @@ object frmQuoteSearch: TfrmQuoteSearch
     TabOrder = 4
   end
   object btnPrev: TBitBtn
-    Left = 210
+    Left = 315
     Height = 28
     Top = 3
     Width = 27
@@ -105,7 +105,7 @@ object frmQuoteSearch: TfrmQuoteSearch
     TabOrder = 1
   end
   object btnNext: TBitBtn
-    Left = 243
+    Left = 348
     Height = 28
     Top = 3
     Width = 27
@@ -180,7 +180,7 @@ object frmQuoteSearch: TfrmQuoteSearch
     TabOrder = 2
   end
   object lblNotFound: TLabel
-    Left = 544
+    Left = 656
     Height = 21
     Top = 7
     Width = 81
@@ -193,5 +193,14 @@ object frmQuoteSearch: TfrmQuoteSearch
     ParentFont = False
     Transparent = False
     Visible = False
+  end
+  object lblFind: TLabel
+    Left = 8
+    Height = 21
+    Top = 7
+    Width = 37
+    Caption = 'Find:'
+    FocusControl = edtSearch
+    ParentColor = False
   end
 end

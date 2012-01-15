@@ -2,12 +2,12 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   Left = 544
   Height = 277
   Top = 377
-  Width = 712
+  Width = 728
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'Display Quotes'
   ClientHeight = 277
-  ClientWidth = 712
+  ClientWidth = 728
   Constraints.MinHeight = 237
   Constraints.MinWidth = 712
   KeyPreview = True
@@ -24,7 +24,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentColor = False
   end
   object btnFirst: TSpeedButton
-    Left = 565
+    Left = 581
     Height = 20
     Top = 0
     Width = 20
@@ -74,7 +74,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnPrev: TSpeedButton
-    Left = 589
+    Left = 605
     Height = 20
     Top = 0
     Width = 20
@@ -124,7 +124,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnNext: TSpeedButton
-    Left = 661
+    Left = 677
     Height = 20
     Top = 0
     Width = 20
@@ -174,7 +174,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnLast: TSpeedButton
-    Left = 685
+    Left = 701
     Height = 20
     Top = 0
     Width = 20
@@ -224,7 +224,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnReloadQuotes: TSpeedButton
-    Left = 503
+    Left = 519
     Height = 20
     Top = 0
     Width = 20
@@ -274,7 +274,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnCopy: TSpeedButton
-    Left = 637
+    Left = 653
     Height = 20
     Top = 0
     Width = 20
@@ -324,7 +324,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ParentShowHint = False
   end
   object btnRandom: TSpeedButton
-    Left = 613
+    Left = 629
     Height = 20
     Top = 0
     Width = 20
@@ -389,7 +389,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Left = 7
     Height = 176
     Top = 57
-    Width = 698
+    Width = 714
     Align = alBottom
     BorderSpacing.Left = 7
     BorderSpacing.Right = 7
@@ -403,27 +403,13 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   end
   inline frmQuoteSearch1: TfrmQuoteSearch
     Top = 240
-    Width = 712
+    Width = 726
     Align = alBottom
-    ClientWidth = 712
+    BorderSpacing.Right = 2
+    ClientWidth = 726
     TabOrder = 2
-    inherited edtSearch: TEdit
-      Left = 8
-    end
-    inherited cbxCaseSensitive: TCheckBox
-      Left = 327
-    end
-    inherited cbxRegex: TCheckBox
-      Left = 470
-    end
-    inherited btnPrev: TBitBtn
-      Left = 254
-    end
-    inherited btnNext: TBitBtn
-      Left = 291
-    end
     inherited lblNotFound: TLabel
-      Left = 629
+      Left = 643
     end
   end
   object ActionList: TActionList

@@ -18,6 +18,7 @@ type
     cbxCaseSensitive: TCheckBox;
     cbxRegex: TCheckBox;
     edtSearch: TEdit;
+    lblFind: TLabel;
     lblNotFound: TLabel;
   private
     { private declarations }
