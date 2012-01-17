@@ -1,7 +1,7 @@
 object frmDisplayQuotes: TfrmDisplayQuotes
-  Left = 544
+  Left = 397
   Height = 300
-  Top = 403
+  Top = 294
   Width = 720
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Display Quotes'
@@ -32,17 +32,19 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     TabOrder = 0
   end
   inline frmQuoteSearch1: TfrmQuoteSearch
+    Height = 37
     Top = 263
     Width = 718
     Align = alBottom
     BorderSpacing.Right = 2
+    ClientHeight = 37
     ClientWidth = 718
     TabOrder = 1
+    DesignLeft = 577
+    DesignTop = 319
     inherited btnPrev: TBitBtn
-      OnClick = nil
     end
     inherited btnNext: TBitBtn
-      OnClick = nil
     end
     inherited lblNotFound: TLabel
       Left = 635

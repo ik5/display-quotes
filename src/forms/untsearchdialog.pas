@@ -34,49 +34,51 @@ var
 implementation
 uses untDisplayQuotes, untFindQuote;
 
-{var
-  index : integer;
-  s     : string;}
-
-  (*
-    frmQuoteSearch := TfrmQuoteSearch.Create(self);
-    try
-      if frmQuoteSearch.ShowModal in [mrAbort, mrCancel, mrNo, mrNoToAll] then
-        exit;
-
-      s := frmQuoteSearch.edtSearch.Text;
-      if Trim(s) =  '' then
-        exit;
-
-      index := FindQuoteByPart(s, Quotes);
-      if index = -1 then
-        begin
-          ShowMessage(Format(txtNotFound, [s]));
-          exit;
-        end;
-
-      ChangeQuote(index);
-      Beep;
-    finally
-      FreeAndNil(frmQuoteSearch);
-    end;
-  *)
-
-procedure TfrmQuoteSearch.btnPrevClick(Sender: TObject);
-begin
-
-end;
-
-procedure TfrmQuoteSearch.btnNextClick(Sender: TObject);
-begin
-
-end;
-
 {$R *.lfm}
 
 { TfrmQuoteSearch }
 
+{%todo more DRY}
 
+procedure TfrmQuoteSearch.btnPrevClick(Sender: TObject);
+var
+  index : integer;
+  s     : string;
+begin
+  s := edtSearch.Text;
+  if cbxRegex.Checked then
+   index := FindPrevRegex(s, frmDisplayQuotes.Quotes,
+                          cbxCaseSensitive.Checked,
+                          frmDisplayQuotes.QuoteNum)
+  else
+    index := FindPrevText(s, frmDisplayQuotes.Quotes,
+                          cbxCaseSensitive.Checked,
+                          frmDisplayQuotes.QuoteNum);
+
+  lblNotFound.Visible := index = -1;
+  if index <> -1 then
+   frmDisplayQuotes.ChangeQuote(index);
+end;
+
+procedure TfrmQuoteSearch.btnNextClick(Sender: TObject);
+var
+  index : integer;
+  s     : string;
+begin
+  s := edtSearch.Text;
+  if cbxRegex.Checked then
+   index := FindNextRegex(s, frmDisplayQuotes.Quotes,
+                          cbxCaseSensitive.Checked,
+                          frmDisplayQuotes.QuoteNum)
+  else
+    index := FindNextText(s, frmDisplayQuotes.Quotes,
+                          cbxCaseSensitive.Checked,
+                          frmDisplayQuotes.QuoteNum);
+
+  lblNotFound.Visible := index = -1;
+  if index <> -1 then
+   frmDisplayQuotes.ChangeQuote(index);
+end;
 
 end.
 
