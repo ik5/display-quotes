@@ -42,11 +42,13 @@ type
     lblQuotesCount: TLabel;
     mmoQuote: TMemo;
     pnlTop: TPanel;
+    Tray: TTrayIcon;
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure TrayDblClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -154,6 +156,11 @@ begin
 
   LoadQuotes;
   Started := False;
+end;
+
+procedure TfrmDisplayQuotes.TrayDblClick(Sender: TObject);
+begin
+  self.Visible := not self.Visible;
 end;
 
 procedure TfrmDisplayQuotes.LoadQuotes;

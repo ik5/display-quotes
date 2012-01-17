@@ -827,4 +827,8 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       FF00FFFFFF00FFFFFF00FFFFFF00
     }
   end
+  object Tray: TTrayIcon
+    OnDblClick = TrayDblClick
+    left = 368
+  end
 end
