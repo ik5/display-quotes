@@ -418,6 +418,18 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     Align = alBottom
     ClientWidth = 720
     TabOrder = 2
+    inherited cbxCaseSensitive: TCheckBox
+      TabOrder = 3
+    end
+    inherited cbxRegex: TCheckBox
+      TabOrder = 4
+    end
+    inherited btnPrev: TBitBtn
+      TabOrder = 1
+    end
+    inherited btnNext: TBitBtn
+      TabOrder = 2
+    end
     inherited lblNotFound: TLabel
       Left = 628
     end
