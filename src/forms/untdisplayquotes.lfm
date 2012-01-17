@@ -12,6 +12,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   KeyPreview = True
   OnClose = FormClose
   OnCreate = FormCreate
+  PopupMenu = ppmnuTray
   Position = poDefault
   LCLVersion = '0.9.31'
   object mmoQuote: TMemo
