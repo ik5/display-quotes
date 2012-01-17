@@ -36,17 +36,9 @@ uses untFindQuote, untDisplayQuotes;
 { TfrmSearchDialog }
 
 procedure TfrmSearchDialog.btnPrevClick(Sender: TObject);
-type
-  TFindProc = function(S : String; List : TStringList; Sensitive : Boolean;
-                       Index : Integer) : integer;
-const
-  cNextFind : array[Boolean] of TFindProc = (@FindNextText, @FindNextRegex);
-  cPrevFind : array[Boolean] of TFindProc = (@FindPrevText, @FindPrevRegex);
-
 var
-  FindProc      : TFindProc;
-  idx, loc, max : integer;
-  search        : String;
+ idx, loc, max : integer;
+ search        : String;
 
 begin
  Search := edtSearch.Text;
@@ -60,35 +52,29 @@ begin
 
   if TComponent(Sender).Tag = 1 then // prev ?
     begin
-      if loc = 0 then // Circular search
-        loc := max
-      else
-        dec(loc); // from prev position
-
-      FindProc := cPrevFind[cbxRegex.Checked];
+      // Circular search
+      if loc = 0 then loc := max
+      else dec(loc); // from prev position
     end
   else begin // next ?
-      if loc = max then // Circular search
-        loc := 0
-      else
-        inc(loc); // from next position
-
-      FindProc := cNextFind[cbxRegex.Checked];
+      // Circular search
+      if loc = max then loc := 0
+      else inc(loc); // from next position
   end;
 
-  idx := FindProc(Search,
+  idx := FindQuote(Search,
                   frmDisplayQuotes.Quotes,
                   cbxCaseSensitive.Checked,
-                  loc);
+                  loc,
+                  cbxRegex.Checked,
+                  TSearchDirection(TComponent(Sender).Tag -1));
 
   lblNotFound.Visible := idx = -1;
-  if idx <> -1 then
-    frmDisplayQuotes.ChangeQuote(idx);
+  if idx <> -1 then frmDisplayQuotes.ChangeQuote(idx);
 end;
 
 procedure TfrmSearchDialog.edtSearchChange(Sender: TObject);
-var
-  txt : String;
+var txt : String;
 begin
   txt             := edtSearch.Text;
   btnPrev.Enabled := txt <> '';

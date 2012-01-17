@@ -5,54 +5,25 @@ unit untFindQuote;
 interface
 
 uses
-  Classes, SysUtils; 
+  Classes; // For TStringList
 
-function FindNextText(S         : String;
-                      List      : TStringList;
-                      Sensitive : Boolean;
-                      Index     : Integer) : integer;
-function FindNextRegex(S         : String;
-                       List      : TStringList;
-                       Sensitive : Boolean;
-                       Index     : Integer) : integer;
+type
+ TSearchDirection = (sdPrev, sdNext);
 
-function FindPrevText(S         : String;
-                      List      : TStringList;
-                      Sensitive : Boolean;
-                      Index     : Integer) : integer;
-function FindPrevRegex(S         : String;
-                       List      : TStringList;
-                       Sensitive : Boolean;
-                       Index     : Integer) : integer;
+function FindQuote(s         : String;
+                   List      : TStringList;
+                   Sensitive : Boolean;
+                   Index     : Integer;
+                   Regex     : Boolean;
+                   Direction : TSearchDirection) : Integer; inline;
 
 
 implementation
-uses strutils, SynRegExpr; //Regex;
+uses strutils, SynRegExpr;
 
-{function FindQuoteByPart(const S : String; List: TStringList) : Integer;
-var
-  i, count, loc, offset : integer;
-  aregex                : TRegexEngine;
-begin
- Result            := -1;
- offset            := 0;
- Count             := List.Count -1;
- aregex            := TRegexEngine.Create(S);
- aregex.IgnoreCase := true;
- aregex.MultiLine  := true;
- for i := 0 to Count do
-   begin
-     if aregex.MatchString(List.Strings[i], loc, offset) then
-       begin
-         Result := i;
-         break;
-       end;
-   end;
- aregex.Free;
-end;
-}
-
-{%TODO: Rewrite this implementation to be more DRY}
+type
+  TFindProc = function(S : String; List : TStringList; Sensitive : Boolean;
+                       Index : Integer) : integer;
 
 function FindNextText(S: String; List: TStringList; Sensitive: Boolean;
                       Index: Integer): integer;
@@ -161,6 +132,22 @@ begin
    end;
 
   regex.Free;
+end;
+
+function FindQuote(s : String; List: TStringList; Sensitive: Boolean;
+  Index: Integer; Regex: Boolean; Direction: TSearchDirection): Integer;
+const
+  cNextFind : array[Boolean] of TFindProc = (@FindNextText, @FindNextRegex);
+  cPrevFind : array[Boolean] of TFindProc = (@FindPrevText, @FindPrevRegex);
+var
+  FindProc : TFindProc;
+begin
+  case Direction of
+   sdPrev : FindProc := cPrevFind[Regex];
+   sdNext : FindProc := cNextFind[Regex];
+  end;
+
+  Result := FindProc(s, List, Sensitive, Index);
 end;
 
 end.
