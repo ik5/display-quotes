@@ -27,7 +27,7 @@ function FindPrevRegex(S         : String;
 
 
 implementation
-uses strutils,Regex;
+uses strutils, SynRegExpr; //Regex;
 
 {function FindQuoteByPart(const S : String; List: TStringList) : Integer;
 var
@@ -67,7 +67,7 @@ begin
 
  Result := -1;
  Count := List.Count -1;
- for i := Index +1 to Count do
+ for i := Index to Count do
   begin
     if FindFunc(List.Strings[i], S) then
       begin
@@ -80,8 +80,8 @@ end;
 function FindPrevText(S: String; List: TStringList; Sensitive: Boolean;
                       Index: Integer): integer;
 var
-  i, count : integer;
-  FindFunc           : function(const AText, ASubText : String) : Boolean;
+  i        : integer;
+  FindFunc : function(const AText, ASubText : String) : Boolean;
 begin
   if Sensitive then
    FindFunc := @AnsiContainsStr
@@ -89,8 +89,7 @@ begin
    FindFunc := @AnsiContainsText;
 
  Result := -1;
- Count := List.Count -1;
- for i := Count downto Index +1 do
+ for i := index downto 0 do
   begin
     if FindFunc(List.Strings[i], s) then
       begin
@@ -100,51 +99,68 @@ begin
   end;
 end;
 
+function initregex(regex : String; Sensitive : Boolean) : TRegExpr;
+begin
+ Result    := TRegExpr.Create;
+
+ Result.ModifierI := not Sensitive; //
+ Result.ModifierM := true;          // multiline
+ Result.ModifierG := true;          // not greedy
+ try
+  Result.Expression := Regex;
+ except // bad regex syntax
+   Result.Free;
+   Exit(nil);
+ end;
+end;
+
 function FindNextRegex(S: String; List: TStringList; Sensitive: Boolean;
   Index: Integer): integer;
 var
-  i, count, loc, offset : integer;
-  aregex                : TRegexEngine;
+  i, count : integer;
+  regex    : TRegExpr;
 begin
- Result            := -1;
- offset            := 0;
- Count             := List.Count -1;
- aregex            := TRegexEngine.Create(S);
- aregex.IgnoreCase := Sensitive;
- aregex.MultiLine  := true;
- for i := Index +1 to Count do
+ Result := -1;
+ Count  := List.Count -1;
+ regex  := initregex(s, Sensitive);
+
+ if not Assigned(regex) then
+  Exit(-1);
+
+ for i := Index to Count do
    begin
-     if aregex.MatchString(List.Strings[i], loc, offset) then
+     if regex.Exec(List.Strings[i]) then
        begin
          Result := i;
          break;
        end;
    end;
- aregex.Free;
+
+ regex.Free;
 end;
 
 function FindPrevRegex(S: String; List: TStringList; Sensitive: Boolean;
   Index: Integer): integer;
 var
-  i, count, loc, offset : integer;
-  aregex                : TRegexEngine;
+  i     : integer;
+  regex : TRegExpr;
 begin
- Result            := -1;
- offset            := 0;
- Count             := List.Count -1;
- aregex            := TRegexEngine.Create(S);
- aregex.IgnoreCase := Sensitive;
- aregex.MultiLine  := true;
+ Result  := -1;
+ regex  := initregex(s, Sensitive);
 
-  for i := Count downto Index +1 do
+ if not Assigned(regex) then
+   Exit(-1);
+
+ for i := Index downto 0 do
    begin
-     if aregex.MatchString(List.Strings[i], loc, offset) then
+     if regex.Exec(List.Strings[i]) then
        begin
          Result := i;
          break;
        end;
    end;
- aregex.Free;
+
+  regex.Free;
 end;
 
 end.

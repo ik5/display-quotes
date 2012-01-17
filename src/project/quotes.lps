@@ -3,15 +3,15 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="24">
+    <Units Count="27">
       <Unit0>
         <Filename Value="quotes.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="18"/>
-        <CursorPos X="1" Y="45"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="1"/>
+        <CursorPos X="35" Y="11"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -21,12 +21,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="untDisplayQuotes"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="39"/>
-        <CursorPos X="14" Y="50"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="92"/>
+        <CursorPos X="42" Y="106"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -34,7 +33,7 @@
         <Filename Value="../libnotify/src/libnotify.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="libnotify"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="33"/>
       </Unit2>
       <Unit3>
         <Filename Value="../forms/untsearchdialog.pas"/>
@@ -43,29 +42,26 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="untSearchDialog"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="39"/>
-        <CursorPos X="14" Y="44"/>
-        <UsageCount Value="30"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <TopLine Value="1"/>
+        <CursorPos X="46" Y="5"/>
+        <UsageCount Value="33"/>
       </Unit3>
       <Unit4>
         <Filename Value="../units/untgtknotify.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="untgtknotify"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="33"/>
       </Unit4>
       <Unit5>
         <Filename Value="../units/untsavesettings.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="untSaveSettings"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
+        <TopLine Value="80"/>
         <CursorPos X="45" Y="111"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -110,11 +106,11 @@
       <Unit11>
         <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/lazutils/fileutil.pas"/>
         <UnitName Value="FileUtil"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="221"/>
         <CursorPos X="36" Y="233"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="16"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>
@@ -156,21 +152,22 @@
       <Unit17>
         <Filename Value="../units/untfindquote.pas"/>
         <UnitName Value="untFindQuote"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="120"/>
-        <CursorPos X="14" Y="147"/>
-        <UsageCount Value="13"/>
+        <TopLine Value="135"/>
+        <CursorPos X="1" Y="166"/>
+        <UsageCount Value="15"/>
         <Loaded Value="True"/>
       </Unit17>
       <Unit18>
         <Filename Value="../../../../foss/fpc/fpc26/packages/regexpr/src/regex.pp"/>
         <UnitName Value="Regex"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="111"/>
-        <CursorPos X="15" Y="111"/>
-        <UsageCount Value="13"/>
+        <TopLine Value="27"/>
+        <CursorPos X="6" Y="40"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit18>
       <Unit19>
@@ -212,134 +209,163 @@
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit23>
+      <Unit24>
+        <Filename Value="../forms/untsearchdialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSearchDialog"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="untSearchDialog"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="50"/>
+        <CursorPos X="29" Y="49"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <UnitName Value="SynRegExpr"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="408"/>
+        <CursorPos X="17" Y="768"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="../../../../foss/fpc/fpc26/rtl/objpas/strutils.pp"/>
+        <UnitName Value="strutils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="25"/>
+        <CursorPos X="10" Y="41"/>
+        <UsageCount Value="10"/>
+      </Unit26>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="28" HistoryIndex="27">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="213" Column="33" TopLine="206"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="457" Column="16" TopLine="431"/>
       </Position1>
       <Position2>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="80" Column="36" TopLine="64"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="460" Column="64" TopLine="434"/>
       </Position2>
       <Position3>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="232" Column="39" TopLine="216"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="462" Column="18" TopLine="436"/>
       </Position3>
       <Position4>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="233" Column="14" TopLine="217"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="464" Column="15" TopLine="438"/>
       </Position4>
       <Position5>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="257" Column="10" TopLine="238"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="466" Column="40" TopLine="440"/>
       </Position5>
       <Position6>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="170" Column="9" TopLine="154"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="467" Column="21" TopLine="441"/>
       </Position6>
       <Position7>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="268" Column="1" TopLine="252"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="470" Column="34" TopLine="444"/>
       </Position7>
       <Position8>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="296" Column="1" TopLine="268"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="798" Column="84" TopLine="781"/>
       </Position8>
       <Position9>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="79" Column="31" TopLine="63"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1086" Column="24" TopLine="1060"/>
       </Position9>
       <Position10>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="276" Column="1" TopLine="260"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1123" Column="64" TopLine="1097"/>
       </Position10>
       <Position11>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="140" Column="3" TopLine="140"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1124" Column="59" TopLine="1098"/>
       </Position11>
       <Position12>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="63" Column="5" TopLine="5"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1125" Column="60" TopLine="1099"/>
       </Position12>
       <Position13>
-        <Filename Value="../forms/untdisplayquotes.pas"/>
-        <Caret Line="133" Column="1" TopLine="40"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1126" Column="46" TopLine="1100"/>
       </Position13>
       <Position14>
-        <Filename Value="../forms/untsearchdialog.pas"/>
-        <Caret Line="39" Column="21" TopLine="31"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1127" Column="50" TopLine="1101"/>
       </Position14>
       <Position15>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="35" Column="9" TopLine="4"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1128" Column="56" TopLine="1102"/>
       </Position15>
       <Position16>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="31" Column="69" TopLine="12"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1129" Column="58" TopLine="1103"/>
       </Position16>
       <Position17>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="113" Column="15" TopLine="86"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1130" Column="77" TopLine="1104"/>
       </Position17>
       <Position18>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="103" Column="21" TopLine="88"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1131" Column="66" TopLine="1105"/>
       </Position18>
       <Position19>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="107" Column="19" TopLine="87"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1133" Column="51" TopLine="1107"/>
       </Position19>
       <Position20>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="100" Column="20" TopLine="84"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1134" Column="50" TopLine="1108"/>
       </Position20>
       <Position21>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="113" Column="11" TopLine="89"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="1467" Column="61" TopLine="1441"/>
       </Position21>
       <Position22>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="107" Column="27" TopLine="87"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="3130" Column="47" TopLine="3104"/>
       </Position22>
       <Position23>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="93" Column="1" TopLine="62"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="3385" Column="44" TopLine="3359"/>
       </Position23>
       <Position24>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="26" Column="55" TopLine="1"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="3428" Column="19" TopLine="3405"/>
       </Position24>
       <Position25>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="61" Column="10" TopLine="31"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="372" Column="22" TopLine="356"/>
       </Position25>
       <Position26>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="11" Column="40" TopLine="1"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="3428" Column="21" TopLine="3402"/>
       </Position26>
       <Position27>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="70" Column="33" TopLine="67"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="3436" Column="21" TopLine="3410"/>
       </Position27>
       <Position28>
-        <Filename Value="../units/untfindquote.pas"/>
-        <Caret Line="138" Column="2" TopLine="119"/>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="3442" Column="21" TopLine="3416"/>
       </Position28>
+      <Position29>
+        <Filename Value="../../../../foss/fpc/lazarus/lazarus/components/synedit/synregexpr.pas"/>
+        <Caret Line="3449" Column="21" TopLine="3423"/>
+      </Position29>
+      <Position30>
+        <Filename Value="../units/untfindquote.pas"/>
+        <Caret Line="113" Column="25" TopLine="80"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
-  <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="../forms/untsearchdialog.pas"/>
-        <Line Value="48"/>
-      </Item1>
-    </BreakPoints>
-  </Debugging>
 </CONFIG>

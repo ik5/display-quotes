@@ -7,8 +7,8 @@ uses
   cthreads,
   {.$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, untDisplayQuotes, untSearchDialog, libnotify, untFindQuote,
-  untSaveSettings
+  Forms, untDisplayQuotes, libnotify, untFindQuote,
+  untSaveSettings, untSearchDialog
   {$IFDEF UNIX}//, untQuoteDBUS
     {$IFDEF LCLGTK2}
     , untGTKNotify

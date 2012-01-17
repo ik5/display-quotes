@@ -1,18 +1,20 @@
-object frmQuoteSearch: TfrmQuoteSearch
+object frmSearchDialog: TfrmSearchDialog
   Left = 0
   Height = 33
   Top = 0
-  Width = 739
+  Width = 790
   ClientHeight = 33
-  ClientWidth = 739
+  ClientWidth = 790
   TabOrder = 0
-  DesignLeft = 497
-  DesignTop = 192
+  DesignLeft = 377
+  DesignTop = 229
   object edtSearch: TEdit
     Left = 56
     Height = 28
     Top = 3
     Width = 248
+    OnChange = edtSearchChange
+    OnKeyPress = edtSearchKeyPress
     TabOrder = 0
   end
   object cbxCaseSensitive: TCheckBox
@@ -21,7 +23,7 @@ object frmQuoteSearch: TfrmQuoteSearch
     Top = 5
     Width = 131
     Caption = 'Case Sensitive'
-    TabOrder = 3
+    TabOrder = 1
   end
   object cbxRegex: TCheckBox
     Left = 529
@@ -29,13 +31,15 @@ object frmQuoteSearch: TfrmQuoteSearch
     Top = 5
     Width = 72
     Caption = 'Regex'
-    TabOrder = 4
+    TabOrder = 2
   end
   object btnPrev: TBitBtn
+    Tag = 1
     Left = 315
     Height = 28
     Top = 3
     Width = 27
+    Enabled = False
     Glyph.Data = {
       C6070000424DC607000000000000360000002800000016000000160000000100
       2000000000009007000064000000640000000000000000000000FFFFFF00FFFF
@@ -103,14 +107,16 @@ object frmQuoteSearch: TfrmQuoteSearch
     }
     GlyphShowMode = gsmSystem
     OnClick = btnPrevClick
-    TabOrder = 1
+    TabOrder = 3
   end
   object btnNext: TBitBtn
+    Tag = 2
     Left = 348
     Height = 28
     Top = 3
     Width = 27
     Default = True
+    Enabled = False
     Glyph.Data = {
       C6070000424DC607000000000000360000002800000016000000160000000100
       2000000000009007000064000000640000000000000000000000FFFFFF00FFFF
@@ -178,17 +184,17 @@ object frmQuoteSearch: TfrmQuoteSearch
     }
     GlyphShowMode = gsmSystem
     Layout = blGlyphRight
-    OnClick = btnNextClick
-    TabOrder = 2
+    OnClick = btnPrevClick
+    TabOrder = 4
   end
   object lblNotFound: TLabel
-    Left = 656
+    Left = 698
     Height = 21
     Top = 7
-    Width = 81
+    Width = 89
     Alignment = taRightJustify
     Anchors = [akTop, akRight]
-    Caption = 'Not Found'
+    Caption = ' Not Found '
     Color = clRed
     Font.Color = clYellow
     ParentColor = False

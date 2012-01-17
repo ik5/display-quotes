@@ -37,7 +37,7 @@ type
     btnRandom: TSpeedButton;
     btnReloadQuotes: TSpeedButton;
     chkNotify: TCheckBox;
-    frmQuoteSearch1: TfrmQuoteSearch;
+    frmSearchDialog1: TfrmSearchDialog;
     ImageList: TImageList;
     lblQuotesCount: TLabel;
     mmoQuote: TMemo;
@@ -98,9 +98,8 @@ begin
 end;
 
 procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
-
 begin
-  frmQuoteSearch1.edtSearch.SetFocus;
+  frmSearchDialog1.edtSearch.SetFocus;
 end;
 
 procedure TfrmDisplayQuotes.acNextQuoteExecute(Sender: TObject);

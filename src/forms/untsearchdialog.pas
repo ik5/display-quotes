@@ -5,14 +5,13 @@ unit untSearchDialog;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons;
+  Classes, SysUtils, FileUtil, Forms, Controls, StdCtrls, Buttons;
 
 type
 
-  { TfrmQuoteSearch }
+  { TfrmSearchDialog }
 
-  TfrmQuoteSearch = class(TFrame)
+  TfrmSearchDialog = class(TFrame)
     btnNext: TBitBtn;
     btnPrev: TBitBtn;
     cbxCaseSensitive: TCheckBox;
@@ -20,64 +19,86 @@ type
     edtSearch: TEdit;
     lblFind: TLabel;
     lblNotFound: TLabel;
-    procedure btnNextClick(Sender: TObject);
     procedure btnPrevClick(Sender: TObject);
+    procedure edtSearchChange(Sender: TObject);
+    procedure edtSearchKeyPress(Sender: TObject; var Key: char);
   private
     { private declarations }
   public
     { public declarations }
   end; 
 
-var
-  frmQuoteSearch: TfrmQuoteSearch;
-
 implementation
-uses untDisplayQuotes, untFindQuote;
+uses untFindQuote, untDisplayQuotes;
 
 {$R *.lfm}
 
-{ TfrmQuoteSearch }
+{ TfrmSearchDialog }
 
-{%todo more DRY}
+procedure TfrmSearchDialog.btnPrevClick(Sender: TObject);
+type
+  TFindProc = function(S : String; List : TStringList; Sensitive : Boolean;
+                       Index : Integer) : integer;
+const
+  cNextFind : array[Boolean] of TFindProc = (@FindNextText, @FindNextRegex);
+  cPrevFind : array[Boolean] of TFindProc = (@FindPrevText, @FindPrevRegex);
 
-procedure TfrmQuoteSearch.btnPrevClick(Sender: TObject);
 var
-  index : integer;
-  s     : string;
-begin
-  s := edtSearch.Text;
-  if cbxRegex.Checked then
-   index := FindPrevRegex(s, frmDisplayQuotes.Quotes,
-                          cbxCaseSensitive.Checked,
-                          frmDisplayQuotes.QuoteNum)
-  else
-    index := FindPrevText(s, frmDisplayQuotes.Quotes,
-                          cbxCaseSensitive.Checked,
-                          frmDisplayQuotes.QuoteNum);
+  FindProc      : TFindProc;
+  idx, loc, max : integer;
+  search        : String;
 
-  lblNotFound.Visible := index = -1;
-  if index <> -1 then
-   frmDisplayQuotes.ChangeQuote(index);
+begin
+ Search := edtSearch.Text;
+ loc    := frmDisplayQuotes.QuoteNum;
+ max    := frmDisplayQuotes.QuoteCount -1;
+ if Search = '' then
+   begin
+     Beep;
+     exit;
+   end;
+
+  if TComponent(Sender).Tag = 1 then // prev ?
+    begin
+      if loc = 0 then // Circular search
+        loc := max
+      else
+        dec(loc); // from prev position
+
+      FindProc := cPrevFind[cbxRegex.Checked];
+    end
+  else begin // next ?
+      if loc = max then // Circular search
+        loc := 0
+      else
+        inc(loc); // from next position
+
+      FindProc := cNextFind[cbxRegex.Checked];
+  end;
+
+  idx := FindProc(Search,
+                  frmDisplayQuotes.Quotes,
+                  cbxCaseSensitive.Checked,
+                  loc);
+
+  lblNotFound.Visible := idx = -1;
+  if idx <> -1 then
+    frmDisplayQuotes.ChangeQuote(idx);
 end;
 
-procedure TfrmQuoteSearch.btnNextClick(Sender: TObject);
+procedure TfrmSearchDialog.edtSearchChange(Sender: TObject);
 var
-  index : integer;
-  s     : string;
+  txt : String;
 begin
-  s := edtSearch.Text;
-  if cbxRegex.Checked then
-   index := FindNextRegex(s, frmDisplayQuotes.Quotes,
-                          cbxCaseSensitive.Checked,
-                          frmDisplayQuotes.QuoteNum)
-  else
-    index := FindNextText(s, frmDisplayQuotes.Quotes,
-                          cbxCaseSensitive.Checked,
-                          frmDisplayQuotes.QuoteNum);
+  txt             := edtSearch.Text;
+  btnPrev.Enabled := txt <> '';
+  btnNext.Enabled := txt <> '';
+end;
 
-  lblNotFound.Visible := index = -1;
-  if index <> -1 then
-   frmDisplayQuotes.ChangeQuote(index);
+procedure TfrmSearchDialog.edtSearchKeyPress(Sender: TObject; var Key: char);
+begin
+  if (key = #13) and (edtSearch.Text <> '') then //enter key
+    btnNext.Click;
 end;
 
 end.

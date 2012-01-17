@@ -16,7 +16,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   LCLVersion = '0.9.31'
   object mmoQuote: TMemo
     Left = 7
-    Height = 203
+    Height = 207
     Top = 57
     Width = 706
     Align = alClient
@@ -31,25 +31,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     ScrollBars = ssAutoBoth
     TabOrder = 0
   end
-  inline frmQuoteSearch1: TfrmQuoteSearch
-    Height = 37
-    Top = 263
-    Width = 718
-    Align = alBottom
-    BorderSpacing.Right = 2
-    ClientHeight = 37
-    ClientWidth = 718
-    TabOrder = 1
-    DesignLeft = 577
-    DesignTop = 319
-    inherited btnPrev: TBitBtn
-    end
-    inherited btnNext: TBitBtn
-    end
-    inherited lblNotFound: TLabel
-      Left = 635
-    end
-  end
   object Panel1: TPanel
     Left = 0
     Height = 54
@@ -59,7 +40,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     BevelOuter = bvNone
     ClientHeight = 54
     ClientWidth = 720
-    TabOrder = 2
+    TabOrder = 1
     object btnLast: TSpeedButton
       Left = 693
       Height = 20
@@ -429,6 +410,16 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       ShowHint = True
       State = cbChecked
       TabOrder = 0
+    end
+  end
+  inline frmSearchDialog1: TfrmSearchDialog
+    Top = 267
+    Width = 720
+    Align = alBottom
+    ClientWidth = 720
+    TabOrder = 2
+    inherited lblNotFound: TLabel
+      Left = 628
     end
   end
   object ActionList: TActionList
