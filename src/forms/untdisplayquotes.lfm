@@ -512,6 +512,20 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       Hint = 'Display Notification for the new quote'
       ShortCut = 32846
     end
+    object acQuit: TAction
+      Caption = '&Quit'
+      OnExecute = acQuitExecute
+      ShortCut = 16465
+    end
+    object acDisplayTooltip: TAction
+      AutoCheck = True
+      Caption = 'Display Tooltip'
+      OnExecute = acDisplayTooltipExecute
+    end
+    object acUseTray: TAction
+      AutoCheck = True
+      Caption = 'Use Tray'
+    end
   end
   object ImageList: TImageList
     left = 288
@@ -840,7 +854,52 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     }
   end
   object Tray: TTrayIcon
+    BalloonTimeout = 6000
+    PopUpMenu = ppmnuTray
     OnDblClick = TrayDblClick
     left = 368
+  end
+  object ppmnuTray: TPopupMenu
+    left = 440
+    object mnuQuotes: TMenuItem
+      Caption = 'Quotes'
+      object mnuFirstQuote: TMenuItem
+        Action = acFirstQuote
+      end
+      object mnuPrevQuote: TMenuItem
+        Action = acPrevQuote
+      end
+      object mnuNextQuote: TMenuItem
+        Action = acNextQuote
+      end
+      object mnuLastQuote: TMenuItem
+        Action = acLastQuote
+      end
+      object MenuItem1mnuRandomQuote: TMenuItem
+        Action = acRandomQuote
+      end
+      object mnuSep2: TMenuItem
+        Caption = '-'
+      end
+      object mnuCopyToClipboard: TMenuItem
+        Action = acCopyToClipboard
+      end
+    end
+    object mnusep: TMenuItem
+      Caption = '-'
+    end
+    object mnuDisplayToolTip: TMenuItem
+      Action = acDisplayTooltip
+      AutoCheck = True
+    end
+    object mnuReloadQuote: TMenuItem
+      Action = acReloadQuotes
+    end
+    object mnuSep3: TMenuItem
+      Caption = '-'
+    end
+    object mnuQuite: TMenuItem
+      Action = acQuit
+    end
   end
 end

@@ -28,6 +28,9 @@ type
     acCopyToClipboard: TAction;
     acRandomQuote: TAction;
     acNotifyQuote: TAction;
+    acQuit: TAction;
+    acDisplayTooltip: TAction;
+    acUseTray: TAction;
     ActionList: TActionList;
     btnCopy: TSpeedButton;
     btnFirst: TSpeedButton;
@@ -40,12 +43,28 @@ type
     frmSearchDialog1: TfrmSearchDialog;
     ImageList: TImageList;
     lblQuotesCount: TLabel;
+    mnuQuite: TMenuItem;
+    mnuSep3: TMenuItem;
+    mnuReloadQuote: TMenuItem;
+    mnuDisplayToolTip: TMenuItem;
+    mnuCopyToClipboard: TMenuItem;
+    mnuSep2: TMenuItem;
+    MenuItem1mnuRandomQuote: TMenuItem;
+    mnuLastQuote: TMenuItem;
+    mnuNextQuote: TMenuItem;
+    mnuPrevQuote: TMenuItem;
+    mnuQuotes: TMenuItem;
+    mnuFirstQuote: TMenuItem;
+    mnusep: TMenuItem;
     mmoQuote: TMemo;
     pnlTop: TPanel;
+    ppmnuTray: TPopupMenu;
     Tray: TTrayIcon;
     procedure acCopyToClipboardExecute(Sender: TObject);
+    procedure acDisplayTooltipExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
+    procedure acQuitExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure TrayDblClick(Sender: TObject);
@@ -100,6 +119,11 @@ begin
   Clipboard.AsText := mmoQuote.Lines.Text;
 end;
 
+procedure TfrmDisplayQuotes.acDisplayTooltipExecute(Sender: TObject);
+begin
+  ProgramSettings.DisplayToolTip := acDisplayTooltip.Checked;
+end;
+
 procedure TfrmDisplayQuotes.acFindQuoteExecute(Sender: TObject);
 begin
   frmSearchDialog1.edtSearch.SetFocus;
@@ -130,6 +154,11 @@ begin
   ChangeCursor(false);
 end;
 
+procedure TfrmDisplayQuotes.acQuitExecute(Sender: TObject);
+begin
+  Close;
+end;
+
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   ProgramSettings.LastQuote   := QuoteNum;
@@ -139,6 +168,7 @@ begin
   ProgramSettings.Width       := Width;
   ProgramSettings.Height      := Height;
   ProgramSettings.QuoteFile   := QuoteFile;
+  ProgramSettings.FormVisible := Self.Visible;
   ProgramSettings.WriteFile;
   FreeAndNil(Quotes);
 end;
@@ -153,6 +183,14 @@ begin
   Width             := ProgramSettings.Width;
   Height            := ProgramSettings.Height;
   QuoteFile         := ProgramSettings.QuoteFile;
+  Tray.Visible      := ProgramSettings.UseTray;
+
+  if Tray.Visible then
+    begin
+      // if the settings are for invisible form, but no systray, then ignore it...
+      Self.Visible := ProgramSettings.FormVisible;
+      Tray.Icon    := Application.Icon;
+    end;
 
   LoadQuotes;
   Started := False;
@@ -208,6 +246,16 @@ begin
   if chkNotify.Checked then
     NotifyQuote(AQuote);
   {$ENDIF}
+
+  if Tray.Visible then
+    if ProgramSettings.DisplayToolTip then
+      begin
+        Tray.BalloonHint  := AQuote;
+        Tray.Animate      := true;
+        Tray.BalloonFlags := bfNone;
+        Tray.BalloonTitle := 'Display Quote';
+        Tray.ShowBalloonHint;
+      end;
 end;
 
 procedure TfrmDisplayQuotes.ChangeCursor(Busy : Boolean = true);
