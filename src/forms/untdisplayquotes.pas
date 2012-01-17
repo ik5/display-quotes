@@ -41,7 +41,7 @@ type
     ImageList: TImageList;
     lblQuotesCount: TLabel;
     mmoQuote: TMemo;
-    Panel1: TPanel;
+    pnlTop: TPanel;
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);

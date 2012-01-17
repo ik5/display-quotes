@@ -1,7 +1,7 @@
 object frmDisplayQuotes: TfrmDisplayQuotes
-  Left = 397
+  Left = 555
   Height = 300
-  Top = 294
+  Top = 296
   Width = 720
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Display Quotes'
@@ -29,9 +29,9 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     )
     ReadOnly = True
     ScrollBars = ssAutoBoth
-    TabOrder = 0
+    TabOrder = 1
   end
-  object Panel1: TPanel
+  object pnlTop: TPanel
     Left = 0
     Height = 54
     Top = 0
@@ -40,7 +40,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     BevelOuter = bvNone
     ClientHeight = 54
     ClientWidth = 720
-    TabOrder = 1
+    TabOrder = 0
     object btnLast: TSpeedButton
       Left = 693
       Height = 20
