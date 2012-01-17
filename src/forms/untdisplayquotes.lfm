@@ -44,7 +44,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     object btnLast: TSpeedButton
       Left = 693
       Height = 20
-      Top = 2
+      Top = 3
       Width = 20
       Action = acLastQuote
       Anchors = [akTop, akRight]
@@ -94,7 +94,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     object btnNext: TSpeedButton
       Left = 669
       Height = 20
-      Top = 2
+      Top = 3
       Width = 20
       Action = acNextQuote
       Anchors = [akTop, akRight]
@@ -144,7 +144,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     object btnCopy: TSpeedButton
       Left = 645
       Height = 20
-      Top = 2
+      Top = 3
       Width = 20
       Action = acCopyToClipboard
       Anchors = [akTop, akRight]
@@ -194,7 +194,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     object btnRandom: TSpeedButton
       Left = 621
       Height = 20
-      Top = 2
+      Top = 3
       Width = 20
       Action = acRandomQuote
       Anchors = [akTop, akRight]
@@ -244,7 +244,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     object btnPrev: TSpeedButton
       Left = 597
       Height = 20
-      Top = 2
+      Top = 3
       Width = 20
       Action = acPrevQuote
       Anchors = [akTop, akRight]
@@ -294,7 +294,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     object btnFirst: TSpeedButton
       Left = 573
       Height = 20
-      Top = 2
+      Top = 3
       Width = 20
       Action = acFirstQuote
       Anchors = [akTop, akRight]
@@ -344,7 +344,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     object btnReloadQuotes: TSpeedButton
       Left = 511
       Height = 20
-      Top = 2
+      Top = 3
       Width = 20
       Action = acReloadQuotes
       Anchors = [akTop, akRight]
