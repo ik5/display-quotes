@@ -25,16 +25,18 @@ type
   TFindProc = function(S : String; List : TStringList; Sensitive : Boolean;
                        Index : Integer) : integer;
 
+  TStrFindFunc = function(const AText, ASubText : String) : Boolean;
+const
+  cSensitiveFind : array[Boolean] of TStrFindFunc =
+    (@AnsiContainsText, @AnsiContainsStr);
+
 function FindNextText(S: String; List: TStringList; Sensitive: Boolean;
                       Index: Integer): integer;
 var
   i, count : integer;
-  FindFunc           : function(const AText, ASubText : String) : Boolean;
+  FindFunc : TStrFindFunc;
 begin
- if Sensitive then
-   FindFunc := @AnsiContainsStr
- else
-   FindFunc := @AnsiContainsText;
+ FindFunc := cSensitiveFind[Sensitive];
 
  Result := -1;
  Count := List.Count -1;
@@ -52,12 +54,9 @@ function FindPrevText(S: String; List: TStringList; Sensitive: Boolean;
                       Index: Integer): integer;
 var
   i        : integer;
-  FindFunc : function(const AText, ASubText : String) : Boolean;
+  FindFunc : TStrFindFunc;
 begin
-  if Sensitive then
-   FindFunc := @AnsiContainsStr
- else
-   FindFunc := @AnsiContainsText;
+ FindFunc := cSensitiveFind[Sensitive];
 
  Result := -1;
  for i := index downto 0 do
@@ -72,11 +71,11 @@ end;
 
 function initregex(regex : String; Sensitive : Boolean) : TRegExpr;
 begin
- Result    := TRegExpr.Create;
+ Result           := TRegExpr.Create;
 
  Result.ModifierI := not Sensitive; //
  Result.ModifierM := true;          // multiline
- Result.ModifierG := true;          // not greedy
+ Result.ModifierG := true;          // not greedy unless the regex itself is
  try
   Result.Expression := Regex;
  except // bad regex syntax
