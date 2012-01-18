@@ -17,57 +17,25 @@ function FindQuote(s         : String;
                    Regex     : Boolean;
                    Direction : TSearchDirection) : Integer; inline;
 
-
 implementation
 uses strutils, SynRegExpr;
 
 type
-  TFindProc = function(S : String; List : TStringList; Sensitive : Boolean;
-                       Index : Integer) : integer;
-
   TStrFindFunc = function(const AText, ASubText : String) : Boolean;
+  TCounterProc = procedure(var x : integer);
+  TFindFunc    = function(sub, s : String) : Boolean;
+  TInitFunc    = function (s : String; Sensitive : Boolean) : Boolean;
+
+var
+  rx          : TRegExpr;
+  StrFindFunc : TStrFindFunc;
+
 const
   cSensitiveFind : array[Boolean] of TStrFindFunc =
     (@AnsiContainsText, @AnsiContainsStr);
 
-function FindNextText(S: String; List: TStringList; Sensitive: Boolean;
-                      Index: Integer): integer;
-var
-  i, count : integer;
-  FindFunc : TStrFindFunc;
-begin
- FindFunc := cSensitiveFind[Sensitive];
-
- Result := -1;
- Count := List.Count -1;
- for i := Index to Count do
-  begin
-    if FindFunc(List.Strings[i], S) then
-      begin
-       Result := i;
-       break;
-      end;
-  end;
-end;
-
-function FindPrevText(S: String; List: TStringList; Sensitive: Boolean;
-                      Index: Integer): integer;
-var
-  i        : integer;
-  FindFunc : TStrFindFunc;
-begin
- FindFunc := cSensitiveFind[Sensitive];
-
- Result := -1;
- for i := index downto 0 do
-  begin
-    if FindFunc(List.Strings[i], s) then
-      begin
-       Result := i;
-       break;
-      end;
-  end;
-end;
+procedure myinc(var x : integer); inline; begin inc(x); end;
+procedure mydec(var x : integer); inline; begin dec(x); end;
 
 function initregex(regex : String; Sensitive : Boolean) : TRegExpr;
 begin
@@ -84,69 +52,64 @@ begin
  end;
 end;
 
-function FindNextRegex(S: String; List: TStringList; Sensitive: Boolean;
-  Index: Integer): integer;
-var
-  i, count : integer;
-  regex    : TRegExpr;
+function RegexFind(sub, s : String) : Boolean; inline;
 begin
- Result := -1;
- Count  := List.Count -1;
- regex  := initregex(s, Sensitive);
-
- if not Assigned(regex) then
-  Exit(-1);
-
- for i := Index to Count do
-   begin
-     if regex.Exec(List.Strings[i]) then
-       begin
-         Result := i;
-         break;
-       end;
-   end;
-
- regex.Free;
+  Result := rx.Exec(s);
 end;
 
-function FindPrevRegex(S: String; List: TStringList; Sensitive: Boolean;
-  Index: Integer): integer;
-var
-  i     : integer;
-  regex : TRegExpr;
+function TextFind(sub, s : String) : Boolean;
 begin
- Result  := -1;
- regex  := initregex(s, Sensitive);
-
- if not Assigned(regex) then
-   Exit(-1);
-
- for i := Index downto 0 do
-   begin
-     if regex.Exec(List.Strings[i]) then
-       begin
-         Result := i;
-         break;
-       end;
-   end;
-
-  regex.Free;
+ Result := StrFindFunc(s, sub);
 end;
+
+function init_regex(s : String; Sensitive : Boolean) : Boolean; inline;
+begin
+  rx     := initregex(s, Sensitive);
+  Result := assigned(rx)
+end;
+
+function init_text(s : String; Sensitive : Boolean) : Boolean; inline;
+begin
+ StrFindFunc := cSensitiveFind[Sensitive];
+ Result := True;
+end;
+
+const
+ cCounterProc : array[TSearchDirection] of TCounterProc =
+   (@mydec, @myinc);
+ cFindFunc    : array[Boolean]          of TFindFunc    =
+   (@TextFind, @RegexFind);
+ cInitFunc    : array[Boolean]          of TInitFunc    =
+   (@init_text, @init_regex);
 
 function FindQuote(s : String; List: TStringList; Sensitive: Boolean;
   Index: Integer; Regex: Boolean; Direction: TSearchDirection): Integer;
-const
-  cNextFind : array[Boolean] of TFindProc = (@FindNextText, @FindNextRegex);
-  cPrevFind : array[Boolean] of TFindProc = (@FindPrevText, @FindPrevRegex);
 var
-  FindProc : TFindProc;
-begin
-  case Direction of
-   sdPrev : FindProc := cPrevFind[Regex];
-   sdNext : FindProc := cNextFind[Regex];
-  end;
+  FindProc  : TFindFunc;
+  InitFunc  : TInitFunc;
+  loop_dir  : TCounterProc;
+  i, Finish : Integer;
 
-  Result := FindProc(s, List, Sensitive, Index);
+begin
+ loop_dir    := cCounterProc[Direction];
+ FindProc    := cFindFunc[Regex];
+ InitFunc    := cInitFunc[Regex];
+ i           := Index;
+ Result      := -1;
+
+ if not InitFunc(s, Sensitive) then Exit(-1);
+ if Direction = sdPrev         then Finish := 0
+ else                               Finish := List.Count -1;
+
+ while I <> Finish do begin
+  if FindProc(s, List.Strings[i]) then begin
+     Result := i;
+     break;
+  end;
+  loop_dir(i);
+ end;
+
+ if Assigned(rx) then rx.Free;
 end;
 
 end.
