@@ -8,11 +8,6 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   StdCtrls, Buttons, Menus, ActnList, untSearchDialog;
 
-const
-  DefaultWidth     = 712;
-  DefaultHeight    = 237;
-  DefaultQuoteFile = '~/quotes.txt';
-
 type
 
   { TfrmDisplayQuotes }

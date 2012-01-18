@@ -10,6 +10,8 @@ uses
 const
   SettingsFileName = 'settings.json';
   DefaultDirName   = 'display_quotes';
+  DefaultWidth     = 712;
+  DefaultHeight    = 237;
 
 type
 
@@ -32,6 +34,8 @@ type
 
     function GetAppConfigDir : String;
   public
+    DefaultQuoteFile : String;
+
     constructor Create;     virtual;
     destructor Destroy;     override;
     procedure WriteFile;    virtual;
@@ -94,6 +98,12 @@ constructor TSettings.Create;
 var
   UserDir : String;
 begin
+  {$IFDEF UNIX}
+    DefaultQuoteFile := '~/quotes.txt';
+  {$ENDIF}
+  {$IFDEF WINDOWS}
+    DefaultQuoteFile := GetAppConfigDirUTF8(false) + 'quotes.txt';
+  {$ENDIF}
    UserDir := self.GetAppConfigDir;
    if not DirectoryExists(UserDir) then
      if not ForceDirectories(UserDir) then

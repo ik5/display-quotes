@@ -7,11 +7,11 @@ uses
   cthreads,
   {.$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, untDisplayQuotes, libnotify, untFindQuote,
+  Forms, untDisplayQuotes, untFindQuote,
   untSaveSettings, untSearchDialog
-  {$IFDEF UNIX}//, untQuoteDBUS
+  {$IFDEF UNIX}
     {$IFDEF LCLGTK2}
-    , untGTKNotify
+    , libnotify, untGTKNotify
     {$ENDIF}
   {$ENDIF}
   { you can add units after this };
