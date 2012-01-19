@@ -183,8 +183,9 @@ begin
   if Tray.Visible then
     begin
       // if the settings are for invisible form, but no systray, then ignore it...
-      Self.Visible := ProgramSettings.FormVisible;
-      Tray.Icon    := Application.Icon;
+      Self.Visible             := ProgramSettings.FormVisible;
+      Tray.Icon                := Application.Icon;
+      acDisplayTooltip.Checked := ProgramSettings.DisplayToolTip;
     end;
 
   LoadQuotes;
@@ -246,7 +247,6 @@ begin
     if ProgramSettings.DisplayToolTip then
       begin
         Tray.BalloonHint  := AQuote;
-        Tray.Animate      := true;
         Tray.BalloonFlags := bfNone;
         Tray.BalloonTitle := 'Display Quote';
         Tray.ShowBalloonHint;
