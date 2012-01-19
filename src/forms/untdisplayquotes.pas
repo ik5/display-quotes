@@ -244,7 +244,7 @@ begin
   {$ENDIF}
 
   if Tray.Visible then
-    if ProgramSettings.DisplayToolTip then
+    if (ProgramSettings.DisplayToolTip) and not Started  then
       begin
         Tray.BalloonHint  := AQuote;
         Tray.BalloonFlags := bfNone;
