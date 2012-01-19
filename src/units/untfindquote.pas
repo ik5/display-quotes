@@ -48,7 +48,7 @@ begin
   Result.Expression := Regex;
  except // bad regex syntax
    Result.Free;
-   Exit(nil);
+   Result := nil;
  end;
 end;
 
