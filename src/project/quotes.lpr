@@ -36,7 +36,10 @@ begin
   Application.Title:='Display Quotes';
   {$IFDEF UNIX}set_random;{$ENDIF}
   Randomize;
+  // For Lazarus 0.9.31 and beyond ...
+  {$IF defined(RequireDerivedFormResource)}
   RequireDerivedFormResource := True;
+  {$ENDIF}
   Application.Initialize;
 
   ProgramSettings := TSettings.Create;
