@@ -78,6 +78,7 @@ type
     procedure ChangeQuote(index : Integer);
     procedure ChangeCursor(Busy : Boolean = true); inline;
     procedure PromptFile; inline;
+    procedure LoadConfig;
   end;
 
 var
@@ -112,6 +113,31 @@ uses Math, Clipbrd, untSaveSettings
 {$R *.lfm}
 
 { TfrmDisplayQuotes }
+
+procedure TfrmDisplayQuotes.LoadConfig;
+begin
+  Quotes            := TStringList.Create;
+  Started           := True;
+  chkNotify.Checked := ProgramSettings.NotifyEvent;
+  Left              := ProgramSettings.Left;
+  Top               := ProgramSettings.Top;
+  Width             := ProgramSettings.Width;
+  Height            := ProgramSettings.Height;
+  QuoteFile         := ProgramSettings.QuoteFile;
+  Tray.Visible      := ProgramSettings.UseTray;
+
+  {$IFDEF WINODWS}
+    acNotifyQuote.Visible := false;
+  {$ENDIF}
+
+  if Tray.Visible then
+    begin
+      // if the settings are for invisible form, but no systray, then ignore it...
+      Self.Visible             := ProgramSettings.FormVisible;
+      Tray.Icon                := Application.Icon;
+      acDisplayTooltip.Checked := ProgramSettings.DisplayToolTip;
+    end;
+end;
 
 procedure TfrmDisplayQuotes.acCopyToClipboardExecute(Sender: TObject);
 begin
@@ -194,28 +220,7 @@ end;
 
 procedure TfrmDisplayQuotes.FormCreate(Sender: TObject);
 begin
-  Quotes            := TStringList.Create;
-  Started           := True;
-  chkNotify.Checked := ProgramSettings.NotifyEvent;
-  Left              := ProgramSettings.Left;
-  Top               := ProgramSettings.Top;
-  Width             := ProgramSettings.Width;
-  Height            := ProgramSettings.Height;
-  QuoteFile         := ProgramSettings.QuoteFile;
-  Tray.Visible      := ProgramSettings.UseTray;
-
-  {$IFDEF WINODWS}
-    acNotifyQuote.Visible := false;
-  {$ENDIF}
-
-  if Tray.Visible then
-    begin
-      // if the settings are for invisible form, but no systray, then ignore it...
-      Self.Visible             := ProgramSettings.FormVisible;
-      Tray.Icon                := Application.Icon;
-      acDisplayTooltip.Checked := ProgramSettings.DisplayToolTip;
-    end;
-
+  LoadConfig;
   LoadQuotes;
   Started := False;
 end;
