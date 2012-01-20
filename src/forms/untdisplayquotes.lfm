@@ -11,6 +11,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   Constraints.MinWidth = 720
   KeyPreview = True
   OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PopupMenu = ppmnuTray
   Position = poDefault

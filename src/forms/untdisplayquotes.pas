@@ -61,6 +61,7 @@ type
     procedure acNextQuoteExecute(Sender: TObject);
     procedure acQuitExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormCreate(Sender: TObject);
     procedure TrayDblClick(Sender: TObject);
   private
@@ -95,6 +96,9 @@ resourcestring
   txtNoQuotesInTheListBody  = 'There are no quotes in the list.'
                               + LineEnding +
                               'The application will exit now';
+  txtHideToTrayTitle        = 'Close or Hide ?';
+  txtHideToTrayBody         = 'A close request was given.' +
+                              ' Do you want to hide to tray ?';
 
 implementation
 
@@ -166,6 +170,26 @@ begin
   ProgramSettings.FormVisible := Self.Visible;
   ProgramSettings.WriteFile;
   FreeAndNil(Quotes);
+end;
+
+procedure TfrmDisplayQuotes.FormCloseQuery(Sender: TObject;
+  var CanClose: boolean);
+var
+  button : integer;
+begin
+  if not Tray.Visible then
+    begin
+      CanClose := True;
+      Exit;
+    end;
+
+  button := MessageDlg(txtHideToTrayTitle, txtHideToTrayBody,
+               mtConfirmation, mbYesNoCancel, 0);
+
+  CanClose := button = mrNo;
+  if button = mrCancel then exit;
+
+  Hide;
 end;
 
 procedure TfrmDisplayQuotes.FormCreate(Sender: TObject);
