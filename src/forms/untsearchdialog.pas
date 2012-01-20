@@ -62,12 +62,14 @@ begin
       else inc(loc); // from next position
   end;
 
+  frmDisplayQuotes.ChangeCursor;
   idx := FindQuote(Search,
                   frmDisplayQuotes.Quotes,
                   cbxCaseSensitive.Checked,
                   loc,
                   cbxRegex.Checked,
                   TSearchDirection(TComponent(Sender).Tag -1));
+  frmDisplayQuotes.ChangeCursor(false);
 
   lblNotFound.Visible := idx = -1;
   if idx <> -1 then frmDisplayQuotes.ChangeQuote(idx);
