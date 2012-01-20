@@ -204,6 +204,10 @@ begin
   QuoteFile         := ProgramSettings.QuoteFile;
   Tray.Visible      := ProgramSettings.UseTray;
 
+  {$IFDEF WINODWS}
+    acNotifyQuote.Visible := false;
+  {$ENDIF}
+
   if Tray.Visible then
     begin
       // if the settings are for invisible form, but no systray, then ignore it...
