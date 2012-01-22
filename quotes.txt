@@ -10634,7 +10634,29 @@ If you are supposed to learn from your mistakes, why do some people have more th
 ----
 Nostalgia isn't what it used to be
 ----
+Top 20 Replies by programmers when their program do not work:
 
+20. That's weird ...
+19. It's never done that before ...
+18. It worked yesterday 
+17. How is it possible ?
+16. It must be a hardware problem
+15. What did you type it wrong to make it crash ?
+14. There is something funky in your data
+13. I haven't touched this module in weeks !
+12. You must have the wrong version
+11. It's just unlucky coincidence
+10. I can't test everything
+9. THIS can't be the source of THAT
+8. It works, but it haven't been tested
+7. Somebody must have changed my code
+6. Did you check for a virus in your system ?
+5. Even though it does not work, how does it feel ?
+4. You can't use that version on your system
+3. Why do you want to do it that way ?
+2. Where were you when the program blow up ?
+1. It works on my machine
+----
 
 
 
