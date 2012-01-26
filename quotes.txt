@@ -10657,7 +10657,7 @@ Top 20 Replies by programmers when their program do not work:
 2. Where were you when the program blow up ?
 1. It works on my machine
 ----
-I do not have an off by one bugs, i just ahead of the buffer ...
+I do not have an off by one bugs, i'm just ahead of the buffer ...
     ik5
 ----
 
