@@ -1326,9 +1326,6 @@ When mindfulness embraces those we love, they will bloom like flowers.
 Daring ideas are like chessmen moved forward. They may be beaten, but they may start a winning game.
     Goethe
 ----
-Personally I'm always ready to learn, although I do not always like being taught.
-    Sir Winston Churchill
-----
 In the beginning the Universe was created. This has made a lot of people very 
 angry and been widely regarded as a bad move.
     Douglas Adams
@@ -10663,7 +10660,167 @@ I do not have an off by one bugs, i'm just ahead of the buffer ...
 The man who passes the sentence should swing the sword
     Eddard Stark - Game of thrones
 ----
+Let us make a special effort to stop communicating with each other, so we can have some conversation.
+    Judith Martin
+----
+A certain amount of opposition is a great help to a man; it is what he wants and must have to be good for anything. Hardship and opposition are the native soil of manhood and self-reliance.
+    John Neal
+----
+The strongest possible piece of advice I would give any young woman is: Don't screw around, and don't smoke.
+    Edwina Currie, in Observer, 1988
+----
+The law is not so much carved in stone as it is written in water, flowing in and out with the tide.
+    Jeff Melvoin, Northern Exposure, Crime and Punishment, 1992
+----
+Get not your friends by bare compliments, but by giving them sensible tokens of your love.
+    Socrates (469 BC - 399 BC)
+----
+Laughter is an instant vacation.
+    Milton Berle (1908 - 2002)
+----
+A handful of patience is worth more than a bushel of brains.
+    Dutch Proverb
+----
+A child of five would understand this. Send someone to fetch a child of five.
+    Groucho Marx (1890 - 1977)
+----
+I am patient with stupidity but not with those who are proud of it.
+    Edith Sitwell (1887 - 1964)
+----
+Life is like Stepping onto a boat which is about to sail out to sea and sink
+    Suzuki Roshi, Zen master
+----
+May you live in interesting times, and attract the attention of important people.
+----
+Some would sooner die than think.  In fact, they often do.
+    Bertrand Russell
+----
+And life itself confided this secret to me:  'Behold, it said, 'I am that which must always overcome itself.  Indeed, you call it a will to procreate or a drive to an end, to something higher, farther, more manifold....
+    Thus Spake Zarathustra II 12
+----
+It is the mark of an educated mind to be able to entertain a thought without accepting it.
+    Aristotle
+----
+Whenever you point your finger at someone, you have *3* pointed at yourself.
+    Hindu proverb
+----
+The tragedy of this life is not failure, but low aim.
+    Benjamin Mays
+----
+Think universally, Act Selfishly
+----
+I have opinions of my own--strong opinions--but I don't always agree with them.
+    George Bush I
+----
+The state is the great fictitious entity by which everyone seeks to live at the expense of everyone else.
+    Frederic Bastiat
+----
+Anarchy means having to put up with things that really piss you off.
+----
+psychedelic drugs cause paranoia, confusion, and total loss of reality in politicians that have never taken them
+    Dr. Timothy Leary
+----
+There is no better argument against democracy than a five-minute conversation the common man
+    Winston Churchill
+----
+I said a lot of stupid things when I was with the Conservative Party, and I left them, because I did not want to go on saying stupid things.
+    Winston Churchill
+----
+Democracy is a form of government that substitutes election by the incompetent many for appointment by the corrupt few.
+    G. B. Shaw
+----
+Spending on the military doesn't increase the deficit.
+    Ronald Reagan
+----
+If ignorance ever goes to $40 a barrel, I want drillin' rights on that man's head.
+    Texas Agriculture Commissioner Jim Hightower discussing President George Bush's policies
+----
+There's a lot of uncertainty that's not clear in my mind.
+    Texas House Speaker Gib Lewis
+----
+Laws... so widely disobeyed and which cannot be enforced only promote disrespect for the law in general.
+    New Jersey Assemblyman Mikulak, regarding the 55 MPH limit
+----
+The word 'politics' is derived from the word 'poly,' meaning 'many,' and the word 'ticks,' meaning 'blood sucking parasites.'
+    Dave Barry
+----
+Power which can be abused, will be abused.
+    Jim Warner
+----
+The Pen is mightier than the Sword.
+The Court is mightier than the Pen.
+The Sword is mightier than the Court.
+    Rey Barry
+----
+The penalty that good men pay for not being interested in politics is to be governed by men worse than themselves...
+    Plato
+----
+He's suffering from Politicians' Logic. Something must be done, this is something, therefore we must do it.
+    Jonathan Lynn and Antony Jay, "Yes, Prime Minister"
+----
+Outlawing drugs in order to solve drug problems is much like outlawing sex... to win the war against AIDS.
+    Ronald Siegel, "Intoxication"
+----
+If you think education is expensive, try ignorance.
+    Derek Bok, president of Harvard
+----
+What right does Congress have to go around making laws just because they deem it necessary?
+    Marion Barry
+----
+A billion dollars here and a billion dollars there soon added up to real money.
+    Senator Everett Dirksen
+----
+The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.
+    Edsger W. Dijkstra
+----
+Never mistake a clear view for a short distance
+    Paul Saffo, Institute for the Future
+----
+We cannot predict where, ultimately, the Computer Revolution will take us. All we know for certain is that, when we finally get there, we won't have enough RAM.
+    Dave Barry
+----
+I admit that when I was in school I wrote COBOL. But I didn't compile.
+    Bill davidsen, GE Corp. R&D Center; Box 8; Schenectady NY 12345
+----
+A month in the laboratory can often save an hour in the library.
+    F. H. Westheimer
+----
+Computers are useless. All they can do is give you answers.
+    Pablo Picasso
+----
+Along with the standard computer warranty agreement which said that if the machine
 
+ * didn't work,
+ * didn't do what the expensive advertisement said,
+ * electrocuted the immediate neighbourhood,  and in fact failed entirely to be 
+   inside the expensive box when you opened it,
+
+this was expressly, absolutely, implicitly and in no event the fault or responsibility of the manufacturer, that the purchaser should consider himself lucky to be allowed to give his money to the manufacturer, and that any attempt to treat what had just been paid for as the purchaser's own property would result in the attentions of serious men with menacing briefcases and very thin watches.
+
+    Terry Pratchett & Neil Gaiman, Good Omens
+----
+Do not go gentle into that long, dark night but rage, rage against the dying of the light.
+    Dylan Thomas
+----
+Zero defects: 
+ The result of shutting down a production line.
+    Kelvin Throop III, "The Management Dictionary"
+----
+There are bugs and then there are bugs. And then there are bugs.
+    Karl Lehenbauer
+----
+A Consultant is a guy who knows 125 different ways to make love, but who doesn't know any women.
+    Mark Russell
+----
+We're going to have tentacles into the PC-buying community that are going to get us closer and closer to the right answers.
+    Andrew Grove, Intel's CEO speaking on the Pentium math errors
+----
+Each time you toss out a "singing" greeting card, you are disposing of more computing power than existed in the entire world before 1950.
+    Paul Saffo, futurist
+----
+On two occasions I have been asked [by members of Parliament!], `Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?'  I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.
+    Charles Babbage
+----
 
 
 
