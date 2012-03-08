@@ -11008,5 +11008,7 @@ DNA - National Dyslexic Association
 To retain respect for sausages and laws, one must not watch them in the making.
     Otto von Bismarck
 ----
-
-
+If you advertise you framework as "even an idiot can make a page in 30 minutes" 
+you will end up with a lot of idiots writing pages in 30 minutes...
+    levhita - https://github.com/rails/rails/issues/5228#issuecomment-4374607
+----
