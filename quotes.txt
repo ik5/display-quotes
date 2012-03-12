@@ -11045,4 +11045,5 @@ I walk around it.
 I walk down another stree
     By Portia Nelson
 ----
-
+I see a glass and a lequid, and I choose how to look at it, and use it
+----
