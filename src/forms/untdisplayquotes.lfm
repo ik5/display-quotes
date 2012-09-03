@@ -15,7 +15,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
   OnCreate = FormCreate
   PopupMenu = ppmnuTray
   Position = poDefault
-  LCLVersion = '0.9.31'
+  LCLVersion = '1.1'
   object mmoQuote: TMemo
     Left = 7
     Height = 207
@@ -88,7 +88,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
-      NumGlyphs = 0
       ShowCaption = False
       ShowHint = True
       ParentShowHint = False
@@ -138,7 +137,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
-      NumGlyphs = 0
       ShowCaption = False
       ShowHint = True
       ParentShowHint = False
@@ -188,7 +186,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
         004B0000004C0000004C0000004C0000004C0000004C0000004C0000004C0000
         004C0000004B0000001200000000000000000000000000000000
       }
-      NumGlyphs = 0
       ShowCaption = False
       ShowHint = True
       ParentShowHint = False
@@ -238,7 +235,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00006D8F1B14323C98FFFFFF00
       }
-      NumGlyphs = 0
       ShowCaption = False
       ShowHint = True
       ParentShowHint = False
@@ -288,7 +284,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
-      NumGlyphs = 0
       ShowCaption = False
       ShowHint = True
       ParentShowHint = False
@@ -338,7 +333,6 @@ object frmDisplayQuotes: TfrmDisplayQuotes
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
-      NumGlyphs = 0
       ShowCaption = False
       ShowHint = True
       ParentShowHint = False
@@ -388,24 +382,23 @@ object frmDisplayQuotes: TfrmDisplayQuotes
         FF00FFFFFF00FFFFFF00004D0023004F007E035B03C0247624F1378237F31668
         16C900500085004D0024FFFFFF00FFFFFF00004D001C004D0020
       }
-      NumGlyphs = 0
       ShowCaption = False
       ShowHint = True
       ParentShowHint = False
     end
     object lblQuotesCount: TLabel
       Left = 7
-      Height = 21
+      Height = 18
       Top = 2
-      Width = 121
+      Width = 116
       Caption = 'lblQuotesCount'
       ParentColor = False
     end
     object chkNotify: TCheckBox
       Left = 7
-      Height = 24
+      Height = 21
       Top = 29
-      Width = 119
+      Width = 120
       Action = acNotifyQuote
       Checked = True
       ParentShowHint = False
@@ -433,7 +426,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       TabOrder = 2
     end
     inherited lblNotFound: TLabel
-      Left = 628
+      Left = 631
     end
   end
   object ActionList: TActionList
