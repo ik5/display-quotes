@@ -7,4 +7,5 @@ src/project/quotes.lps
 src/*/*bak
 src/*/*.dbg
 src/*/*.app/*
+src/units/fb_details.pas
 *~
