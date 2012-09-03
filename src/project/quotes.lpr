@@ -8,7 +8,7 @@ uses
   {.$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, untDisplayQuotes, untFindQuote,
-  untSaveSettings, untSearchDialog
+  untSaveSettings, fb_details, untSearchDialog
   {$IFDEF UNIX}
     {$IFDEF LCLGTK2}
     , libnotify, untGTKNotify

@@ -38,7 +38,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="6">
+    <Units Count="7">
       <Unit0>
         <Filename Value="quotes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -74,6 +74,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="untSaveSettings"/>
       </Unit5>
+      <Unit6>
+        <Filename Value="../units/fb_details.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="fb_details"/>
+      </Unit6>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
