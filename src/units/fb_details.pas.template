@@ -1,0 +1,12 @@
+unit fb_details;
+
+interface
+
+const
+  App_ID     = '';
+  App_Secret = '';
+
+implementation
+
+end.
+
