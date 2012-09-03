@@ -106,6 +106,7 @@ implementation
 uses Math, Clipbrd, untSaveSettings
 {$IFDEF UNIX}
   {$IFDEF LCLGTK2}
+  {$DEFINE NOTIFY}
     , untGTKNotify
   {$ENDIF}
 {$ENDIF};
@@ -126,7 +127,7 @@ begin
   QuoteFile         := ProgramSettings.QuoteFile;
   Tray.Visible      := ProgramSettings.UseTray;
 
-  {$IFDEF WINODWS}
+  {$IFNDEF NOTIFY}
     acNotifyQuote.Visible := false;
   {$ENDIF}
 
@@ -271,7 +272,7 @@ begin
   acLastQuote.Enabled    := index < (QuoteCount -1);
   Application.ProcessMessages;
 
-  {$IFDEF UNIX}
+  {$IFDEF NOTIFY}
   if chkNotify.Checked then
     NotifyQuote(AQuote);
   {$ENDIF}
