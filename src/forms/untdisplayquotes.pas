@@ -20,7 +20,6 @@
   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
   IN THE SOFTWARE.
 }
-
 unit untDisplayQuotes;
 
 {$mode objfpc}{$H+}
@@ -29,7 +28,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, Buttons, Menus, ActnList, untSearchDialog;
+  StdCtrls, Buttons, Menus, ActnList, untSearchDialog, untConsts;
 
 type
 
@@ -101,12 +100,14 @@ type
     Quotes      : TStringList;
     Started     : Boolean;
     QuoteFile   : String;
+    Mode        : TModes;
     procedure IterateQuotes;
     procedure LoadQuotes;
     procedure ChangeQuote(index : Integer);
     procedure ChangeCursor(Busy : Boolean = true); inline;
     procedure PromptFile; inline;
     procedure LoadConfig;
+    procedure SetPanelState(const panel : TPanel; const Vis : Boolean);
   end;
 
 var
@@ -167,7 +168,28 @@ begin
       acDisplayTooltip.Checked := ProgramSettings.DisplayToolTip;
     end;
 
-  //pnlEdit.Top  := pnlNavigation.Top;
+  pnlEdit.Top  := pnlNavigation.Top;
+  Mode         := ProgramSettings.Mode;
+  case Mode of
+    mdNav  : ;
+    mdEdit : acToggleModes.Execute;
+  end;
+end;
+
+procedure TfrmDisplayQuotes.SetPanelState(const panel: TPanel;
+  const Vis: Boolean);
+var i: integer;
+begin
+  for i := 0 to panel.ControlCount -1 do
+    begin
+      if panel.Controls[i] is TSpeedButton then
+        begin
+          if Assigned(TSpeedButton(panel.Controls[i]).Action) then
+            TAction(TSpeedButton(panel.Controls[i]).Action).Enabled := Vis
+          else
+            TSpeedButton(panel.Controls[i]).Enabled := Vis;
+        end;
+    end;
 end;
 
 procedure TfrmDisplayQuotes.acCopyToClipboardExecute(Sender: TObject);
@@ -218,49 +240,27 @@ end;
 procedure TfrmDisplayQuotes.acToggleModesExecute(Sender: TObject);
 var
   vispan, hidpan : TPanel;
-  i              : integer;
 begin
   if acToggleModes.Checked then
     begin
-      //pnlNavigation.Visible := True;
-      //pnlEdit.Visible       := False;
+      pnlNavigation.Visible := True;
+      pnlEdit.Visible       := False;
       acToggleModes.Checked := False;
-      vispan                := pnlEdit;
-      hidpan                := pnlNavigation;
+      vispan                := pnlNavigation;
+      hidpan                := pnlEdit;
+      Mode                  := mdNav;
     end
   else begin
-    //pnlNavigation.Visible := False;
-    //pnlEdit.Visible       := True;
+    pnlNavigation.Visible := False;
+    pnlEdit.Visible       := True;
     acToggleModes.Checked := True;
-    vispan                := pnlNavigation;
-    hidpan                := pnlEdit;
+    vispan                := pnlEdit;
+    hidpan                := pnlNavigation;
+    Mode                  := mdEdit;
   end;
 
-  ShowMessage('vispan.ComponentCount: '+ IntToStr(vispan.ComponentCount) +
-              ' hidpan.ComponentCount: ' + IntToStr(hidpan.ComponentCount));
-  ShowMessage('nav.componentcount: ' + IntToStr(pnlNavigation.ComponentCount) +
-              ' edt.componentcount: ' + IntToStr(pnlEdit.ComponentCount));
-  for i := 0 to vispan.ComponentCount -1 do
-    begin
-      if vispan.Components[i] is TSpeedButton then
-        begin
-          if Assigned(TSpeedButton(vispan.Components[i]).Action) then
-            TAction(TSpeedButton(vispan.Components[i]).Action).Enabled := True
-          else
-            TSpeedButton(vispan.Components[i]).Enabled := True;
-        end;
-    end;
-
-  for i := 0 to hidpan.ComponentCount -1 do
-    begin
-      if hidpan.Components[i] is TSpeedButton then
-        begin
-          if Assigned(TSpeedButton(hidpan.Components[i]).Action) then
-            TAction(TSpeedButton(hidpan.Components[i]).Action).Enabled := False
-          else
-            TSpeedButton(hidpan.Components[i]).Enabled := False;
-        end;
-    end;
+  SetPanelState(hidpan, False);
+  SetPanelState(vispan, True);
 end;
 
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -273,6 +273,7 @@ begin
   ProgramSettings.Height      := Height;
   ProgramSettings.QuoteFile   := QuoteFile;
   ProgramSettings.FormVisible := Self.Visible;
+  ProgramSettings.Mode        := Mode;
   ProgramSettings.WriteFile;
   FreeAndNil(Quotes);
 end;
@@ -368,7 +369,7 @@ end;
 procedure TfrmDisplayQuotes.ChangeCursor(Busy : Boolean = true);
 const CursorImage : array[Boolean] of TCursor = (crDefault, crHourGlass);
 begin
-   Screen.Cursor := CursorImage[Busy];
+  Screen.Cursor := CursorImage[Busy];
   Application.ProcessMessages;
 end;
 
