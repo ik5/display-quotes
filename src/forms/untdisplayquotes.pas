@@ -75,6 +75,7 @@ type
     mnuFirstQuote: TMenuItem;
     mnusep: TMenuItem;
     mmoQuote: TMemo;
+    pnlNavigation: TPanel;
     pnlTop: TPanel;
     ppmnuTray: TPopupMenu;
     Tray: TTrayIcon;
