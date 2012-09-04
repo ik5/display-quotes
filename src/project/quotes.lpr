@@ -30,7 +30,7 @@ uses
   cthreads,
   {.$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, untDisplayQuotes, untFindQuote,
+  Forms, untConsts, untDisplayQuotes, untFindQuote,
   untSaveSettings, fb_details, untSearchDialog
   {$IFDEF UNIX}
     {$IFDEF LCLGTK2}

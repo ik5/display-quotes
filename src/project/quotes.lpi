@@ -41,7 +41,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="7">
+    <Units Count="8">
       <Unit0>
         <Filename Value="quotes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -82,6 +82,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="fb_details"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="../units/untconsts.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="untConsts"/>
+      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
