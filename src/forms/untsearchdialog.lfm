@@ -10,7 +10,7 @@ object frmSearchDialog: TfrmSearchDialog
   DesignTop = 229
   object edtSearch: TEdit
     Left = 56
-    Height = 28
+    Height = 26
     Top = 3
     Width = 248
     OnChange = edtSearchChange
@@ -19,15 +19,15 @@ object frmSearchDialog: TfrmSearchDialog
   end
   object cbxCaseSensitive: TCheckBox
     Left = 388
-    Height = 24
+    Height = 21
     Top = 5
-    Width = 131
+    Width = 135
     Caption = 'Case Sensitive'
     TabOrder = 1
   end
   object cbxRegex: TCheckBox
     Left = 529
-    Height = 24
+    Height = 21
     Top = 5
     Width = 72
     Caption = 'Regex'
@@ -188,10 +188,10 @@ object frmSearchDialog: TfrmSearchDialog
     TabOrder = 4
   end
   object lblNotFound: TLabel
-    Left = 698
-    Height = 21
+    Left = 701
+    Height = 18
     Top = 7
-    Width = 89
+    Width = 86
     Alignment = taRightJustify
     Anchors = [akTop, akRight]
     Caption = ' Not Found '
@@ -204,9 +204,9 @@ object frmSearchDialog: TfrmSearchDialog
   end
   object lblFind: TLabel
     Left = 8
-    Height = 21
+    Height = 18
     Top = 7
-    Width = 37
+    Width = 36
     Caption = 'Find:'
     FocusControl = edtSearch
     ParentColor = False

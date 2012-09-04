@@ -426,12 +426,12 @@ object frmDisplayQuotes: TfrmDisplayQuotes
       TabOrder = 2
     end
     inherited lblNotFound: TLabel
-      Left = 631
+      Left = 634
     end
   end
   object ActionList: TActionList
     Images = ImageList
-    left = 192
+    left = 152
     object acFindQuote: TAction
       Caption = '&Find Quote ...'
       Hint = 'Find Quote'
@@ -523,7 +523,7 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     end
   end
   object ImageList: TImageList
-    left = 288
+    left = 224
     Bitmap = {
       4C690A0000001000000010000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -852,10 +852,10 @@ object frmDisplayQuotes: TfrmDisplayQuotes
     BalloonTimeout = 6000
     PopUpMenu = ppmnuTray
     OnDblClick = TrayDblClick
-    left = 368
+    left = 288
   end
   object ppmnuTray: TPopupMenu
-    left = 440
+    left = 360
     object mnuQuotes: TMenuItem
       Caption = 'Quotes'
       object mnuFirstQuote: TMenuItem
