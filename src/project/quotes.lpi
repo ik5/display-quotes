@@ -70,7 +70,7 @@
       <Unit4>
         <Filename Value="../units/untgtknotify.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="untgtknotify"/>
+        <UnitName Value="untGTKNotify"/>
       </Unit4>
       <Unit5>
         <Filename Value="../units/untsavesettings.pas"/>
