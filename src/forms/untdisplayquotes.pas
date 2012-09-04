@@ -178,7 +178,7 @@ end;
 
 procedure TfrmDisplayQuotes.SetPanelState(const panel: TPanel;
   const Vis: Boolean);
-var i: integer;
+var i : Integer;
 begin
   for i := 0 to panel.ControlCount -1 do
     begin
