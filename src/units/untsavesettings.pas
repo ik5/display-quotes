@@ -27,7 +27,7 @@ unit untSaveSettings;
 interface
 
 uses
-  Classes, SysUtils, jsonConf;
+  Classes, SysUtils, jsonConf, untConsts;
 
 const
   SettingsFileName = 'settings.json';
@@ -47,6 +47,7 @@ type
     FHight          : Integer;
     FLastQuote      : Integer;
     FLeft           : Integer;
+    FMode           : TModes;
     FNotifyEvent    : Boolean;
     FConfig         : TJSONConfig;
     FQuoteFile      : String;
@@ -72,6 +73,8 @@ type
                                       write FLastQuote;
     property Left           : Integer  read FLeft
                                       write FLeft;
+    property Mode           : TModes   read FMode
+                                      write FMode;
     property NotifyEvent    : Boolean  read FNotifyEvent
                                       write FNotifyEvent;
     property Top            : Integer  read FTop
@@ -94,17 +97,20 @@ resourcestring
   errCreateConfigDirectory = 'Unable to create config directory "%s".';
 
 const
-  LastQuotePath      = '/quotes/LastQuote';
   NotifyEventPath    = '/window/NotifyEvent';
   WindowLeftPath     = '/window/demensions/left';
   WindowTopPath      = '/window/demensions/top';
   WindowWidthPath    = '/window/demensions/width';
   WindowHeightPath   = '/window/demensions/height';
+  WindowMode         = '/window/mode';
+  LastQuotePath      = '/quotes/LastQuote';
   QuoteFilePath      = '/quotes/file';
+
 
   UseTrayPath        = '/window/tray/use';
   DisplayTooltipPath = '/window/tray/displaytooltip';
   FormVisiblePath    = '/window/tray/formvisible';
+
 
 { TSettings }
 
@@ -146,6 +152,7 @@ begin
   FDisplayToolTip := FConfig.GetValue(DisplayTooltipPath, false);
   FFormVisible    := FConfig.GetValue(FormVisiblePath, true);
   FUseTray        := FConfig.GetValue(UseTrayPath, true);
+  FMode           := TModes(FConfig.GetValue(WindowMode, Ord(mdNav)));
 end;
 
 destructor TSettings.Destroy;
@@ -167,6 +174,7 @@ begin
   FConfig.SetValue(DisplayTooltipPath, FDisplayToolTip);
   FConfig.SetValue(FormVisiblePath,    FFormVisible);
   FConfig.SetValue(UseTrayPath,        FUseTray);
+  FConfig.SetValue(WindowMode,         Ord(FMode));
   FConfig.Flush;
 end;
 
