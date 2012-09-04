@@ -48,6 +48,7 @@ type
     acNotifyQuote: TAction;
     acQuit: TAction;
     acDisplayTooltip: TAction;
+    acToggleModes: TAction;
     acUseTray: TAction;
     ActionList: TActionList;
     btnCopy: TSpeedButton;
@@ -75,15 +76,18 @@ type
     mnuFirstQuote: TMenuItem;
     mnusep: TMenuItem;
     mmoQuote: TMemo;
+    pnlEdit: TPanel;
     pnlNavigation: TPanel;
     pnlTop: TPanel;
     ppmnuTray: TPopupMenu;
+    btnMode: TSpeedButton;
     Tray: TTrayIcon;
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acDisplayTooltipExecute(Sender: TObject);
     procedure acFindQuoteExecute(Sender: TObject);
     procedure acNextQuoteExecute(Sender: TObject);
     procedure acQuitExecute(Sender: TObject);
+    procedure acToggleModesExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormCreate(Sender: TObject);
@@ -162,6 +166,8 @@ begin
       Tray.Icon                := Application.Icon;
       acDisplayTooltip.Checked := ProgramSettings.DisplayToolTip;
     end;
+
+  //pnlEdit.Top  := pnlNavigation.Top;
 end;
 
 procedure TfrmDisplayQuotes.acCopyToClipboardExecute(Sender: TObject);
@@ -207,6 +213,54 @@ end;
 procedure TfrmDisplayQuotes.acQuitExecute(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TfrmDisplayQuotes.acToggleModesExecute(Sender: TObject);
+var
+  vispan, hidpan : TPanel;
+  i              : integer;
+begin
+  if acToggleModes.Checked then
+    begin
+      //pnlNavigation.Visible := True;
+      //pnlEdit.Visible       := False;
+      acToggleModes.Checked := False;
+      vispan                := pnlEdit;
+      hidpan                := pnlNavigation;
+    end
+  else begin
+    //pnlNavigation.Visible := False;
+    //pnlEdit.Visible       := True;
+    acToggleModes.Checked := True;
+    vispan                := pnlNavigation;
+    hidpan                := pnlEdit;
+  end;
+
+  ShowMessage('vispan.ComponentCount: '+ IntToStr(vispan.ComponentCount) +
+              ' hidpan.ComponentCount: ' + IntToStr(hidpan.ComponentCount));
+  ShowMessage('nav.componentcount: ' + IntToStr(pnlNavigation.ComponentCount) +
+              ' edt.componentcount: ' + IntToStr(pnlEdit.ComponentCount));
+  for i := 0 to vispan.ComponentCount -1 do
+    begin
+      if vispan.Components[i] is TSpeedButton then
+        begin
+          if Assigned(TSpeedButton(vispan.Components[i]).Action) then
+            TAction(TSpeedButton(vispan.Components[i]).Action).Enabled := True
+          else
+            TSpeedButton(vispan.Components[i]).Enabled := True;
+        end;
+    end;
+
+  for i := 0 to hidpan.ComponentCount -1 do
+    begin
+      if hidpan.Components[i] is TSpeedButton then
+        begin
+          if Assigned(TSpeedButton(hidpan.Components[i]).Action) then
+            TAction(TSpeedButton(hidpan.Components[i]).Action).Enabled := False
+          else
+            TSpeedButton(hidpan.Components[i]).Enabled := False;
+        end;
+    end;
 end;
 
 procedure TfrmDisplayQuotes.FormClose(Sender: TObject; var CloseAction: TCloseAction);
