@@ -5,6 +5,7 @@ src/project/gmon.out
 src/project/core
 src/project/quotes.lps
 src/*/*bak
+src/*/.directory
 src/*/*.dbg
 src/*/*.app/*
 src/units/fb_details.pas
