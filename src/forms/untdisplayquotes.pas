@@ -251,20 +251,22 @@ var
 begin
   if acToggleModes.Checked then
     begin
-      pnlNavigation.Visible := True;
-      pnlEdit.Visible       := False;
-      acToggleModes.Checked := False;
-      vispan                := pnlNavigation;
-      hidpan                := pnlEdit;
-      Mode                  := mdNav;
+      pnlNavigation.Visible    := True;
+      pnlEdit.Visible          := False;
+      acToggleModes.Checked    := False;
+      frmSearchDialog1.Enabled := True;
+      vispan                   := pnlNavigation;
+      hidpan                   := pnlEdit;
+      Mode                     := mdNav;
     end
   else begin
-    pnlNavigation.Visible := False;
-    pnlEdit.Visible       := True;
-    acToggleModes.Checked := True;
-    vispan                := pnlEdit;
-    hidpan                := pnlNavigation;
-    Mode                  := mdEdit;
+    frmSearchDialog1.Enabled := False;
+    pnlNavigation.Visible    := False;
+    pnlEdit.Visible          := True;
+    acToggleModes.Checked    := True;
+    vispan                   := pnlEdit;
+    hidpan                   := pnlNavigation;
+    Mode                     := mdEdit;
   end;
 
   SetPanelState(hidpan, False);
