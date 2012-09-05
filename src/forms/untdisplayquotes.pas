@@ -47,6 +47,10 @@ type
     acNotifyQuote: TAction;
     acQuit: TAction;
     acDisplayTooltip: TAction;
+    acNewQuote: TAction;
+    acEditQuote: TAction;
+    acSaveQuote: TAction;
+    acDeleteQuote: TAction;
     acToggleModes: TAction;
     acUseTray: TAction;
     ActionList: TActionList;
@@ -80,6 +84,10 @@ type
     pnlTop: TPanel;
     ppmnuTray: TPopupMenu;
     btnMode: TSpeedButton;
+    btnNewQuote: TSpeedButton;
+    btnEditQuote: TSpeedButton;
+    btnSaveQuote: TSpeedButton;
+    btnDeleteQuote: TSpeedButton;
     Tray: TTrayIcon;
     procedure acCopyToClipboardExecute(Sender: TObject);
     procedure acDisplayTooltipExecute(Sender: TObject);
