@@ -8940,9 +8940,6 @@ We used to think that if we knew one, we knew two, because one and one are two. 
 Love me when I least deserve it, because that's when I really need it.
    Swedish Proverb
 ----
-Love is like a friendship caught on fire. In the beginning a flame, very pretty, often hot and fierce, but still only light and flickering. As love grows older, our hearts mature and our love becomes as coals, deep-burning and unquenchable.
-   Bruce Lee
-----
 As pascal shows, something proven is often better as some hype ;)
    Florian Klaempfl, seen at http://www.mail-archive.com/fpc-other@lists.freepascal.org/msg00209.html
 ----
@@ -10154,9 +10151,6 @@ Fall seven times, stand up eight.
 I'm a great believer in luck, and I find the harder I work the more I have of it.
    Thomas Jefferson
 ----
-If you spend too much time thinking about a thing, you'll never get it done.
-   Bruce Lee
-----
 To see what is right and not to do it is cowardice. 
    Confucius
 ----
@@ -10396,9 +10390,6 @@ We must face problems which do not lend themselves to easy or quick or permanent
 ----
 It requires twenty years for a man to rise from the vegetable state in which he is within his mother's womb, and from the pure animal state which is the lot of his early childhood, to the state when the maturity of reason begins to appear. It has required thirty centuries to learn a little about his structure. It would need eternity to learn something about his soul. It takes an instant to kill him.
     Voltaire
-----
-Don't get set into one form, adapt it and build your own, and let it grow, be like water. Empty your mind, be formless, shapeless — like water. Now you put water in a cup, it becomes the cup; You put water into a bottle it becomes the bottle; You put it in a teapot it becomes the teapot. Water can flow or it can crash. Be water, my friend.
-    Bruce Lee
 ----
 To see a World in a Grain of Sand
 And a Heaven in a Wild Flower,
@@ -11649,7 +11640,102 @@ Always remember that you are unique. Just like everyone else
 ----
 Booze is the answer. I don't remember the question.
 ----
+I’m not in this world to live up to your expectations and you’re not in this world to live up to mine.
+    Bruce Lee
+----
+Do not pray for an easy life, pray for the strength to endure a difficult one
+    Bruce Lee
+----
+Don't get set into one form, adapt it and build your own, and let it grow, be like water. 
+Empty your mind, be formless, shapeless — like water. Now you put water in a cup,
+it becomes the cup; You put water into a bottle it becomes the bottle; 
+You put it in a teapot it becomes the teapot. Water can flow or it can crash. 
+Be water, my friend.
+    Bruce Lee
+----
+If you spend too much time thinking about a thing, you'll never get it done.
+    Bruce Lee
+----
+Love is like a friendship caught on fire. In the beginning a flame, very pretty,
+often hot and fierce, but still only light and flickering. As love grows older, 
+our hearts mature and our love becomes as coals, deep-burning and unquenchable.
+    Bruce Lee
+----
+Be like water making its way through cracks. Do not be assertive, but adjust to 
+the object, and you shall find a way around or through it. 
+If nothing within you stays rigid, outward things will disclose themselves.
 
+Empty your mind, be formless. Shapeless, like water. If you put water into a cup,
+it becomes the cup. You put water into a bottle and it becomes the bottle. 
+You put it in a teapot, it becomes the teapot. Now, water can flow or it can crash. 
+Be water, my friend.
+    Bruce Lee
+----
+Be happy, but never satisfied.
+    Bruce Lee
+----
+Mistakes are always forgivable, if one has the courage to admit them.
+    Bruce Lee
+----
+Love is like a friendship caught on fire. In the beginning a flame, very pretty,
+often hot and fierce, but still only light and flickering. As love grows older, 
+our hearts mature and our love becomes as coals, deep-burning and unquenchable.
+    Bruce Lee
+----
+Adapt what is useful, reject what is useless, and add what is specifically your own.
+    Bruce Lee
+----
+A wise man can learn more from a foolish question than a fool can learn from a wise answer.
+    Bruce Lee
+----
+I fear not the man who has practiced 10,000 kicks once, but I fear the man who 
+had practiced one kick 10,000 times.
+    Bruce Lee
+----
+The doubters said,
+"Man can not fly,"
+The doers said,
+"Maybe, but we'll try,"
+And finally soared
+In the morning glow
+While non-believers
+Watched from below.
+    Bruce Lee
+----
+If you always put limits on everything you do, physical or anything else, 
+it will spread into your work and into your life. There are no limits. 
+There are only plateaus, and you must not stay there, you must go beyond them.
+    Bruce Lee
+----
+To hell with circumstances; I create opportunities.
+    Bruce Lee
+----
+If you spend too much time thinking about a thing, you'll never get it done.
+    Bruce Lee
+----
+The key to immortality is first living a life worth remembering.
+    Bruce Lee
+----
+A goal is not always meant to be reached, it often serves simply as something to aim at.
+    Bruce Lee
+----
+Don't fear failure. — Not failure, but low aim, is the crime.
+In great attempts it is glorious even to fail.
+    Bruce Lee, Striking Thoughts: Bruce Lee's Wisdom for Daily Living 
+----
+If you don't want to slip up tomorrow, speak the truth today.
+    Bruce Lee
+----
+Use only that which works, and take it from any place you can find it.
+    Bruce Lee, Tao of Jeet Kune Do 
+----
+Not being tense but ready.
+Not thinking but not dreaming.
+Not being set but flexible.
+Liberation from the uneasy sense of confinement.
+It is being wholly and quietly alive, aware and alert, ready for whatever may come.
+    Bruce Lee, Tao of Jeet Kune Do 
+----
 
 
 
